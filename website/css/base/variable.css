@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;600;800;900&display=swap');
+
+:root{
+    /*definições para a home page*/
+    --font_principal : "Heebo";
+    --font_aux : "Arial";
+    --font_titulo1 : 55px;
+    --font_descTitulo1 : 20px;
+    --font_tituloCard : 24px;
+    --font_titulo2 : 30px;
+    --font_descProdutoPreco : 15px;
+    --font_texto : 14px;
+    --font_botaoEtiqueta : 12px;
+    --cor_preto : #181818;
+    --cor_branco : #FFFFFF;
+    /*fazer as variaveis das cores escolhidas*/
+
+
+    /*fazer as definições para usar nas outras paginas*/
+}

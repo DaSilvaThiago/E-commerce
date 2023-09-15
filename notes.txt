@@ -1,0 +1,48 @@
+e-commerce models: 
+    home and product page - https://www.figma.com/community/file/1078682350875733917/Laura's-Closet-(-E-commerce-Fashion-Website-Landing-Page-)
+    product but page and cart to buy - https://www.figma.com/community/file/1075457784792729712/Laura's-Closet-(-E-Commerce-Design-)
+    MAIN MODEL - https://br.puma.com/
+
+
+**PAGES**
+user login
+user setings -> define address (this address will being used in his order)
+home showcase
+showcase of especific type of product (for example men clothes, womman clothes or child clothes)
+cartItens (has products and is associated to an user)
+order
+
+
+
+ordered pages by the teacher
+
+1 - Tela Inicial (Homepage)
+Destaques e produtos promocionais
+Barra de pesquisa
+Links para as principais categorias
+
+
+2 - Tela de Listagem de Produtos
+Produtos organizados por categoria ou resultado de pesquisa
+Filtros e ordenação
+
+3 - Tela de Detalhes do Produto
+Imagens detalhadas do produto
+Descrição e preço
+Botão de compra
+
+4 - Tela Carrinho de Compras
+Lista dos itens selecionados
+Resumo do preço
+
+5 - Tela de Checkout
+Formulário de informações para entrega
+Seleção de método de pagamento
+
+6 - Tela Página de Cadastro e Login
+Formulário de registro e autenticação
+
+7 - Página de Perfil do Usuário
+Informações do usuário e histórico de compras
+
+8 - Tela de listagem dos pedidos já feitos

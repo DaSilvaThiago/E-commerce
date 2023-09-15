@@ -1,0 +1,110 @@
+@media only screen and (min-width: 500px){
+    .footer{
+        background-color: #101010;
+        height: 250px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact_desc{
+        margin: auto;
+    }
+    
+    .first_content_first_line{
+        display: flex;
+        justify-content: center;
+        margin: 6px;
+    }
+    
+    .social_pic_footer{
+        margin: 7px;    
+    }
+
+    .links_footer_columns{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+}
+@media only screen and (min-width: 700px){
+    .footer{
+        background-color: #101010;
+        height: 200px;
+        margin-top: 30px;
+        display: grid;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .contact_desc{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 600px;
+    }
+    
+    .first_content_first_line{
+        display: flex;
+    }
+    
+    .links_footer_columns{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 850px){
+    .footer{
+        background-color: #101010;
+        height: 200px;
+        margin-top: 30px;
+        display: grid;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .contact_desc{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 800px;
+    }
+    
+    .first_content_first_line{
+        display: flex;
+    }
+    
+    .links_footer_columns{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    .footer{
+        background-color: #101010;
+        height: 200px;
+        margin-top: 30px;
+        display: grid;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .contact_desc{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 1000px;
+    }
+    
+    .first_content_first_line{
+        display: flex;
+    }
+    
+    .links_footer_columns{
+        display: flex;
+        justify-content: space-between;
+    }
+}

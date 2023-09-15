@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,200&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+
+:root{
+    --font_kanit : "Kanit";
+    --font_Preahvihear : "Preahvihear";
+    --font_noto_sans: "Noto Sans JP";
+    --txt_large: 34px;
+    --txt_medium: 24px;
+    --txt_small: 16px;
+    --space_between_txt: 30px;
+    --txt_align_center: center;
+    --title_color: red;
+    --color-orange: #cb5b2c;
+    --color-white: white;
+}
+
+
+/* os tamanhos de fontes são sempre multiplos de 8, tipo 16 pequena, 24 media, 32 grande.
