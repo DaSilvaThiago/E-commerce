@@ -1,0 +1,37 @@
+@media (min-width: 992px){
+    .menu-trigger {
+        display: none;
+    }
+
+    .header-center nav{
+        display: grid;
+    }
+
+    .header-left .list-inline {
+        display: block;
+    }
+
+    nav.menu .sub-menu {
+        position: absolute;
+        top: auto;
+        line-height: initial;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        display: none;
+        animation: var(--fade);
+    }
+
+    nav.menu li:hover .sub-menu{
+        display: block;
+    }
+    
+    nav.menu .sub-menu {
+        padding: 10px 0;
+    }
+
+    nav.menu .sub-menu li{
+        padding: 5px 30px;
+    }
+
+}
