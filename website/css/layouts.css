@@ -1,6 +1,5 @@
-
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -9,23 +8,64 @@ html{
     padding: 0;
 }
 
-*,::before,::after{
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: var(--mx-width, 1200px);
     padding: 0 var(--gutter, 15px);
     margin: 0 auto;
 }
 
-.item-floating, .header-center .branding{
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+
+
+
+
+
+
+
+.button>[class*=-btn] {
+    font-size: var(--fs14);
+    font-weight: var(--fw600);
+    text-transform: uppercase;
+    padding: 0 30px;
+    display: inline-block;
+    line-height: 42px;
+    border-width: 2px;
+    border-style: solid;
+    transition: var(--transition-background), var(--transition-color), var(--transition-border);
+}
+.primary-btn, .secondary-btn{
+    border-color: var(--dark-color);
+}
+.primary-btn:hover, .secondary-btn {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.secondary-btn:hover {
+    background-color: transparent;
+    border-color: var(--dark-color);
+    color: var(--dark-color);
+
 }
 
-.list-block a{
+
+
+
+
+
+
+.item-floating,
+.header-center .branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-block a {
     position: relative;
     font-size: var(--fs14);
     color: var(--grey-color);
@@ -34,11 +74,11 @@ html{
     transition: var(--dark-color);
 }
 
-.list-block a:hover{
+.list-block a:hover {
     color: var(--dark-color);
 }
 
-.list-block a::before{
+.list-block a::before {
     content: '';
     position: absolute;
     width: 0;
@@ -51,17 +91,18 @@ html{
     transition: width .3s, height .3s;
 }
 
-.list-block a:hover::before{
+.list-block a:hover::before {
     width: 8px;
     height: 8px;
 }
 
 @keyframes fade-bottom {
-    0%{
+    0% {
         transform: translateY(10px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
@@ -74,7 +115,7 @@ html{
     line-height: 34px;
 }
 
-.dot-title a{
+.dot-title a {
     transition: var(--transition-color);
 }
 
@@ -83,7 +124,8 @@ html{
     color: var(--light-color);
 }
 
-.overlay{
+.overlay,
+.mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -100,23 +142,66 @@ html{
     transition: opacity .3s, visibility .3s;
 }
 
-.overlay.active{
+.overlay.active {
     opacity: .75;
     visibility: visible;
     pointer-events: all;
 }
 
-.inner-header :where(.wrap, .menu >  ul),
-.list-inline > ul {
-    display: flex;
-    align-items: center ;
+.scrollto > .wrapper {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+}
+.scrollto .wrapper::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+.scrollto .wrapper::-webkit-scrollbar-thumb {
+    --border-color: var(var(--white-color));
+    background-color: var(--light-color);
+    border: 3px solid var(--border-color);
+    border-radius: 20px;
 }
 
-.header-left, .header-right {
+.scrollto .wrapper:hover::-webkit-scrollbar-thumb {
+    background-color: var(--grey-color);
+}
+.scrollto .wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: var(--grey-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inner-header :where(.wrap, .menu > ul),
+.list-inline>ul {
+    display: flex;
+    align-items: center;
+}
+
+.header-left,
+.header-right {
     flex-grow: 1;
 }
 
-.header-center nav{
+.header-center nav {
     display: none;
     grid-template-columns: 1fr 1fr;
     gap: 180px;
@@ -131,11 +216,13 @@ html{
     pointer-events: none;
 }
 
-.header-right ul{
+.header-right ul {
     justify-content: flex-end;
 }
 
-.list-inline a, .menu-trigger {
+.list-inline a,
+.menu-trigger,
+.close-trigger {
     position: relative;
     font-size: 24px;
     padding: 0 10px;
@@ -144,17 +231,12 @@ html{
     transition: var(--transition-color);
 }
 
-.header-left .list-inline{
+.header-left .list-inline {
     display: none;
 }
+
 :where(.header-left, .header-right) li {
     display: flex;
     align-items: center;
     height: 80px;
 }
-
-
-
-
-
-

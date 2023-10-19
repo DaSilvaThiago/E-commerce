@@ -78,7 +78,6 @@ h2{font-size: 1em}
     pointer-events: auto;
 }
 
-
 .header-center .menu > ul > li > a {
     font-size: var(--fs14);
     font-weight: var(--fw600);
@@ -89,6 +88,6 @@ h2{font-size: 1em}
 }
 
 
-.list-inline a:hover {
+.list-inline a:hover, .menu-trigger:hover{
     color: var(--light-color);
 }

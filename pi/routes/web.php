@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CarrinhoItemController;
+use App\Http\Controllers\EnderecoController;
+use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +18,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::redirect('/', '/produtos');
+Route::resource('produtos', ProdutoController::class)->only([
+    'index', 'show'
+]);
+
 Route::resource('usuarios', UsuarioController::class)->only([
     'index', 'show', 'create', 'update'
 ]);
+Route::resource('enderecos', EnderecoController::class)->only([
+    'index', 'show', 'create', 'update'
+]);
+Route::resource('carrinhos', CarrinhoItemController::class)->only([
+    'show', 'create', 'update'
+]);
+Route::resource('pedidos', PedidoController::class)->only([
+    'index', 'show', 'create', 'update'
+]);
+
