@@ -15,3 +15,273 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+.inner-header .search-float {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 80px;
+    background-color: var(--white-color);
+    z-index: 1000;
+    display: none;
+}
+
+form.search {
+    position: relative;
+}
+
+form.search :where(i) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+form.search .input {
+    outline: 0;
+    padding: 15px 50px;
+}
+
+form.search i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+
+form.search :where(i:last-child) {
+    left: auto;
+    right: 0;
+}
+
+.inner-header .search .input {
+    display: flex;
+    border: 0;
+    height: 80px;
+    font-size: 18px;
+}
+
+.search-float.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+.mobile-menu {
+    z-index: 1001;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mobile-menu.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-menu .wrap {
+    position: relative;
+    max-width: calc(100% - 40px);
+    width: 360px;
+    height: 100%;
+    background-color: var(--white-color);
+    pointer-events: auto;
+    transform: translateX(var(--transX, -100%));
+    transition: var(--transition-transform);
+}
+
+.mobile-menu.active .wrap {
+    transform: translateX(0);
+}
+
+.mobile-menu .close-trigger,
+.mobile-menu .child-trigger {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .main-menu {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu nav>ul {
+    padding: 20px 0;
+}
+
+.mobile-menu nav>ul>li>a {
+    position: relative;
+    padding: 12px 0;
+    font-weight: 500;
+    transition: var(--transition-color);
+}
+
+.mobile-menu nav li :where(li, a) {
+    display: block;
+}
+
+.mobile-menu nav>ul>li>a:hover {
+    color: var(--grey-color);
+}
+
+.mobile-menu .child-trigger {
+    color: var(--dark-color);
+    font-size: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: var(--transition-background);
+    z-index: 1;
+}
+.mobile-menu .child-trigger:hover {
+    background-color: var(--light-color);
+}
+
+.mobile-menu nav .sub-menu {
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+}
+.mobile-menu nav li.active .sub-menu {
+    max-height: 1000px;
+    visibility: visible;
+}
+.mobile-menu .button {
+    margin-top: auto;
+    padding: 20px 0 40px;
+    text-align: center;
+}
+
+.mobile-menu .button a {
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+.slider :where(.image, .ob-cover){
+    position: relative;
+}
+
+.slider .ob-cover{
+    height: 430px;
+}
+
+.ob-cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 992px) {
+    .menu-trigger {
+        display: none;
+    }
+
+    .header-center nav {
+        display: grid;
+    }
+
+    .header-left .list-inline {
+        display: block;
+    }
+
+    .mega-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 60px;
+    }
+
+    .mega-content .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    }
+
+    nav.menu .sub-mega {
+        left: 0;
+        right: 0;
+        padding: 50px 0;
+    }
+
+    nav.menu :where(.sub-menu, .sub-mega) {
+        position: absolute;
+        top: auto;
+        line-height: initial;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        display: none;
+        animation: var(--fade);
+    }
+
+    nav.menu li:hover :where(.sub-menu, .sub-mega) {
+        display: block;
+    }
+
+    nav.menu .sub-menu {
+        padding: 10px 0;
+    }
+
+    nav.menu .sub-menu li {
+        padding: 5px 30px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .container.wide {
+        --mx-width: 1720px;
+        --gutter: 40px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .mega-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+>>>>>>> da12f06b39b71b4b8a248c36cc435ddb87b6e0f1
