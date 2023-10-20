@@ -272,6 +272,22 @@ form.search :where(i:last-child) {
 
 
 
+.slider :where(.image, .ob-cover){
+    position: relative;
+}
+
+.slider .ob-cover{
+    height: 430px;
+}
+
+.ob-cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 
 
 
