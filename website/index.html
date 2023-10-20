@@ -8,6 +8,7 @@
     <title>Charlie Clothes</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -18,7 +19,8 @@
                     <div class="wrap">
                         <div class="header-left">
                             <div class="menu-bar">
-                                <a href="#0" class="menu-trigger" trigger-button data-target="mobile-menu"><i class="ri-menu-line"></i></a>
+                                <a href="#0" class="menu-trigger" trigger-button data-target="mobile-menu"><i
+                                        class="ri-menu-line"></i></a>
                             </div>
                             <div class="list-inline">
                                 <ul>
@@ -34,7 +36,7 @@
                                 <ul>
                                     <li><a href=""><span>Home</span></a></li>
                                     <li><a href="">
-                                            <span>Produtos</span>
+                                            <span>Products</span>
                                             <i class="ri-arrow-down-s-line"></i>
                                         </a>
                                         <ul class="sub-mega">
@@ -203,7 +205,7 @@
                                     <li><a href=""><span>Sale</span></a></li>
                                 </ul>
                             </nav>
-                            <div class="branding"><a href="">Charlie</a></div>
+                            <div class="branding"><a href=""><img src="assets/logo_charlie.png" alt=""></a></div>
                         </div>
                         <div class="header-right">
                             <div class="list-inline">
@@ -230,9 +232,9 @@
         </header>
         <main>
             <div class="slider">
-                <div class="sliderbox">
-                    <div class="wrap">
-                        <div class="item">
+                <div class="sliderbox swiper">
+                    <div class="wrap swiper-wrapper">
+                        <div class="item swiper-slide">
                             <div class="image">
                                 <div class="ob-cover">
                                     <img src="assets/slider_01.jpg" alt="">
@@ -248,6 +250,41 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="item swiper-slide">
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="assets/slider_02.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$65</span>
+                                            <h3 class="title">Inner world of brown</h3>
+                                            <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item swiper-slide">
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="assets/slider_03.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$95</span>
+                                            <h3 class="title">What a mix of colors</h3>
+                                            <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-pagination">
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -296,13 +333,13 @@
                         <li class="has-child">
                             <a href="">
                                 <span>Specials</span>
-                            <span class="child-trigger"><i class="ri-arrow-down-s-line"></i></span>
-                            <ul class="sub-menu list-block">
-                                <li><a href="#">Dolce & Gabbana</a></li>
-                                <li><a href="#">Louiv Vuitton</a></li>
-                                <li><a href="#">Versace</a></li>
-                                <li><a href="#">Dior</a></li>
-                            </ul>
+                                <span class="child-trigger"><i class="ri-arrow-down-s-line"></i></span>
+                                <ul class="sub-menu list-block">
+                                    <li><a href="#">Dolce & Gabbana</a></li>
+                                    <li><a href="#">Louiv Vuitton</a></li>
+                                    <li><a href="#">Versace</a></li>
+                                    <li><a href="#">Dior</a></li>
+                                </ul>
                         </li>
                         <li><a href=""><span>Sale</span></a></li>
                     </ul>
@@ -314,6 +351,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

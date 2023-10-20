@@ -21,6 +21,7 @@ for (let i = 0; i < triggerOpen.length; i++) {
 }
 
 //menu mobile
+
 const submenu = document.querySelectorAll('.child-trigger');
 submenu.forEach((menu) => menu.addEventListener('click', function(e) {
     e.preventDefault();
@@ -29,3 +30,20 @@ submenu.forEach((menu) => menu.addEventListener('click', function(e) {
         this.closest('.has-child').classList.toggle('active');
     }
 }))
+
+
+//slider
+
+const swiper = new Swiper('.sliderbox', {
+
+    loop: true,
+    effect: 'fade',
+    autoHeoght: true,
+    
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+  });
