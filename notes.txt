@@ -1,17 +1,6 @@
-e-commerce models: 
-    home and product page - https://www.figma.com/community/file/1078682350875733917/Laura's-Closet-(-E-commerce-Fashion-Website-Landing-Page-)
-    product but page and cart to buy - https://www.figma.com/community/file/1075457784792729712/Laura's-Closet-(-E-Commerce-Design-)
-    MAIN MODEL - https://br.puma.com/
+https://fonts.google.com/icons?selected=Material+Icons+Outlined:manage_accounts:&icon.platform=web
 
-
-**PAGES**
-user login
-user setings -> define address (this address will being used in his order)
-home showcase
-showcase of especific type of product (for example men clothes, womman clothes or child clothes)
-cartItens (has products and is associated to an user)
-order
-
+https://github.com/ahmadhuss/ludus-free-premium-ecommerce-template
 
 
 ordered pages by the teacher
