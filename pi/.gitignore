@@ -1,4 +1,4 @@
-/config/database.php
+config\database.php
 /.phpunit.cache
 /node_modules
 /public/build
