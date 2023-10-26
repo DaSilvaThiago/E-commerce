@@ -189,11 +189,15 @@
                                         </li>
                                         <li data-tooltip="tooltip" data-placement="left" title="Contact">
 
-                                            <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a>
+                                            <a href="tel:+0900901904"><span class="material-icons">
+                                                perm_phone_msg
+                                                </span></a>
                                         </li>
                                         <li data-tooltip="tooltip" data-placement="left" title="Mail">
 
-                                            <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a>
+                                            <a href="mailto:contact@domain.com"><span class="material-icons">
+                                                email
+                                                </span></a>
                                         </li>
                                     </ul>
                                     <!--====== End - List ======-->
@@ -229,7 +233,7 @@
                                     <ul class="ah-list">
                                         <li class="has-dropdown">
 
-                                            <span class="mega-text">M</span>
+                                            <span class="mega-text">MENU</span>
 
                                             <!--====== Mega Menu ======-->
 
@@ -243,7 +247,7 @@
                                                                 <a href="shop-side-version-2.html"><i
                                                                         class="fas fa-tv u-s-m-r-6"></i>
 
-                                                                    <span>Electronics</span></a>
+                                                                    <span>CAMISETAS</span></a>
 
                                                                 <span class="js-menu-toggle js-toggle-mark"></span>
                                                             </li>
@@ -252,7 +256,7 @@
                                                                 <a href="shop-side-version-2.html"><i
                                                                         class="fas fa-female u-s-m-r-6"></i>
 
-                                                                    <span>Women's Clothing</span></a>
+                                                                    <span>MOLETONS</span></a>
 
                                                                 <span class="js-menu-toggle"></span>
                                                             </li>
@@ -261,7 +265,7 @@
                                                                 <a href="shop-side-version-2.html"><i
                                                                         class="fas fa-male u-s-m-r-6"></i>
 
-                                                                    <span>Men's Clothing</span></a>
+                                                                    <span>BONÉ</span></a>
 
                                                                 <span class="js-menu-toggle"></span>
                                                             </li>
@@ -270,7 +274,7 @@
                                                                 <a href="index-3.html"><i
                                                                         class="fas fa-utensils u-s-m-r-6"></i>
 
-                                                                    <span>Food & Supplies</span></a>
+                                                                    <span>BERMUDAS</span></a>
 
                                                                 <span class="js-menu-toggle"></span>
                                                             </li>
@@ -279,7 +283,7 @@
                                                                 <a href="index-3.html"><i
                                                                         class="fas fa-couch u-s-m-r-6"></i>
 
-                                                                    <span>Furniture & Decor</span></a>
+                                                                    <span>TENIS</span></a>
 
                                                                 <span class="js-menu-toggle"></span>
                                                             </li>
@@ -288,7 +292,7 @@
                                                                 <a href="index-3.html"><i
                                                                         class="fas fa-football-ball u-s-m-r-6"></i>
 
-                                                                    <span>Sports & Game</span></a>
+                                                                    <span>CALÇAS</span></a>
 
                                                                 <span class="js-menu-toggle"></span>
                                                             </li>
@@ -297,7 +301,7 @@
                                                                 <a href="index-3.html"><i
                                                                         class="fas fa-heartbeat u-s-m-r-6"></i>
 
-                                                                    <span>Beauty & Health</span></a>
+                                                                    <span>INTIMOS</span></a>
 
                                                                 <span class="js-menu-toggle"></span>
                                                             </li>
@@ -1221,319 +1225,27 @@
                                     <ul class="ah-list ah-list--design2 ah-list--link-color-white">
                                         <li>
 
-                                            <a href="shop-side-version-2.html">NEW ARRIVALS</a>
+                                            <a href="shop-side-version-2.html">HOMENS</a>
                                         </li>
-                                        <li class="has-dropdown">
+                                        <li class="ah-list ah-list--design2 ah-list--link-color-white">
 
-                                            <a>PAGES<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+                                            <a href="shop-side-version-2.html">MULHERES</a>
 
-                                            <!--====== Dropdown ======-->
-
-                                            <span class="js-menu-toggle"></span>
-                                            <ul style="width:170px">
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a>Home<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:118px">
-                                                        <li>
-
-                                                            <a href="index.html">Home 1</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="index-2.html">Home 2</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="index-3.html">Home 3</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a>Account<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:200px">
-                                                        <li>
-
-                                                            <a href="signin.html">Signin / Already Registered</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="signup.html">Signup / Register</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="lost-password.html">Lost Password</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a href="dashboard.html">Dashboard<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:200px">
-                                                        <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                            <a href="dashboard.html">Manage My Account<i
-                                                                    class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                            <!--====== Dropdown ======-->
-
-                                                            <span class="js-menu-toggle"></span>
-                                                            <ul style="width:180px">
-                                                                <li>
-
-                                                                    <a href="dash-edit-profile.html">Edit Profile</a>
-                                                                </li>
-                                                                <li>
-
-                                                                    <a href="dash-address-book.html">Edit Address
-                                                                        Book</a>
-                                                                </li>
-                                                                <li>
-
-                                                                    <a href="dash-manage-order.html">Manage Order</a>
-                                                                </li>
-                                                            </ul>
-                                                            <!--====== End - Dropdown ======-->
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="dash-my-profile.html">My Profile</a>
-                                                        </li>
-                                                        <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                            <a href="dash-address-book.html">Address Book<i
-                                                                    class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                            <!--====== Dropdown ======-->
-
-                                                            <span class="js-menu-toggle"></span>
-                                                            <ul style="width:180px">
-                                                                <li>
-
-                                                                    <a href="dash-address-make-default.html">Address
-                                                                        Make Default</a>
-                                                                </li>
-                                                                <li>
-
-                                                                    <a href="dash-address-add.html">Add New Address</a>
-                                                                </li>
-                                                                <li>
-
-                                                                    <a href="dash-address-edit.html">Edit Address
-                                                                        Book</a>
-                                                                </li>
-                                                            </ul>
-                                                            <!--====== End - Dropdown ======-->
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="dash-track-order.html">Track Order</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="dash-my-order.html">My Orders</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="dash-payment-option.html">My Payment Options</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="dash-cancellation.html">My Returns &
-                                                                Cancellations</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a>Empty<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:200px">
-                                                        <li>
-
-                                                            <a href="empty-search.html">Empty Search</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="empty-cart.html">Empty Cart</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="empty-wishlist.html">Empty Wishlist</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a>Product Details<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:200px">
-                                                        <li>
-
-                                                            <a href="product-detail.html">Product Details</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="product-detail-variable.html">Product Details
-                                                                Variable</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="product-detail-affiliate.html">Product Details
-                                                                Affiliate</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a>Shop Grid Layout<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:200px">
-                                                        <li>
-
-                                                            <a href="shop-grid-left.html">Shop Grid Left Sidebar</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="shop-grid-right.html">Shop Grid Right Sidebar</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="shop-grid-full.html">Shop Grid Full Width</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="shop-side-version-2.html">Shop Side Version 2</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li class="has-dropdown has-dropdown--ul-left-100">
-
-                                                    <a>Shop List Layout<i
-                                                            class="fas fa-angle-down i-state-right u-s-m-l-6"></i></a>
-
-                                                    <!--====== Dropdown ======-->
-
-                                                    <span class="js-menu-toggle"></span>
-                                                    <ul style="width:200px">
-                                                        <li>
-
-                                                            <a href="shop-list-left.html">Shop List Left Sidebar</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="shop-list-right.html">Shop List Right Sidebar</a>
-                                                        </li>
-                                                        <li>
-
-                                                            <a href="shop-list-full.html">Shop List Full Width</a>
-                                                        </li>
-                                                    </ul>
-                                                    <!--====== End - Dropdown ======-->
-                                                </li>
-                                                <li>
-
-                                                    <a href="cart.html">Cart</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="wishlist.html">Wishlist</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="checkout.html">Checkout</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="faq.html">FAQ</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="about.html">About us</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="contact.html">Contact</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="404.html">404</a>
-                                                </li>
-                                            </ul>
                                             <!--====== End - Dropdown ======-->
                                         </li>
-                                        <li class="has-dropdown">
+                                        <li class="ah-list ah-list--design2 ah-list--link-color-white">
 
-                                            <a>BLOG<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+                                            <a href="shop-side-version-2.html">CRIANÇAS</a>
 
-                                            <!--====== Dropdown ======-->
-
-                                            <span class="js-menu-toggle"></span>
-                                            <ul style="width:200px">
-                                                <li>
-
-                                                    <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="blog-sidebar-none.html">Blog Sidebar None</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="blog-masonry.html">Blog Masonry</a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="blog-detail.html">Blog Details</a>
-                                                </li>
-                                            </ul>
                                             <!--====== End - Dropdown ======-->
                                         </li>
                                         <li>
 
-                                            <a href="shop-side-version-2.html">VALUE OF THE DAY</a>
+                                            <a href="shop-side-version-2.html">MAIS COMPRADOS</a>
                                         </li>
                                         <li>
 
-                                            <a href="shop-side-version-2.html">GIFT CARDS</a>
+                                            <a href="shop-side-version-2.html">NOVOS</a>
                                         </li>
                                     </ul>
                                     <!--====== End - List ======-->
@@ -1561,15 +1273,21 @@
                                     <ul class="ah-list ah-list--design1 ah-list--link-color-white">
                                         <li>
 
-                                            <a href="index-3.html"><i class="fas fa-home u-c-brand"></i></a>
+                                            <a href="index-3.html"><span class="material-icons">
+                                                home
+                                                </span></a>
                                         </li>
                                         <li>
 
-                                            <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                                            <a href="wishlist.html"><span class="material-icons">
+                                                favorite_border
+                                                </span></a>
                                         </li>
                                         <li class="has-dropdown">
 
-                                            <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
+                                            <a class="mini-cart-shop-link"><span class="material-icons">
+                                                shopping_bag
+                                                </span>
 
                                                 <span class="total-item-round">2</span></a>
 
@@ -1774,18 +1492,17 @@
                                     <div class="col-12">
                                         <div class="slider-content slider-content--animation">
 
-                                            <span class="content-span-1 u-c-white">Update Your Fashion</span>
+                                            <span class="content-span-1 u-c-white">Atualize-se na Moda</span>
 
-                                            <span class="content-span-2 u-c-white">10% Discount on Outwear</span>
+                                            <span class="content-span-2 u-c-white">10% de desconto</span>
 
-                                            <span class="content-span-3 u-c-white">Find outwear on best prices</span>
+                                            <span class="content-span-3 u-c-white">Em peças selecionadas de camisa feminina</span>
 
-                                            <span class="content-span-4 u-c-white">Starting At
+                                            <span class="content-span-4 u-c-white">Apartir de
 
-                                                <span class="u-c-brand">$100.00</span></span>
+                                                <span class="u-c-brand">R$99.90</span></span>
 
-                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">SHOP
-                                                NOW</a>
+                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1799,18 +1516,17 @@
                                     <div class="col-12">
                                         <div class="slider-content slider-content--animation">
 
-                                            <span class="content-span-1 u-c-white">Open Your Eyes</span>
+                                            <span class="content-span-1 u-c-white">Abra os olhos</span>
 
-                                            <span class="content-span-2 u-c-white">10% Off On Intimates</span>
+                                            <span class="content-span-2 u-c-white">10% off para Moletons</span>
 
-                                            <span class="content-span-3 u-c-white">Find intimates on best prices</span>
+                                            <span class="content-span-3 u-c-white">Encontre aqui os melhores preços</span>
 
-                                            <span class="content-span-4 u-c-white">Starting At
+                                            <span class="content-span-4 u-c-white">Apartir de
 
-                                                <span class="u-c-brand">$100.00</span></span>
+                                                <span class="u-c-brand">R$180.00</span></span>
 
-                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">SHOP
-                                                NOW</a>
+                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1824,18 +1540,15 @@
                                     <div class="col-12">
                                         <div class="slider-content slider-content--animation">
 
-                                            <span class="content-span-1 u-c-white">Find Top Brands</span>
+                                            <span class="content-span-1 u-c-white">Encontre as melhores marcas</span>
 
-                                            <span class="content-span-2 u-c-white">10% Off On Outwear</span>
+                                            <span class="content-span-2 u-c-white">Marcas selecionadas</span>
 
-                                            <span class="content-span-3 u-c-white">Find outwear on best prices</span>
+                                            <span class="content-span-3 u-c-white">Venha conferir produtos da moda jovem</span>
 
-                                            <span class="content-span-4 u-c-white">Starting At
+                                            <span class="content-span-4 u-c-white">Adiquira já
 
-                                                <span class="u-c-brand">$100.00</span></span>
-
-                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">SHOP
-                                                NOW</a>
+                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1858,12 +1571,12 @@
                                 <div class="promotion-o">
                                     <div class="aspect aspect--bg-grey aspect--square">
 
-                                        <img class="aspect__img" src="images/promo/promo-img-4.jpg" alt="">
+                                        <img class="aspect__img" src="{{asset('images/section1/1.jpg')}}" alt="">
                                     </div>
                                     <div class="promotion-o__content">
 
                                         <a class="promotion-o__link btn--e-white-brand"
-                                            href="shop-side-version-2.html">Women's Clothing</a>
+                                            href="shop-side-version-2.html">Roupas de Mulher</a>
                                     </div>
                                 </div>
                             </div>
@@ -1871,12 +1584,12 @@
                                 <div class="promotion-o">
                                     <div class="aspect aspect--bg-grey aspect--square">
 
-                                        <img class="aspect__img" src="images/promo/promo-img-5.jpg" alt="">
+                                        <img class="aspect__img" src="{{asset('images/section1/2.jpg')}}" alt="">
                                     </div>
                                     <div class="promotion-o__content">
 
                                         <a class="promotion-o__link btn--e-white-brand"
-                                            href="shop-side-version-2.html">Fashion Accessories</a>
+                                            href="shop-side-version-2.html">Acessórios</a>
                                     </div>
                                 </div>
                             </div>
@@ -1884,12 +1597,12 @@
                                 <div class="promotion-o">
                                     <div class="aspect aspect--bg-grey aspect--square">
 
-                                        <img class="aspect__img" src="images/promo/promo-img-6.jpg" alt="">
+                                        <img class="aspect__img" src="{{asset('images/section1/3.jpg')}}" alt="">
                                     </div>
                                     <div class="promotion-o__content">
 
                                         <a class="promotion-o__link btn--e-white-brand"
-                                            href="shop-side-version-2.html">Men's Clothing</a>
+                                            href="shop-side-version-2.html">Roupas de Homem</a>
                                     </div>
                                 </div>
                             </div>
@@ -3986,14 +3699,16 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content modal--shadow">
 
-                    <button class="btn new-l__dismiss fas fa-times" type="button" data-dismiss="modal"></button>
+                    <button class="btn new-l__dismiss fas " type="button" data-dismiss="modal"><span class="material-icons">
+                        close
+                        </span></button>
                     <div class="modal-body">
                         <div class="row u-s-m-x-0">
                             <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
 
                                 <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
 
-                                    <img class="u-img-fluid u-d-block" src="images/newsletter/newsletter.jpg"
+                                    <img class="u-img-fluid u-d-block" src="{{asset('images/newsletter/newsletter.jpg')}}"
                                         alt=""></a>
                             </div>
                             <div class="col-lg-6 new-l__col-2">
@@ -4002,28 +3717,25 @@
                                         <h3 class="new-l__h3">Newsletter</h3>
                                     </div>
                                     <div class="u-s-m-b-30 new-l--center">
-                                        <p class="new-l__p1">Sign up for emails to get the scoop on new arrivals,
-                                            special sales and more.</p>
+                                        <p class="new-l__p1">Registre um email para receber ofertas e notícias sobre nós.</p>
                                     </div>
                                     <form class="new-l__form">
                                         <div class="u-s-m-b-15">
 
                                             <input class="news-l__input" type="text"
-                                                placeholder="E-mail Address">
+                                                placeholder="E-mail">
                                         </div>
                                         <div class="u-s-m-b-15">
 
-                                            <button class="btn btn--e-brand-b-2" type="submit">Sign up!</button>
+                                            <button class="btn btn--e-brand-b-2" type="submit">Registrar!</button>
                                         </div>
                                     </form>
                                     <div class="u-s-m-b-15 new-l--center">
-                                        <p class="new-l__p2">By Signing up, you agree to receive Reshop
-                                            offers,<br />promotions and other commercial messages. You may unsubscribe
-                                            at any time.</p>
+                                        <p class="new-l__p2">Ao cadastrar você recebe novas ofertas, cupons, <br />Promoções e outras propostas comerciais. Você pode se inscrever a qualquer momento.</p>
                                     </div>
                                     <div class="u-s-m-b-15 new-l--center">
 
-                                        <a class="new-l__link" data-dismiss="modal">No Thanks</a>
+                                        <a class="new-l__link" data-dismiss="modal">Não Obrigado</a>
                                     </div>
                                 </div>
                             </div>

@@ -5674,7 +5674,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   
   /* Extension Mega Menu */
   .mega-text {
-    width: 34px;
+    width: 40px;
     height: 34px;
     display: inline-block;
     -webkit-user-select: none;
