@@ -36,7 +36,7 @@ class ProdutoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('produtos.show', ['products' => PRODUTO::all()]);
     }
 
     /**
