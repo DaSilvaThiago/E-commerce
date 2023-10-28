@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-class CATEGORIUM extends Model
+class CATEGORIA extends Model
 {
 	protected $table = 'CATEGORIA';
 	protected $primaryKey = 'CATEGORIA_ID';
@@ -37,7 +37,7 @@ class CATEGORIUM extends Model
 		'CATEGORIA_ATIVO'
 	];
 
-	public function p_r_o_d_u_t_o_s()
+	public function produtos()
 	{
 		return $this->hasMany(PRODUTO::class, 'CATEGORIA_ID');
 	}

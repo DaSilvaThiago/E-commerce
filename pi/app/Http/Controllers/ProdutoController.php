@@ -12,7 +12,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('produtos.index', ['products' => PRODUTO::all()]);
+        return view('produtos.index', ['produtos' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->take(12)->get()]);
     }
 
     /**
@@ -36,7 +36,7 @@ class ProdutoController extends Controller
      */
     public function show(string $id)
     {
-        return view('produtos.show', ['products' => PRODUTO::all()]);
+        return view('produtos.show', ['produtos' => PRODUTO::all()]);
     }
 
     /**

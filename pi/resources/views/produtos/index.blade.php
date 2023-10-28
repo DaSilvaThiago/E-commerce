@@ -74,8 +74,10 @@
                             <!--====== Dropdown Main plugin ======-->
                             <div class="menu-init" id="navigation">
 
-                                <button class="btn btn--icon toggle-button toggle-button--white fas fa-cogs"
-                                    type="button"></button>
+                                <button class="btn btn--icon toggle-button toggle-button--white fas "
+                                    type="button"><span class="material-icons">
+                                        manage_accounts
+                                        </span></button>
 
                                 <!--====== Menu ======-->
                                 <div class="ah-lg-mode">
@@ -127,8 +129,8 @@
                                             title="Configurações">
 
                                             <a><span class="material-icons">
-                                                manage_accounts
-                                            </span></a>
+                                                    manage_accounts
+                                                </span></a>
 
                                             <!--====== Dropdown ======-->
 
@@ -190,13 +192,13 @@
                                         <li data-tooltip="tooltip" data-placement="left" title="Contact">
 
                                             <a href="tel:+0900901904"><span class="material-icons">
-                                                perm_phone_msg
+                                                    perm_phone_msg
                                                 </span></a>
                                         </li>
                                         <li data-tooltip="tooltip" data-placement="left" title="Mail">
 
                                             <a href="mailto:contact@domain.com"><span class="material-icons">
-                                                email
+                                                    email
                                                 </span></a>
                                         </li>
                                     </ul>
@@ -1213,8 +1215,10 @@
                             <!--====== Dropdown Main plugin ======-->
                             <div class="menu-init" id="navigation2">
 
-                                <button class="btn btn--icon toggle-button toggle-button--white fas fa-cog"
-                                    type="button"></button>
+                                <button class="btn btn--icon toggle-button toggle-button--white fas"
+                                    type="button"><span class="material-icons">
+                                        home
+                                        </span></button>
 
                                 <!--====== Menu ======-->
                                 <div class="ah-lg-mode">
@@ -1259,8 +1263,10 @@
                             <div class="menu-init" id="navigation3">
 
                                 <button
-                                    class="btn btn--icon toggle-button toggle-button--white fas fa-shopping-bag toggle-button-shop"
-                                    type="button"></button>
+                                    class="btn btn--icon toggle-button toggle-button--white fas  toggle-button-shop"
+                                    type="button"><span class="material-icons">
+                                        shopping_bag
+                                        </span></button>
 
                                 <span class="total-item-round">2</span>
 
@@ -1274,19 +1280,19 @@
                                         <li>
 
                                             <a href="index-3.html"><span class="material-icons">
-                                                home
+                                                    home
                                                 </span></a>
                                         </li>
                                         <li>
 
                                             <a href="wishlist.html"><span class="material-icons">
-                                                favorite_border
+                                                    favorite_border
                                                 </span></a>
                                         </li>
                                         <li class="has-dropdown">
 
                                             <a class="mini-cart-shop-link"><span class="material-icons">
-                                                shopping_bag
+                                                    shopping_bag
                                                 </span>
 
                                                 <span class="total-item-round">2</span></a>
@@ -1496,13 +1502,15 @@
 
                                             <span class="content-span-2 u-c-white">10% de desconto</span>
 
-                                            <span class="content-span-3 u-c-white">Em peças selecionadas de camisa feminina</span>
+                                            <span class="content-span-3 u-c-white">Em peças selecionadas de camisa
+                                                feminina</span>
 
                                             <span class="content-span-4 u-c-white">Apartir de
 
                                                 <span class="u-c-brand">R$99.90</span></span>
 
-                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">COMPRAR</a>
+                                            <a class="shop-now-link btn--e-brand"
+                                                href="shop-side-version-2.html">COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1520,13 +1528,15 @@
 
                                             <span class="content-span-2 u-c-white">10% off para Moletons</span>
 
-                                            <span class="content-span-3 u-c-white">Encontre aqui os melhores preços</span>
+                                            <span class="content-span-3 u-c-white">Encontre aqui os melhores
+                                                preços</span>
 
                                             <span class="content-span-4 u-c-white">Apartir de
 
                                                 <span class="u-c-brand">R$180.00</span></span>
 
-                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">COMPRAR</a>
+                                            <a class="shop-now-link btn--e-brand"
+                                                href="shop-side-version-2.html">COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1544,11 +1554,13 @@
 
                                             <span class="content-span-2 u-c-white">Marcas selecionadas</span>
 
-                                            <span class="content-span-3 u-c-white">Venha conferir produtos da moda jovem</span>
+                                            <span class="content-span-3 u-c-white">Venha conferir produtos da moda
+                                                jovem</span>
 
                                             <span class="content-span-4 u-c-white">Adiquira já
 
-                                            <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">VER MAIS</a>
+                                                <a class="shop-now-link btn--e-brand"
+                                                    href="shop-side-version-2.html">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1571,7 +1583,8 @@
                                 <div class="promotion-o">
                                     <div class="aspect aspect--bg-grey aspect--square">
 
-                                        <img class="aspect__img" src="{{asset('images/section1/1.jpg')}}" alt="">
+                                        <img class="aspect__img" src="{{ asset('images/section1/1.jpg') }}"
+                                            alt="">
                                     </div>
                                     <div class="promotion-o__content">
 
@@ -1584,7 +1597,8 @@
                                 <div class="promotion-o">
                                     <div class="aspect aspect--bg-grey aspect--square">
 
-                                        <img class="aspect__img" src="{{asset('images/section1/2.jpg')}}" alt="">
+                                        <img class="aspect__img" src="{{ asset('images/section1/2.jpg') }}"
+                                            alt="">
                                     </div>
                                     <div class="promotion-o__content">
 
@@ -1597,7 +1611,8 @@
                                 <div class="promotion-o">
                                     <div class="aspect aspect--bg-grey aspect--square">
 
-                                        <img class="aspect__img" src="{{asset('images/section1/3.jpg')}}" alt="">
+                                        <img class="aspect__img" src="{{ asset('images/section1/3.jpg') }}"
+                                            alt="">
                                     </div>
                                     <div class="promotion-o__content">
 
@@ -1628,7 +1643,7 @@
                                         <div class="aspect aspect--bg-grey-fb aspect--square">
 
                                             <img class="aspect__img i3-banner__img"
-                                                src="images/banners/i3-banner-1.jpg" alt="">
+                                                src="{{ asset('images/section2/3.jpg') }}" alt="">
                                         </div>
                                     </a>
                                 </div>
@@ -1643,21 +1658,23 @@
                                                             href="product-detail.html">
 
                                                             <img class="aspect__img product-short__img"
-                                                                src="images/product/women/product14.jpg"
+                                                                src="{{ asset('images/section2/2.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                     <div class="product-short__info">
-
-                                                        <span class="product-short__price">$126.77</span>
+                                                        <div class="priceSold">
+                                                            <span class="product-bs__discount">R$379.99</span>
+                                                            <span class="product-short__price">R$322.99</span>
+                                                        </div>
 
                                                         <span class="product-short__name">
 
-                                                            <a href="product-detail.html">Women Shoes</a></span>
+                                                            <a href="product-detail.html">G-SHOCK</a></span>
 
                                                         <span class="product-short__category">
 
-                                                            <a href="shop-side-version-2.html">Women
-                                                                Clothing</a></span>
+                                                            <a href="shop-side-version-2.html">Acessório
+                                                                Masculino</a></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1671,20 +1688,22 @@
                                                             href="product-detail.html">
 
                                                             <img class="aspect__img product-short__img"
-                                                                src="images/product/men/product12.jpg"
+                                                                src="{{ asset('images/section2/1.jpg') }}"
                                                                 alt=""></a>
                                                     </div>
                                                     <div class="product-short__info">
 
-                                                        <span class="product-short__price">$126.77</span>
+                                                        <span class="product-short__price">R$176.77</span>
 
                                                         <span class="product-short__name">
 
-                                                            <a href="product-detail.html">Men Leather Wallet</a></span>
+                                                            <a href="product-detail.html">Bucket The North
+                                                                Face</a></span>
 
                                                         <span class="product-short__category">
 
-                                                            <a href="shop-side-version-2.html">Men Clothing</a></span>
+                                                            <a href="shop-side-version-2.html">Acessório
+                                                                Uniseex</a></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1695,7 +1714,7 @@
                                                 <div class="aspect aspect--bg-grey-fb aspect--1048-334">
 
                                                     <img class="aspect__img i3-banner__img"
-                                                        src="images/banners/i3-banner-2.jpg" alt="">
+                                                        src="{{ asset('images/section2/4.jpg') }}" alt="">
                                                 </div>
                                             </a>
                                         </div>
@@ -1719,9 +1738,9 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">RECENT PRODUCTS</h1>
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">PRODUTOS RECENTES</h1>
 
-                                    <span class="section__span u-c-silver">NEWLY ADDED PRODUCTS</span>
+                                    <span class="section__span u-c-silver">RECEM CHEGADOS</span>
                                 </div>
                             </div>
                         </div>
@@ -1730,418 +1749,90 @@
                 <!--====== End - Section Intro ======-->
 
 
+
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
+                            @foreach ($produtos as $produto)
+                                <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
+                                    <div class="product-r u-h-100">
+                                        <div class="product-r__container">
 
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="product-detail.html">
+                                                @php
+                                                    $primaryImage = $produto->produtoImagens->first();
+                                                @endphp
 
-                                            <img class="aspect__img" src="images/product/women/product5.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
+                                                @if ($primaryImage)
+                                                    <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
+                                                        alt="">
+                                                @endif
+                                            </a>
+                                            <div class="product-r__action-wrap">
+                                                <ul class="product-r__action-list">
+                                                    <li class="margin">
 
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
+                                                        <a data-modal="modal" data-modal-id="#quick-look"><span
+                                                                class="material-icons">
+                                                                zoom_in
+                                                            </span></a>
+                                                    </li>
+                                                    <li>
 
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
+                                                        <a data-modal="modal" data-modal-id="#add-to-cart"><span
+                                                                class="material-icons">
+                                                                add_shopping_cart
+                                                            </span></a>
+                                                    </li>
+                                                    <li>
 
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
+                                                        <a href="signin.html"><span class="material-icons">
+                                                                favorite
+                                                            </span></a>
+                                                    </li>
+                                                    <li>
 
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
+                                                        <a href="signin.html"><span class="material-icons">
+                                                                email
+                                                            </span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
+                                        <div class="product-r__info-wrap">
 
-                                        <span class="product-r__category">
+                                            <span class="product-r__category">
 
-                                            <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
+                                                <a
+                                                    href="shop-side-version-2.html">{{ $produto->categoria->CATEGORIA_NOME }}</a></span>
+                                            <div class="product-r__n-p-wrap">
 
-                                            <span class="product-r__name">
+                                                <span class="product-r__name">
 
-                                                <a href="product-detail.html">New Dress A Nice Elegant</a></span>
+                                                    <a
+                                                        href="product-detail.html">{{ $produto->PRODUTO_NOME }}</a></span>
+                                                @if ($produto->PRODUTO_DESCONTO)
+                                                    <div class="priceSold">
+                                                        <span
+                                                            class="product-bs__discount">R${{ $produto->PRODUTO_PRECO }}</span>
+                                                        <span
+                                                            class="product-r__price">R${{ $produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO }}</span>
+                                                    </div>
+                                                @else
+                                                    <span
+                                                        class="product-r__price">R${{ $produto->PRODUTO_PRECO }}</span>
+                                                @endif
+                                            </div>
 
-                                            <span class="product-r__price">$125.00</span>
+                                            <span class="product-r__description">{{ $produto->PRODUTO_DESC }}</span>
                                         </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/women/product6.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Dress B Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/women/product7.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Dress C Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/women/product8.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Dress D Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/men/product5.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Men Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Fashion A Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/men/product6.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Men Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Fashion B Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/men/product7.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Men Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Fashion C Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-r u-h-100">
-                                    <div class="product-r__container">
-
-                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                            href="product-detail.html">
-
-                                            <img class="aspect__img" src="images/product/men/product8.jpg"
-                                                alt=""></a>
-                                        <div class="product-r__action-wrap">
-                                            <ul class="product-r__action-list">
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#quick-look"><i
-                                                            class="fas fa-search-plus"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                            class="fas fa-plus-circle"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-heart"></i></a>
-                                                </li>
-                                                <li>
-
-                                                    <a href="signin.html"><i class="fas fa-envelope"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product-r__info-wrap">
-
-                                        <span class="product-r__category">
-
-                                            <a href="shop-side-version-2.html">Men Clothing</a></span>
-                                        <div class="product-r__n-p-wrap">
-
-                                            <span class="product-r__name">
-
-                                                <a href="product-detail.html">New Fashion D Nice Elegant</a></span>
-
-                                            <span class="product-r__price">$125.00</span>
-                                        </div>
-
-                                        <span class="product-r__description">Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry.</span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -3699,8 +3390,9 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content modal--shadow">
 
-                    <button class="btn new-l__dismiss fas " type="button" data-dismiss="modal"><span class="material-icons">
-                        close
+                    <button class="btn new-l__dismiss fas " type="button" data-dismiss="modal"><span
+                            class="material-icons">
+                            close
                         </span></button>
                     <div class="modal-body">
                         <div class="row u-s-m-x-0">
@@ -3708,8 +3400,8 @@
 
                                 <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
 
-                                    <img class="u-img-fluid u-d-block" src="{{asset('images/newsletter/newsletter.jpg')}}"
-                                        alt=""></a>
+                                    <img class="u-img-fluid u-d-block"
+                                        src="{{ asset('images/newsletter/newsletter.jpg') }}" alt=""></a>
                             </div>
                             <div class="col-lg-6 new-l__col-2">
                                 <div class="new-l__section u-s-m-t-30">
@@ -3717,13 +3409,13 @@
                                         <h3 class="new-l__h3">Newsletter</h3>
                                     </div>
                                     <div class="u-s-m-b-30 new-l--center">
-                                        <p class="new-l__p1">Registre um email para receber ofertas e notícias sobre nós.</p>
+                                        <p class="new-l__p1">Registre um email para receber ofertas e notícias sobre
+                                            nós.</p>
                                     </div>
                                     <form class="new-l__form">
                                         <div class="u-s-m-b-15">
 
-                                            <input class="news-l__input" type="text"
-                                                placeholder="E-mail">
+                                            <input class="news-l__input" type="text" placeholder="E-mail">
                                         </div>
                                         <div class="u-s-m-b-15">
 
@@ -3731,7 +3423,10 @@
                                         </div>
                                     </form>
                                     <div class="u-s-m-b-15 new-l--center">
-                                        <p class="new-l__p2">Ao cadastrar você recebe novas ofertas, cupons, <br />Promoções e outras propostas comerciais. Você pode se inscrever a qualquer momento.</p>
+                                        <p class="new-l__p2">Ao cadastrar você recebe novas ofertas, cupons,
+                                            <br />Promoções e outras propostas comerciais. Você pode se inscrever a
+                                            qualquer momento.
+                                        </p>
                                     </div>
                                     <div class="u-s-m-b-15 new-l--center">
 

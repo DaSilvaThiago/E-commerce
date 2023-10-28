@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $PRODUTO_ID
  * @property string|null $IMAGEM_URL
  * 
- * @property PRODUTO $p_r_o_d_u_t_o
+ * @property PRODUTO $produto
  *
  * @package App\Models
  */
@@ -37,7 +37,7 @@ class PRODUTOIMAGEM extends Model
 		'IMAGEM_URL'
 	];
 
-	public function p_r_o_d_u_t_o()
+	public function produto()
 	{
 		return $this->belongsTo(PRODUTO::class, 'PRODUTO_ID');
 	}
