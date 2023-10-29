@@ -36,7 +36,7 @@ class ProdutoController extends Controller
      */
 
     public function modalProduto(string $id){
-        
+        return view('modal.showProduct', ['produto' => $id]);
     }
 
     public function show(string $id)

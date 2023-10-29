@@ -258,8 +258,30 @@
                 </div>
             </div>
         </div>
-    <!--====== End - Quick Look Modal ======-->
 
+        <script>
+            function showModal(productId) {
+                $('#quick-look').modal('show');
+                // Aqui você pode usar Ajax para buscar os detalhes do produto com base no ID e preencher a seção #product-details.
+                // Exemplo simplificado:
+                $('#product-details').html('Carregando...');
+                $.get('/products/' + productId, function(data) {
+                    $('#product-details').html(data);
+                });
+            }
+        
+            // Restante do código do modal
+        </script>
+    <!--====== End - Quick Look Modal ======-->
+    <script>
+        function showModal() {
+            $('#quick-look').modal('show');
+        }
+    
+        function hideModal() {
+            $('#quick-look').modal('hide');
+        }
+    </script>
        <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
        <script>
         window.ga = function() {

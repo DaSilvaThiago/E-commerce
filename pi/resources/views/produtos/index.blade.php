@@ -1,3 +1,6 @@
+@extends('modal.showProduct')
+
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -1770,10 +1773,11 @@
                                                 <ul class="product-r__action-list">
                                                     <li class="margin">
 
-                                                        <a data-modal="modal" data-modal-id="#quick-look"><span
+                                                        <a href="{{ route('modal.showProduct', ['id' => $produto->PRODUTO_ID]) }}" onclick="showModal()" data-modal="modal" data-modal-id="#quick-look" data-product-id="{{ $produto->id }}"><span
                                                                 class="material-icons">
                                                                 zoom_in
                                                             </span></a>
+                                                            @include('modal.showProduct')
                                                     </li>
                                                     <li>
 
