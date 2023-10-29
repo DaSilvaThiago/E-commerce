@@ -40,7 +40,7 @@
     RESHOP.initScrollUp = function() {
         $.scrollUp({
             scrollName: 'topScroll',
-            scrollText: '<i class="fas fa-long-arrow-alt-up"></i>',
+            scrollText: '',
             easingType: 'linear',
             scrollSpeed: 900,
             animation: 'fade',

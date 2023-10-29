@@ -23,6 +23,8 @@ Route::resource('produtos', ProdutoController::class)->only([
     'index', 'show'
 ]);
 
+Route::get('/modalProduto/{id}', ProdutoController::class, 'modalProduto')->name('modal.showProduct');
+
 Route::resource('usuarios', UsuarioController::class)->only([
     'index', 'show', 'create', 'update'
 ]);

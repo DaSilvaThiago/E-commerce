@@ -34,6 +34,11 @@ class ProdutoController extends Controller
     /**
      * Display the specified resource.
      */
+
+    public function modalProduto(string $id){
+        
+    }
+
     public function show(string $id)
     {
         return view('produtos.show', ['produtos' => PRODUTO::all()]);
