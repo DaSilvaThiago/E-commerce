@@ -35,9 +35,6 @@ class ProdutoController extends Controller
      * Display the specified resource.
      */
 
-    public function modalProduto(string $id){
-        return view('modal.showProduct', ['produto' => $id]);
-    }
 
     public function show(string $id)
     {
