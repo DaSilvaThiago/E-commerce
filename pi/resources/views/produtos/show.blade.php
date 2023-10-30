@@ -3,7 +3,7 @@
     <p>{{ $produto->PRODUTO_DESC }}</p>
     <p>Price: ${{ $produto->PRODUTO_PRECO }}</p>
     <p>Discount: {{ $produto->PRODUTO_DESCONTO }}</p>
-
+    @dd($produto->categoria->CATEGORIA_NOME)
     <h3>Primary Image:</h3>
     @php
         $primaryImage = $produto->produtoImagens->first();
@@ -15,6 +15,8 @@
         <p>No image available for this product.</p>
     @endif
 @endforeach
+
+
 
 
 

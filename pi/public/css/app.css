@@ -55,6 +55,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
     -webkit-tap-highlight-color: transparent; }
     html.boxed {
       background-color: #eee; }
+
   
   *,
   *::before,
