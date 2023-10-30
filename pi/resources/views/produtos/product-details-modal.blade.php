@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
 <div class="modal fade" id="quick-look">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal--shadow">
@@ -73,11 +75,7 @@
                             </div>
                             <div class="u-s-m-b-15">
                                 <div class="pd-detail__rating gl-rating-style">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
+                                    <div class="imno-rating" value="3" max="5"></div>
 
                                     <span class="pd-detail__review u-s-m-l-4">
 
@@ -198,3 +196,4 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{{asset('js/rating-star.js')}}"></script>
