@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-
+<
 <div class="modal fade" id="quick-look">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal--shadow">
@@ -75,8 +74,18 @@
                             </div>
                             <div class="u-s-m-b-15">
                                 <div class="pd-detail__rating gl-rating-style">
-                                    <div class="imno-rating" value="3" max="5"></div>
-
+                                    <div class="rate">
+                                        <input type="radio" id="star5" name="rate" value="5" />
+                                        <label for="star5" title="5">5 stars</label>
+                                        <input type="radio" id="star4" name="rate" value="4" />
+                                        <label for="star4" title="4">4 stars</label>
+                                        <input type="radio" id="star3" name="rate" value="3" />
+                                        <label for="star3" title="3">3 stars</label>
+                                        <input type="radio" id="star2" name="rate" value="2" />
+                                        <label for="star2" title="2">2 stars</label>
+                                        <input type="radio" id="star1" name="rate" value="1" />
+                                        <label for="star1" title="1">1 star</label>
+                                    </div>
                                     <span class="pd-detail__review u-s-m-l-4">
 
                                         <a href="product-detail.html" class="reviews"></a></span>
@@ -86,8 +95,8 @@
                                 <div class="pd-detail__inline">
 
                                     <span class="pd-detail__stock estoque_produto">200 in stock</span>
+                                    <span class="pd-detail__left estoque_fim">Only 2 left</span>
 
-                                    <span class="pd-detail__left">Only 2 left</span>
                                 </div>
                             </div>
                             <div class="u-s-m-b-15">
@@ -196,4 +205,3 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="{{asset('js/rating-star.js')}}"></script>

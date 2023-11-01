@@ -6,6 +6,7 @@
         let desconto = $(this).data('desconto');
         let fotos = $(this).data('fotos');
         let categoria = $(this).data('categoria');
+        let estoque = $(this).data('estoque');
 
         $('#js-product-detail-modal').empty();
         $('#js-product-detail-modal-thumbnail').empty();
@@ -18,8 +19,15 @@
         $('.descricao_produto').text(desc);
         $('.preco_produto').text("R$" + valorComDesconto.toFixed(2));
         $('.desconto_produto').text("(" + Math.round(porcentagem) + "% OFF)");
-        $('.valor_desconto').text("R$" + preco)
-        $('.reviews').text(Math.floor(Math.random()* 500 + 1)+" Avaliações")
+        $('.valor_desconto').text("R$" + preco);
+        $('.reviews').text(Math.floor(Math.random()* 500 + 1)+" Avaliações");
+        
+        if (estoque <= 0) {
+            $('.estoque_produto').style("display", "none");
+            $('.estoque_fim').text("Produto Esgotado");
+        } else {
+            
+        }
 
         //imagens principais
         let modalBody = $('#js-product-detail-modal');
