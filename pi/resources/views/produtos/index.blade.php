@@ -1780,8 +1780,12 @@
                                                         data-preco="{{$produto->PRODUTO_PRECO}}"
                                                         data-desconto="{{$produto->PRODUTO_DESCONTO}}"
                                                         data-fotos="{{$produto->produtoImagens}}"
-                                                        data-categoria="{{$produto->categoria->CATEGORIA_NOME}}">
-                                                        {{-- data-estoque="{{$produto->produtoEstoque->PRODUTO_QTD}}"> --}}
+                                                        data-categoria="{{$produto->categoria->CATEGORIA_NOME}}"
+                                                        @if ($produto->produtoEstoque)
+                                                            data-estoque="{{$produto->produtoEstoque->PRODUTO_QTD}}"
+                                                        @else
+                                                            data-estoque="{{0}}"
+                                                        @endif >
                                                         <span class="material-icons">
                                                                 zoom_in</span></a>
                                                     </li>

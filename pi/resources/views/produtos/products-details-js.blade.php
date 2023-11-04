@@ -23,10 +23,14 @@
         $('.reviews').text(Math.floor(Math.random()* 500 + 1)+" Avaliações");
         
         if (estoque <= 0) {
-            $('.estoque_produto').style("display", "none");
+            $('.estoque_produto').css("display", "none");
             $('.estoque_fim').text("Produto Esgotado");
-        } else {
-            
+        } else if (estoque <= 20) {
+            $('.estoque_produto').text("Apenas " + estoque + " em estoque");
+            $('.estoque_fim').css("display", "none");
+        } else{
+            $('.estoque_produto').text(estoque + " em estoque");
+            $('.estoque_fim').css("display", "none");
         }
 
         //imagens principais
