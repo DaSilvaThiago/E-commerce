@@ -42,9 +42,7 @@ class UsuarioController extends Controller
             'USUARIO_CPF' => $request->USUARIO_CPF
         ]);
 
-        event(new Registered($user));
-
-        Auth::login($user);  
+        event(new Registered($user));  
 
         return redirect(route('produtos.index'));
     }

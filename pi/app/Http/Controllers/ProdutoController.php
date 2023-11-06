@@ -12,7 +12,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('produtos.index', ['produtos' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->take(12)->get()]);
+        return view('index', ['produtos' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->take(12)->get()]);
     }
 
     /**
