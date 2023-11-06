@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarrinhoItemController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsuarioController;
-use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +20,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+
+
+
+
 Route::redirect('/', '/produtos');
 Route::resource('produtos', ProdutoController::class)->only([
     'index', 'show'
 ]);
 
 Route::resource('usuarios', UsuarioController::class)->only([
-    'index', 'show', 'create', 'update'
+    'show', 'create', 'update', 'store'
 ]);
 Route::resource('enderecos', EnderecoController::class)->only([
     'index', 'show', 'create', 'update'
@@ -35,4 +53,3 @@ Route::resource('carrinhos', CarrinhoItemController::class)->only([
 Route::resource('pedidos', PedidoController::class)->only([
     'index', 'show', 'create', 'update'
 ]);
-
