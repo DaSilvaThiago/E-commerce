@@ -1564,6 +1564,7 @@
     <!--====== Vendor Js ======-->
     <script src="{{asset('js/vendor.js')}}"></script>
 
+    
     <!--====== jQuery Shopnav plugin ======-->
     <script src="{{asset('js/jquery.shopnav.js')}}"></script>
 

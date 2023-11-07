@@ -6465,3 +6465,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+.icon_account{
+  font-size: 18px;
+}

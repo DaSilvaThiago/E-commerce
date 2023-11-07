@@ -35,7 +35,7 @@ class UsuarioController extends Controller
             'USUARIO_CPF' => ['required', 'max:11'],
         ]);
 
-        $user = USUARIO::create([
+        $user = User::create([
             'USUARIO_NOME' => $request->USUARIO_NOME,
             'USUARIO_EMAIL' => $request->USUARIO_EMAIL,
             'USUARIO_SENHA' => Hash::make($request->USUARIO_SENHA),

@@ -34,8 +34,6 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-
-
 Route::redirect('/', '/produtos');
 Route::resource('produtos', ProdutoController::class)->only([
     'index', 'show'

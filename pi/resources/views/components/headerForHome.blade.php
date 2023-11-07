@@ -58,32 +58,55 @@
                                     <!--====== Dropdown ======-->
 
                                     <span class="js-menu-toggle"></span>
+                                    @if (Route::has('login'))
                                     <ul style="width:120px">
+                                        @auth
                                         <li>
 
-                                            <a href="dashboard.html"><i class="fi fi-sr-user"></i>
+                                            <a href="dashboard.html"><span class="material-icons icon_account">
+                                                person
+                                                </span>
 
                                                 <span>Conta</span></a>
                                         </li>
                                         <li>
 
-                                            <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
+                                            <a href="signup.html"><span class="material-icons icon_account">
+                                                lock_open
+                                                </span>
 
-                                                <span>Signup</span></a>
+                                                <span>Sair</span></a>
                                         </li>
+                                        @else
                                         <li>
 
-                                            <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
+                                            <a href="signin.html"><span class="material-icons icon_account">
+                                                lock
+                                                </span>
 
-                                                <span>Signin</span></a>
+                                                <span>Entrar</span></a>
                                         </li>
-                                        <li>
+                    
+                                            @if (Route::has('register'))
+                                            <li>
 
-                                            <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
-
-                                                <span>Signout</span></a>
-                                        </li>
+                                                <a href="signup.html"><span class="material-icons icon_account">
+                                                    person_add
+                                                    </span>
+    
+                                                    <span>Registrar</span></a>
+                                            </li>
+                                            @endif
+                                        @endauth
                                     </ul>
+                                @endif
+                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    
                                     <!--====== End - Dropdown ======-->
                                 </li>
                                 <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"

@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form class="l-f-o__form" method="POST" action="{{route('usuarios.store')}}">
+    <form class="l-f-o__form" method="POST" action="{{route('register.store')}}">
         @csrf
         <div class="u-s-m-b-30">
             <label class="gl-label" for="reg-fname">NOME *</label>
