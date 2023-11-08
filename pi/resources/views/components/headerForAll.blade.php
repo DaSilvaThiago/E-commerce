@@ -43,70 +43,7 @@
                         <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
                                 <x-userInfo/>    
 
-                                <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"
-                                    title="Configurações">
-
-                                    <a><span class="material-icons">
-                                            manage_accounts
-                                        </span></a>
-
-                                    <!--====== Dropdown ======-->
-
-                                    <span class="js-menu-toggle"></span>
-                                    <ul style="width:120px">
-                                        <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                            <a>Language<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                            <!--====== Dropdown ======-->
-
-                                            <span class="js-menu-toggle"></span>
-                                            <ul style="width:120px">
-                                                <li>
-
-                                                    <a class="u-c-brand">ENGLISH</a>
-                                                </li>
-                                                <li>
-
-                                                    <a>ARABIC</a>
-                                                </li>
-                                                <li>
-
-                                                    <a>FRANCAIS</a>
-                                                </li>
-                                                <li>
-
-                                                    <a>ESPANOL</a>
-                                                </li>
-                                            </ul>
-                                            <!--====== End - Dropdown ======-->
-                                        </li>
-                                        <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                            <a>Currency<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                            <!--====== Dropdown ======-->
-
-                                            <span class="js-menu-toggle"></span>
-                                            <ul style="width:225px">
-                                                <li>
-
-                                                    <a class="u-c-brand">$ - US DOLLAR</a>
-                                                </li>
-                                                <li>
-
-                                                    <a>£ - BRITISH POUND STERLING</a>
-                                                </li>
-                                                <li>
-
-                                                    <a>€ - EURO</a>
-                                                </li>
-                                            </ul>
-                                            <!--====== End - Dropdown ======-->
-                                        </li>
-                                    </ul>
-                                    <!--====== End - Dropdown ======-->
-                                </li>
+                                
                                 <li data-tooltip="tooltip" data-placement="left" title="Contact">
 
                                     <a href="tel:+0900901904"><span class="material-icons">
