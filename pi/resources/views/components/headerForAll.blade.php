@@ -9,7 +9,7 @@
 
                 <!--====== Main Logo ======-->
 
-                <a class="main-logo" href="index.html">
+                <a class="main-logo" href="{{route('produtos.index')}}">
 
                     <img src="{{ asset('images/logo/logo.png') }}" alt=""></a>
                 <!--====== End - Main Logo ======-->
@@ -1138,12 +1138,7 @@
                                         home
                                     </span></a>
                             </li>
-                            <li>
-
-                                <a href="wishlist.html"><span class="material-icons">
-                                        favorite_border
-                                    </span></a>
-                            </li>
+                            
                             <li class="has-dropdown">
 
                                 <a class="mini-cart-shop-link"><span class="material-icons">

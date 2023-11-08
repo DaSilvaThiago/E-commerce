@@ -60,35 +60,30 @@
                                             <h1 class="gl-h1">LOGIN</h1>
     
                                             <span class="gl-text u-s-m-b-30">Se ja tem uma conta conosco, por favor faça login.</span>
-                                            <form class="l-f-o__form">
-                                              
+                                            <x-auth-session-status class="mb-4" :status="session('status')" />
+                                            <form method="POST" action="{{ route('login') }}" class="l-f-o__form">
+                                                @csrf
                                                 <div class="u-s-m-b-30">
     
                                                     <label class="gl-label" for="login-email">E-MAIL *</label>
     
-                                                    <input class="input-text input-text--primary-style" type="text" id="login-email" placeholder="Digite o E-mail"></div>
+                                                    <input required class="input-text input-text--primary-style" type="text" id="login-email" name="USUARIO_EMAIL" placeholder="Digite o E-mail"></div>
                                                 <div class="u-s-m-b-30">
     
-                                                    <label class="gl-label" for="login-password">PASSWORD *</label>
+                                                    <label class="gl-label" for="login-password">SENHA *</label>
     
-                                                    <input class="input-text input-text--primary-style" type="text" id="login-password" placeholder="Digite a Senha"></div>
+                                                    <input required class="input-text input-text--primary-style" type="password" id="login-password" name="USUARIO_SENHA" placeholder="Digite a Senha"></div>
                                                 <div class="gl-inline">
                                                     <div class="u-s-m-b-30">
     
                                                         <button class="btn btn--e-transparent-brand-b-2" type="submit">LOGIN</button></div>
                                                   
                                                 </div>
-                                                <div class="u-s-m-b-30">
-    
-                                                    <!--====== Check Box ======-->
-                                                    <div class="check-box">
-    
-                                                        <input type="checkbox" id="remember-me">
-                                                        <div class="check-box__state check-box__state--primary">
-    
-                                                            <label class="check-box__label" for="remember-me">Remember Me</label></div>
-                                                    </div>
-                                                    <!--====== End - Check Box ======-->
+                                                <div class="block mt-4">
+                                                    <label for="remember_me" class="inline-flex items-center">
+                                                        <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                                                        <span class="ml-2 text-sm text-gray-600">{{ __('Relembrar-se') }}</span>
+                                                    </label>
                                                 </div>
                                             </form>
                                         </div>

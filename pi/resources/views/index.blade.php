@@ -945,131 +945,31 @@
 
 
             <!--====== Section 5 ======-->
-            <div class="u-s-p-b-60">
-
-                <!--====== Section Intro ======-->
-                <div class="section__intro u-s-m-b-46">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">URBAN SOUL</h1>
-
-                                    <span class="section__span u-c-silver">RECENTLY URBAN PRODUCTS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Intro ======-->
-
+            <div class="banner-bg">
 
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-short u-h-100">
-                                    <div class="product-short__container">
-                                        <div class="product-short__img-wrap">
-
-                                            <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                href="product-detail.html">
-
-                                                <img class="aspect__img product-short__img"
-                                                    src="images/product/women/product16.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product-short__info">
-
-                                            <span class="product-short__price">$126.77</span>
-
-                                            <span class="product-short__name">
-
-                                                <a href="product-detail.html">New Dress A Nice Elegant</a></span>
-
-                                            <span class="product-short__category">
-
-                                                <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        </div>
-                                    </div>
+                            <div class="col-lg-12">
+                                <div class="banner-bg__countdown">
+                                    <div class="countdown countdown--style-banner" data-countdown="2020/05/01"><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Days</span></div></div><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Hours</span></div></div><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Mins</span></div></div><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Secs</span></div></div></div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-short u-h-100">
-                                    <div class="product-short__container">
-                                        <div class="product-short__img-wrap">
+                                <div class="banner-bg__wrap">
+                                    <div class="banner-bg__text-1">
 
-                                            <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                href="product-detail.html">
+                                        <span class="u-c-white">Global</span>
 
-                                                <img class="aspect__img product-short__img"
-                                                    src="images/product/women/product17.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product-short__info">
+                                        <span class="u-c-secondary">Offers</span></div>
+                                    <div class="banner-bg__text-2">
 
-                                            <span class="product-short__price">$126.77</span>
+                                        <span class="u-c-secondary">Official Launch</span>
 
-                                            <span class="product-short__name">
+                                        <span class="u-c-white">Don't Miss!</span></div>
 
-                                                <a href="product-detail.html">New Dress B Nice Elegant</a></span>
+                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary">Enjoy Free Shipping when you buy 2 items and above!</span>
 
-                                            <span class="product-short__category">
-
-                                                <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-short u-h-100">
-                                    <div class="product-short__container">
-                                        <div class="product-short__img-wrap">
-
-                                            <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                href="product-detail.html">
-
-                                                <img class="aspect__img product-short__img"
-                                                    src="images/product/women/product18.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product-short__info">
-
-                                            <span class="product-short__price">$126.77</span>
-
-                                            <span class="product-short__name">
-
-                                                <a href="product-detail.html">New Dress C Nice Elegant</a></span>
-
-                                            <span class="product-short__category">
-
-                                                <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="product-short u-h-100">
-                                    <div class="product-short__container">
-                                        <div class="product-short__img-wrap">
-
-                                            <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                href="product-detail.html">
-
-                                                <img class="aspect__img product-short__img"
-                                                    src="images/product/women/product19.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product-short__info">
-
-                                            <span class="product-short__price">$126.77</span>
-
-                                            <span class="product-short__name">
-
-                                                <a href="product-detail.html">New Dress D Nice Elegant</a></span>
-
-                                            <span class="product-short__category">
-
-                                                <a href="shop-side-version-2.html">Women Clothing</a></span>
-                                        </div>
-                                    </div>
+                                    <a class="banner-bg__shop-now btn--e-secondary" href="shop-side-version-2.html">Shop Now</a>
                                 </div>
                             </div>
                         </div>
