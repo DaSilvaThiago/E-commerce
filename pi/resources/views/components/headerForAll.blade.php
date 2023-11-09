@@ -9,18 +9,20 @@
 
                 <!--====== Main Logo ======-->
 
-                <a class="main-logo" href="{{route('produtos.index')}}">
+                <a class="main-logo" href="{{route('products.index')}}">
 
                     <img src="{{ asset('images/logo/logo.png') }}" alt=""></a>
                 <!--====== End - Main Logo ======-->
 
 
                 <!--====== Search Form ======-->
-                <form class="main-form">
+                <form class="main-form" action="{{route('search')}}" method="GET">
 
                     <label for="main-search"></label>
 
-                    <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Search">
+                    <input class="input-text input-text--border-radius input-text--only-white"
+                            type="text" id="main-search" placeholder="Pesquisar" name="PRODUTO_NOME">
+
 
                     <button class="btn btn--icon fas main-search-button" type="submit"><span
                         class="material-icons">search</span></button></form>

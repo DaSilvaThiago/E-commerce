@@ -1,3 +1,4 @@
+<!--====== Main Footer ======-->
 <footer>
     <div class="outer-footer">
         <div class="container">

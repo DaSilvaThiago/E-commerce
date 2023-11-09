@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $CATEGORIA_DESC
  * @property bool|null $CATEGORIA_ATIVO
  * 
- * @property Collection|PRODUTO[] $p_r_o_d_u_t_o_s
+ * @property Collection|PRODUTO[] $products
  *
  * @package App\Models
  */
@@ -37,8 +37,10 @@ class CATEGORIA extends Model
 		'CATEGORIA_ATIVO'
 	];
 
-	public function produtos()
+	public function products()
 	{
 		return $this->hasMany(PRODUTO::class, 'CATEGORIA_ID');
 	}
+
+
 }

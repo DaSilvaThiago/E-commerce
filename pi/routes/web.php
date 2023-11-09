@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarrinhoItemController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\PedidoController;
-use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsuarioController;
 
 
@@ -34,20 +34,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::redirect('/', '/produtos');
-Route::resource('produtos', ProdutoController::class)->only([
-    'index', 'show'
-]);
-
-Route::resource('usuarios', UsuarioController::class)->only([
-    'show', 'create', 'update', 'store'
-]);
-Route::resource('enderecos', EnderecoController::class)->only([
-    'index', 'show', 'create', 'update'
-]);
-Route::resource('carrinhos', CarrinhoItemController::class)->only([
-    'show', 'create', 'update'
-]);
-Route::resource('pedidos', PedidoController::class)->only([
-    'index', 'show', 'create', 'update'
-]);
+Route::get('/', [ProductController::class, 'index'])->name('products.index');
+Route::get('/search', [ProductController::class, 'search'])->name('search');

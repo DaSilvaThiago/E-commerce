@@ -12,19 +12,19 @@
 
                     <!--====== Main Logo ======-->
 
-                    <a class="main-logo" href="{{route('produtos.index')}}">
+                    <a class="main-logo" href="{{route('products.index')}}">
 
                         <img src="{{ asset('images/logo/logo.png') }}" alt=""></a>
                     <!--====== End - Main Logo ======-->
 
 
                     <!--====== Search Form ======-->
-                    <form class="main-form">
+                    <form class="main-form" action="{{route('search')}}" method="GET">
 
                         <label for="main-search"></label>
 
                         <input class="input-text input-text--border-radius input-text--only-white"
-                            type="text" id="main-search" placeholder="Pesquisar">
+                            type="text" id="main-search" placeholder="Pesquisar" name="PRODUTO_NOME">
 
                         <button class="btn btn--icon fas main-search-button" type="submit"><span
                                 class="material-icons">search</span></button>
@@ -47,9 +47,9 @@
 
                             <!--====== List ======-->
                             <ul class="ah-list ah-list--design1 ah-list--link-color-white">
+
                                 <x-userInfo/>
 
-                                
                                 <li data-tooltip="tooltip" data-placement="left" title="Contato">
 
                                     <a href="tel:+0900901904"><span class="material-icons">

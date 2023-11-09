@@ -280,7 +280,7 @@
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
-                            @foreach ($produtos as $produto)
+                            @foreach ($products as $product)
                                 <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
                                     <div class="product-r u-h-100">
                                         <div class="product-r__container">
@@ -288,7 +288,7 @@
                                             <a class="aspect aspect--bg-grey aspect--square u-d-block"
                                                 href="product-detail.html">
                                                 @php
-                                                    $primaryImage = $produto->produtoImagens->first();
+                                                    $primaryImage = $product->produtoImagens->first();
                                                 @endphp
 
                                                 @if ($primaryImage)
@@ -303,14 +303,14 @@
                                                         <a data-modal="modal" data-modal-id="#quick-look" href="#" data-bs-toggle="modal"
                                                         class="ProductsDetailModal"
                                                         data-bs-target="#ProductsDetailModal"
-                                                        data-nome="{{$produto->PRODUTO_NOME}}"
-                                                        data-desc="{{$produto->PRODUTO_DESC}}"
-                                                        data-preco="{{$produto->PRODUTO_PRECO}}"
-                                                        data-desconto="{{$produto->PRODUTO_DESCONTO}}"
-                                                        data-fotos="{{$produto->produtoImagens}}"
-                                                        data-categoria="{{$produto->categoria->CATEGORIA_NOME}}"
-                                                        @if ($produto->produtoEstoque)
-                                                            data-estoque="{{$produto->produtoEstoque->PRODUTO_QTD}}"
+                                                        data-nome="{{$product->PRODUTO_NOME}}"
+                                                        data-desc="{{$product->PRODUTO_DESC}}"
+                                                        data-preco="{{$product->PRODUTO_PRECO}}"
+                                                        data-desconto="{{$product->PRODUTO_DESCONTO}}"
+                                                        data-fotos="{{$product->produtoImagens}}"
+                                                        data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
+                                                        @if ($product->produtoEstoque)
+                                                            data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
                                                         @else
                                                             data-estoque="{{0}}"
                                                         @endif >
@@ -344,27 +344,27 @@
                                             <span class="product-r__category">
 
                                                 <a
-                                                    href="shop-side-version-2.html">{{ $produto->categoria->CATEGORIA_NOME }}</a></span>
+                                                    href="shop-side-version-2.html">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
                                             <div class="product-r__n-p-wrap">
 
                                                 <span class="product-r__name">
 
                                                     <a
-                                                        href="product-detail.html">{{ $produto->PRODUTO_NOME }}</a></span>
-                                                @if ($produto->PRODUTO_DESCONTO)
+                                                        href="product-detail.html">{{ $product->PRODUTO_NOME }}</a></span>
+                                                @if ($product->PRODUTO_DESCONTO)
                                                     <div class="priceSold">
                                                         <span
-                                                            class="product-bs__discount">R${{ $produto->PRODUTO_PRECO }}</span>
+                                                            class="product-bs__discount">R${{ $product->PRODUTO_PRECO }}</span>
                                                         <span
-                                                            class="product-r__price">R${{ $produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO }}</span>
+                                                            class="product-r__price">R${{ $product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO }}</span>
                                                     </div>
                                                 @else
                                                     <span
-                                                        class="product-r__price">R${{ $produto->PRODUTO_PRECO }}</span>
+                                                        class="product-r__price">R${{ $product->PRODUTO_PRECO }}</span>
                                                 @endif
                                             </div>
 
-                                            <span class="product-r__description">{{ $produto->PRODUTO_DESC }}</span>
+                                            <span class="product-r__description">{{ $product->PRODUTO_DESC }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1331,168 +1331,27 @@
 
 
         <!--====== Main Footer ======-->
+
         <x-mainFooter/>
+
+        <!--====== End - Main Footer ======-->
 
         <!--====== Modal Section ======-->
 
-        <!--====== Add to Cart Modal ======-->
-        <div class="modal fade" id="add-to-cart">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal-radius modal-shadow">
+        <x-addToCardModal/>
+        
+        <x-quickLookModal/>
 
-                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="success u-s-m-b-30">
-                                    <div class="success__text-wrap"><i class="fas fa-check"></i>
+        <x-newsLetter/>
 
-                                        <span>Item is added successfully!</span>
-                                    </div>
-                                    <div class="success__img-wrap">
-
-                                        <img class="u-img-fluid" src="images/product/electronic/product1.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="success__info-wrap">
-
-                                        <span class="success__name">Beats Bomb Wireless Headphone</span>
-
-                                        <span class="success__quantity">Quantity: 1</span>
-
-                                        <span class="success__price">$170.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="s-option">
-
-                                    <span class="s-option__text">1 item (s) in your cart</span>
-                                    <div class="s-option__link-box">
-
-                                        <a class="s-option__link btn--e-white-brand-shadow"
-                                            data-dismiss="modal">CONTINUE SHOPPING</a>
-
-                                        <a class="s-option__link btn--e-white-brand-shadow" href="cart.html">VIEW
-                                            CART</a>
-
-                                        <a class="s-option__link btn--e-brand-shadow" href="checkout.html">PROCEED
-                                            TO CHECKOUT</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--====== End - Add to Cart Modal ======-->
-
-
-        <!--====== Newsletter Subscribe Modal ======-->
-        <div class="modal fade new-l" id="newsletter-modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal--shadow">
-
-                    <button class="btn new-l__dismiss fas " type="button" data-dismiss="modal"><span
-                            class="material-icons">
-                            close
-                        </span></button>
-                    <div class="modal-body">
-                        <div class="row u-s-m-x-0">
-                            <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
-
-                                <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
-
-                                    <img class="u-img-fluid u-d-block"
-                                        src="{{ asset('images/newsletter/newsletter.jpg') }}" alt=""></a>
-                            </div>
-                            <div class="col-lg-6 new-l__col-2">
-                                <div class="new-l__section u-s-m-t-30">
-                                    <div class="u-s-m-b-8 new-l--center">
-                                        <h3 class="new-l__h3">Newsletter</h3>
-                                    </div>
-                                    <div class="u-s-m-b-30 new-l--center">
-                                        <p class="new-l__p1">Registre um email para receber ofertas e notícias sobre
-                                            nós.</p>
-                                    </div>
-                                    <form class="new-l__form">
-                                        <div class="u-s-m-b-15">
-
-                                            <input class="news-l__input" type="text" placeholder="E-mail">
-                                        </div>
-                                        <div class="u-s-m-b-15">
-
-                                            <button class="btn btn--e-brand-b-2" type="submit">Registrar!</button>
-                                        </div>
-                                    </form>
-                                    <div class="u-s-m-b-15 new-l--center">
-                                        <p class="new-l__p2">Ao cadastrar você recebe novas ofertas, cupons,
-                                            <br />Promoções e outras propostas comerciais. Você pode se inscrever a
-                                            qualquer momento.
-                                        </p>
-                                    </div>
-                                    <div class="u-s-m-b-15 new-l--center">
-
-                                        <a class="new-l__link" data-dismiss="modal">Não Obrigado</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--====== End - Newsletter Subscribe Modal ======-->
         <!--====== End - Modal Section ======-->
+    
     </div>
+
     <!--====== End - Main App ======-->
 
+    <x-someScripts/>
 
-    <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
-    <script>
-        window.ga = function() {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
-    <!--====== Vendor Js ======-->
-    <script src="{{asset('js/vendor.js')}}"></script>
-
-    
-    <!--====== jQuery Shopnav plugin ======-->
-    <script src="{{asset('js/jquery.shopnav.js')}}"></script>
-
-    <!--====== App ======-->
-    <script src="{{asset('js/app.js')}}"></script>
-
-
-    <!--====== Noscript ======-->
-    <noscript>
-        <div class="app-setting">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="app-setting__wrap">
-                            <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
-
-                            <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a
-                                JavaScript-capable browser.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </noscript>
-
-    @include('produtos.product-details-modal')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    @include('produtos.products-details-js')
 </body>
 
 </html>
