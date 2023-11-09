@@ -165,17 +165,17 @@
                                                         <input class="input-text input-text--primary-style" type="text" id="price-max" value="{{$maxPrice}}" name="maxPrice" style="display: none">
                                                     @endisset
                                                 <div class="u-s-m-b-8"><select name="productsPerPage" id="productsPerPage" class="select-box select-box--transparent-b-2">
-                                                        <option value="8">Mostrar: 8</option>
-                                                        <option selected value="12">Mostrar: 12</option>
-                                                        <option value="16">Mostrar: 16</option>
-                                                        <option value="28">Mostrar: 28</option>
+                                                        <option value="8" {{ $productsPerPage === '8' ? 'selected' : '' }}>Mostrar: 8</option>
+                                                        <option value="12" {{ $productsPerPage === '12' ? 'selected' : '' }}>Mostrar: 12</option>
+                                                        <option value="16" {{ $productsPerPage === '16' ? 'selected' : '' }}>Mostrar: 16</option>
+                                                        <option value="28" {{ $productsPerPage === '28' ? 'selected' : '' }}>Mostrar: 28</option>
                                                     </select></div>
                                                 <div class="u-s-m-b-8"><select name="takeFormat" id="takeFormat" class="select-box select-box--transparent-b-2">
-                                                        <option value="newest" selected>Ordernar Por: Novos</option>
-                                                        <option value="latest">Ordernar Por: Últimos</option>
-                                                        <option value="besSelling">Ordernar Por: Mais Vendidos</option>
-                                                        <option value="lowestPrice">Ordernar Por: Menor Preço</option>
-                                                        <option value="highestPrice">Ordernar Por: Maior Preço</option>
+                                                        <option value="newest" {{ $takeFormat === 'newest' ? 'selected' : '' }}>Ordernar Por: Novos</option>
+                                                        <option value="latest" {{ $takeFormat === 'latest' ? 'selected' : '' }}>Ordernar Por: Últimos</option>
+                                                        <option value="besSelling" {{ $takeFormat === 'bestSelling' ? 'selected' : '' }}>Ordernar Por: Mais Vendidos</option>
+                                                        <option value="lowestPrice" {{ $takeFormat === 'lowestPrice' ? 'selected' : '' }}>Ordernar Por: Menor Preço</option>
+                                                        <option value="highestPrice" {{ $takeFormat === 'highestPrice' ? 'selected' : '' }}>Ordernar Por: Maior Preço</option>
                                                     </select></div>
                                             </div>
                                         </form>
