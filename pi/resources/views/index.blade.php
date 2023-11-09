@@ -11,7 +11,7 @@
     <div id="app">
 
         <!--====== Header Wrapper ======-->
-        <x-headerForHome/>
+        <x-headerForHome :dataFromController="$categories" />
         <!--====== End - Header Wrapper ======-->
 
 
@@ -300,22 +300,26 @@
                                                 <ul class="product-r__action-list">
                                                     <li class="margin">
 
-                                                        <a data-modal="modal" data-modal-id="#quick-look" href="#" data-bs-toggle="modal"
-                                                        class="ProductsDetailModal"
-                                                        data-bs-target="#ProductsDetailModal"
-                                                        data-nome="{{$product->PRODUTO_NOME}}"
-                                                        data-desc="{{$product->PRODUTO_DESC}}"
-                                                        data-preco="{{$product->PRODUTO_PRECO}}"
-                                                        data-desconto="{{$product->PRODUTO_DESCONTO}}"
-                                                        data-fotos="{{$product->produtoImagens}}"
-                                                        data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
-                                                        @if ($product->produtoEstoque)
-                                                            data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
-                                                        @else
-                                                            data-estoque="{{0}}"
-                                                        @endif >
-                                                        <span class="material-icons">
-                                                                zoom_in</span></a>
+                                                        <a 
+                                                            data-modal="modal" 
+                                                            data-modal-id="#quick-look" 
+                                                            href="#" 
+                                                            data-bs-toggle="modal"
+                                                            class="ProductsDetailModal"
+                                                            data-bs-target="#ProductsDetailModal"
+                                                            data-nome="{{$product->PRODUTO_NOME}}"
+                                                            data-desc="{{$product->PRODUTO_DESC}}"
+                                                            data-preco="{{$product->PRODUTO_PRECO}}"
+                                                            data-desconto="{{$product->PRODUTO_DESCONTO}}"
+                                                            data-fotos="{{$product->produtoImagens}}"
+                                                            data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
+                                                            @if ($product->produtoEstoque)
+                                                                data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                            @else
+                                                                data-estoque="{{0}}"
+                                                            @endif >
+                                                            <span class="material-icons">zoom_in</span>
+                                                        </a>
                                                     </li>
                                                     <li>
 

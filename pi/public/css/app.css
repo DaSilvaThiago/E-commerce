@@ -50,6 +50,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
 /**
  * Setup box-sizing
  */
+
  html {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent; }
@@ -1296,6 +1297,8 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
       font-size: 14px;
       text-decoration: line-through; }
   
+
+      
   .product-o2:hover .product-o2__img {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
@@ -6471,3 +6474,4 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   font-size: 18px;
   
 }
+

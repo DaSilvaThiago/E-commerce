@@ -1472,7 +1472,9 @@ template {
     content: "\f0f4"
 }
 
-
+.fa-cog:before {
+    content: "\f013";
+}
 
 .fa-coins:before {
     content: "\f51e"
@@ -4430,6 +4432,9 @@ template {
     content: "\f54b"
 }
 
+.fa-shopping-bag:before {
+    content: "\f290"
+}
 
 .fa-shopping-basket:before {
     content: "\f291"

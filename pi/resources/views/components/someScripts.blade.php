@@ -20,6 +20,7 @@
     <!--====== App ======-->
     <script src="{{asset('js/app.js')}}"></script>
 
+    <script src="https://kit.fontawesome.com/eabf20875e.js" crossorigin="anonymous"></script>
 
     <!--====== Noscript ======-->
     <noscript>

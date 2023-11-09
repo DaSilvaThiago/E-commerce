@@ -215,8 +215,27 @@
                                                             @endif
                                                         </a>
                                                         <div class="product-m__quick-look">
-
-                                                            <a class="fas fa-search" data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick Look"></a></div>
+                                                            <a 
+                                                                data-modal="modal" 
+                                                                data-modal-id="#quick-look" 
+                                                                href="#" 
+                                                                data-bs-toggle="modal"
+                                                                class="ProductsDetailModal"
+                                                                data-bs-target="#ProductsDetailModal"
+                                                                data-nome="{{$product->PRODUTO_NOME}}"
+                                                                data-desc="{{$product->PRODUTO_DESC}}"
+                                                                data-preco="{{$product->PRODUTO_PRECO}}"
+                                                                data-desconto="{{$product->PRODUTO_DESCONTO}}"
+                                                                data-fotos="{{$product->produtoImagens}}"
+                                                                data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
+                                                                @if ($product->produtoEstoque)
+                                                                    data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                                @else
+                                                                    data-estoque="{{0}}"
+                                                                @endif >
+                                                                <span class="material-icons">zoom_in</span>
+                                                            </a>
+                                                        </div>
                                                         <div class="product-m__add-cart">
 
                                                             <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">ADD no Carrinho</a></div>
@@ -236,9 +255,7 @@
                                                             <div class="product-m__preview-description">
 
                                                                 <span>{{ $product->PRODUTO_DESC}}</span></div>
-                                                            <div class="product-m__wishlist">
-
-                                                                <a class="far fa-heart" href="#" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"></a></div>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -247,31 +264,46 @@
                                     </div>
                                 </div>
                                 <div class="u-s-p-y-60">
-
+                                   
                                     <!--====== Pagination ======-->
-                                    <ul class="shop-p__pagination">
-                                        <li class="is-active">
+                                    <div class="pagination-container">
+                                        <ul class="shop-p__pagination">
+                                            {{-- Botão "Anterior" --}}
+                                            @if ($products->onFirstPage())
+                                                <li class="disabled">
+                                                    <span>&laquo;</span>
+                                                </li>
+                                            @else
+                                                <li>
+                                                    <a href="{{ $products->previousPageUrl() }}" rel="prev">&laquo;</a>
+                                                </li>
+                                            @endif
                                     
-                                            <a href="shop-side-version-2.html">1</a>
-                                        </li>
-                                        <li>
+                                            {{-- Links das páginas --}}
+                                            @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
+                                                @if ($page == $products->currentPage())
+                                                    <li class="is-active">
+                                                        <span>{{ $page }}</span>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{ $url }}{{ request()->getQueryString() ? '&' : '?' }}{{ http_build_query(request()->except('page')) }}">{{ $page }}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
                                     
-                                            <a href="shop-side-version-2.html">2</a>
-                                        </li>
-                                        <li>
-                                    
-                                            <a href="shop-side-version-2.html">3</a>
-                                        </li>
-                                        <li>
-                                    
-                                            <a href="shop-side-version-2.html">4</a>
-                                        </li>
-                                        <li>
-                                    
-                                            <a class="fas fa-angle-right" href="shop-side-version-2.html"></a>
-                                        </li>
-                                    </ul>
-                                    
+                                            {{-- Botão "Próximo" --}}
+                                            @if ($products->hasMorePages())
+                                                <li>
+                                                    <a href="{{ $products->nextPageUrl() }}" rel="next">&raquo;</a>
+                                                </li>
+                                            @else
+                                                <li class="disabled">
+                                                    <span>&raquo;</span>
+                                                </li>
+                                            @endif
+                                        </ul>
+                                    </div>
                                     <!--====== End - Pagination ======-->
                                 </div>
                             </div>

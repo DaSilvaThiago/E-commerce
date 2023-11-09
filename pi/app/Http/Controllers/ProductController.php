@@ -13,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->take(12)->get()]);
+        return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4)]);
     }
 
     /**
@@ -22,6 +22,7 @@ class ProductController extends Controller
     public function search()
     {
         $query = PRODUTO::query();
+        $query->where('PRODUTO_ATIVO', 1);
 
         if (!empty($_GET['PRODUTO_NOME'])) {
             $searchTerm = $_GET['PRODUTO_NOME'];
@@ -49,29 +50,25 @@ class ProductController extends Controller
             }
         }
 
-        if (!empty($_GET['productsPerPage'])) {
-            $productsPerPage = $_GET['productsPerPage'];
-            $query->take($productsPerPage);
-        }
+        $productsPerPage = !empty($_GET['productsPerPage']) ? $_GET['productsPerPage'] : 12;
+        $query = $query->paginate($productsPerPage);
 
         
         if (!empty($_GET['productsPerPage']) && !empty($_GET['takeFormat']) && !empty($_GET['PRODUTO_NOME'])) {
-            $searchResults = $query->get();
-            if ($searchResults->count() == 0) {
+            if ($query->isEmpty()) {
                 return view('products.emptySearch');
             }
             return view('products.searchProducts', [
                 'searchTerm' => $searchTerm,
                 'productsPerPage' => $productsPerPage,
                 'takeFormat' => $takeFormat,
-                'products' => $searchResults,
+                'products' => $query,
                 'categories' => CATEGORIA::all()
             ]);
         }
 
         if (!empty($_GET['productsPerPage']) && !empty($_GET['takeFormat']) && !empty($minPrice) && !empty($maxPrice) && !empty($_GET['PRODUTO_NOME'])) {
-            $searchResults = $query->get();
-            if ($searchResults->count() == 0) {
+            if ($query->isEmpty()) {
                 return view('products.emptySearch');
             }
             return view('products.searchProducts', [
@@ -80,14 +77,13 @@ class ProductController extends Controller
                 'maxPrice' => $maxPrice,
                 'productsPerPage' => $productsPerPage,
                 'takeFormat' => $takeFormat,
-                'products' => $searchResults,
+                'products' => $query,
                 'categories' => CATEGORIA::all()
             ]);
         }
 
         if (!empty($_GET['takeFormat']) && !empty($minPrice) && !empty($maxPrice) && !empty($_GET['PRODUTO_NOME'])) {
-            $searchResults = $query->take(12)->get();
-            if ($searchResults->count() == 0) {
+            if ($query->isEmpty()) {
                 return view('products.emptySearch');
             }
             return view('products.searchProducts', [
@@ -95,33 +91,31 @@ class ProductController extends Controller
                 'minPrice' => $minPrice,
                 'maxPrice' => $maxPrice,
                 'takeFormat' => $takeFormat,
-                'products' => $searchResults,
+                'products' => $query,
                 'categories' => CATEGORIA::all()
             ]);
         }
 
         if (!empty($minPrice) && !empty($maxPrice) && !empty($_GET['PRODUTO_NOME'])) {
-            $searchResults = $query->take(12)->get();
-            if ($searchResults->count() == 0) {
+            if ($query->isEmpty()) {
                 return view('products.emptySearch');
             }
             return view('products.searchProducts', [
                 'searchTerm' => $searchTerm,
                 'minPrice' => $minPrice,
                 'maxPrice' => $maxPrice,
-                'products' => $searchResults,
+                'products' => $query,
                 'categories' => CATEGORIA::all()
             ]);
         }
 
         if (!empty($_GET['PRODUTO_NOME'])) {
-            $searchResults = $query->take(12)->get();
-            if ($searchResults->count() == 0) {
+            if ($query->isEmpty()) {
                 return view('products.emptySearch');
             }
             return view('products.searchProducts', [
                 'searchTerm' => $searchTerm,
-                'products' => $searchResults,
+                'products' => $query,
                 'categories' => CATEGORIA::all()
             ]);
         }
