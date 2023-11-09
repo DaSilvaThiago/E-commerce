@@ -153,20 +153,29 @@
                                             <span class="js-shop-grid-target is-active">Grid</span>
 
                                             <span class="js-shop-list-target">List</span></div>
-                                        <form>
+                                        <form action="{{route('search')}}" method="GET" id="formProductShow">
                                             <div class="tool-style__form-wrap">
-                                                <div class="u-s-m-b-8"><select class="select-box select-box--transparent-b-2">
-                                                        <option>Show: 8</option>
-                                                        <option selected>Show: 12</option>
-                                                        <option>Show: 16</option>
-                                                        <option>Show: 28</option>
+                                                @isset($searchTerm)
+                                                        <input type="text" name="PRODUTO_NOME" value="{{ $searchTerm }}" style="display: none;">
+                                                    @endisset
+                                                    @isset($minPrice)
+                                                        <input class="input-text input-text--primary-style" type="text" id="price-min" name="minPrice" value="{{$minPrice}}" style="display: none">
+                                                    @endisset
+                                                    @isset($maxPrice)
+                                                        <input class="input-text input-text--primary-style" type="text" id="price-max" value="{{$maxPrice}}" name="maxPrice" style="display: none">
+                                                    @endisset
+                                                <div class="u-s-m-b-8"><select name="productsPerPage" id="productsPerPage" class="select-box select-box--transparent-b-2">
+                                                        <option value="8">Mostrar: 8</option>
+                                                        <option selected value="12">Mostrar: 12</option>
+                                                        <option value="16">Mostrar: 16</option>
+                                                        <option value="28">Mostrar: 28</option>
                                                     </select></div>
-                                                <div class="u-s-m-b-8"><select class="select-box select-box--transparent-b-2">
-                                                        <option selected>Sort By: Newest Items</option>
-                                                        <option>Sort By: Latest Items</option>
-                                                        <option>Sort By: Best Selling</option>
-                                                        <option>Sort By: Lowest Price</option>
-                                                        <option>Sort By: Highest Price</option>
+                                                <div class="u-s-m-b-8"><select name="takeFormat" id="takeFormat" class="select-box select-box--transparent-b-2">
+                                                        <option value="newest" selected>Ordernar Por: Novos</option>
+                                                        <option value="latest">Ordernar Por: Últimos</option>
+                                                        <option value="besSelling">Ordernar Por: Mais Vendidos</option>
+                                                        <option value="lowestPrice">Ordernar Por: Menor Preço</option>
+                                                        <option value="highestPrice">Ordernar Por: Maior Preço</option>
                                                     </select></div>
                                             </div>
                                         </form>
@@ -249,6 +258,19 @@
             </div>
             <!--====== End - Section 1 ======-->
         </div>
+
+        <script>
+            var select = document.getElementById("productsPerPage");
+            var select2 = document.getElementById("takeFormat");
+            var form = document.getElementById("formProductShow");
+
+            select.addEventListener("change", sendForm);
+            select2.addEventListener("change", sendForm);
+            
+            function sendForm() {
+                form.submit();
+            }
+        </script>
 
         <script>
             function getRandomNumber(min, max) {
