@@ -38,12 +38,12 @@ class CARRINHOITEM extends Model
 		'ITEM_QTD'
 	];
 
-	public function p_r_o_d_u_t_o()
+	public function produto()
 	{
 		return $this->belongsTo(PRODUTO::class, 'PRODUTO_ID');
 	}
 
-	public function u_s_u_a_r_i_o()
+	public function uauario()
 	{
 		return $this->belongsTo(USUARIO::class, 'USUARIO_ID');
 	}
