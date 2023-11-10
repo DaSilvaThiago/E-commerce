@@ -1,5 +1,3 @@
-<li class="has-dropdown" data-tooltip="tooltip" data-placement="left"title="@auth{{ Auth::user()->USUARIO_NOME }}@else Perfil @endauth">
-    <a><i class="fa-solid fa-circle-user fa-lg" style="color: #272626;"></i></a>
 
     <!--====== Dropdown ======-->
 
@@ -15,8 +13,8 @@
                 <li>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <a type="submit"><i class="fa-solid fa-arrow-right-from-bracket fa-xs" style="color: #000000;"></i>
-                            <span id="out-session-btn"">Sair</span></a>
+                        <button type="submit"><i class="fa-solid fa-arrow-right-from-bracket fa-xs" style="color: #000000;"></i>
+                            <span id="out-session-btn"">Sair</span></button>
                         
                     </form>
                 </li>
@@ -37,5 +35,3 @@
     @endif
 
     <!--====== End - Dropdown ======-->
-
-</li>

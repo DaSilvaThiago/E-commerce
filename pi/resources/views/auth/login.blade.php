@@ -1,4 +1,11 @@
 <x-guest-layout>
+                    <!--====== Main Header ======-->
+                    <x-headerForAll :dataFromController="$categories"  />
+                    <!--====== End - Main Header ======-->
+        
+        
+                <!--====== App Content ======-->
+                <div class="app-content">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -96,5 +103,7 @@
                 </div>
 
                 <!--====== End - Section 2 ======-->
+            </div>
+            <!--====== End - App Content ======-->
                 
 </x-guest-layout>

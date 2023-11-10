@@ -44,7 +44,13 @@
                             <!--====== List ======-->
                             <ul class="ah-list ah-list--design1 ah-list--link--color-secondary">
 
+                                <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"title="@auth{{ Auth::user()->USUARIO_NOME }}@else Perfil @endauth">
+                                    <a><i class="fa-solid fa-circle-user fa-lg" style="color: #272626;"></i></a>
+                                
                                 <x-userInfo/>
+                                
+                                </li>
+
                                 <li data-tooltip="tooltip" data-placement="left" title="Mail">
 
                                     <a href="mailto:contact@domain.com"><i class="fa-solid fa-envelope fa-lg" style="color: #272626;"></i></a></li>

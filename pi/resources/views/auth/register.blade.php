@@ -1,4 +1,11 @@
 <x-guest-layout>
+    <!--====== Main Header ======-->
+    <x-headerForAll :dataFromController="$categories"  />
+    <!--====== End - Main Header ======-->
+
+
+<!--====== App Content ======-->
+<div class="app-content">
                 <!--====== Section 1 ======-->
                 <div class="u-s-p-y-60">
 
@@ -10,7 +17,7 @@
                                     <ul class="breadcrumb__list">
                                         <li class="has-separator">
     
-                                            <a href="index.html">Home</a></li>
+                                            <a href="{{route('products.index')}}">Home</a></li>
                                         <li class="is-marked">
                                             
                                             <a href="signup.html">Registrar</a></li>
@@ -86,5 +93,6 @@
                     <!--====== End - Section Content ======-->
                 </div>
                 <!--====== End - Section 2 ======-->
-    
+            </div>
+            <!--====== End - App Content ======-->
 </x-guest-layout>
