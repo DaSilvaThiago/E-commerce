@@ -933,8 +933,8 @@
 
                                     <a href="{{route('products.index')}}"><i class="fas fa-home"></i></a></li>
                                 </li>
-                               
-                                <li class="has-dropdown">
+                                @auth
+                                    <li class="has-dropdown">
 
                                    <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
 
@@ -1006,7 +1006,40 @@
                                         <!--====== End - Mini Product Statistics ======-->
                                     </div>
                                     <!--====== End - Dropdown ======-->
-                                </li>
+                                    </li>
+                                @else
+                                    <li class="has-dropdown">
+
+                                        <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i> </a>
+    
+                                        <!--====== Dropdown ======-->
+    
+                                        <span class="js-menu-toggle"></span>
+                                        <div class="mini-cart">
+    
+    
+    
+                                            <!--====== Mini Product Statistics ======-->
+                                            <div class="mini-product-stat">
+                                                <div class="mini-total">
+
+                                                    <span class="subtotal-text">FAÇA LOGIN PARA ACESSAR O CARRINHO</span>
+    
+                                                </div>
+                                                <div class="mini-action">
+    
+                                                    <a class="mini-link btn--e-brand-b-2"
+                                                        href="checkout.html">REGISTRAR-SE</a>
+    
+                                                    <a class="mini-link btn--e-transparent-secondary-b-2"
+                                                        href="cart.html">LOGIN</a>
+                                                </div>
+                                            </div>
+                                            <!--====== End - Mini Product Statistics ======-->
+                                        </div>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                @endauth
                             </ul>
                             <!--====== End - List ======-->
                         </div>
