@@ -36,3 +36,4 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [ProductController::class, 'index'])->name('products.index');
 Route::get('/search', [ProductController::class, 'search'])->name('search');
+Route::get('/products/FilledByCategory{id}', [ProductController::class, 'categoryFillproductsPage'])->name('categoryFillproductsPage');

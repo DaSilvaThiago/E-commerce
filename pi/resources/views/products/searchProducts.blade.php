@@ -1,4 +1,12 @@
-<x-guest-layout>
+<x-guest-layout >
+
+                <!--====== Main Header ======-->
+                <x-headerForAll :dataFromController="$categories"  />
+                <!--====== End - Main Header ======-->
+    
+    
+            <!--====== App Content ======-->
+            <div class="app-content">
             <!--====== Section 1 ======-->
             <div class="u-s-p-y-90">
                 <div class="container">
@@ -313,7 +321,13 @@
             </div>
             <!--====== End - Section 1 ======-->
         </div>
+   
 
+        <x-quickLookModal/>
+
+        <x-addToCardModal/>
+    </div>
+    <!--====== End - App Content ======-->
         <script>
             var select = document.getElementById("productsPerPage");
             var select2 = document.getElementById("takeFormat");
@@ -340,8 +354,4 @@
             document.getElementById('random6').textContent = getRandomNumber(1, 400); 
         </script>
 
-        <x-quickLookModal/>
-
-        <x-addToCardModal/>
-        
 </x-guest-layout>

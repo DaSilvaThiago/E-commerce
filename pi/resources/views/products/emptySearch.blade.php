@@ -1,4 +1,14 @@
 <x-guest-layout>
+            <!--====== Main Header ======-->
+            <x-headerForAll :dataFromController="$categories"  />
+            <!--====== End - Main Header ======-->
+
+
+        <!--====== App Content ======-->
+        <div class="app-content">
+         
+
+
     <!--====== Section 1 ======-->
     <div class="u-s-p-y-60">
 
@@ -37,4 +47,7 @@
         <!--====== End - Section Content ======-->
     </div>
     <!--====== End - Section 1 ======-->
+       
+</div>
+<!--====== End - App Content ======-->
 </x-guest-layout>

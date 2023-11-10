@@ -1,5 +1,5 @@
 <li class="has-dropdown" data-tooltip="tooltip" data-placement="left"title="@auth{{ Auth::user()->USUARIO_NOME }}@else Perfil @endauth">
-    <a><i class="far fa-user-circle"></i></a>
+    <a><i class="fa-solid fa-circle-user fa-lg" style="color: #272626;"></i></a>
 
     <!--====== Dropdown ======-->
 

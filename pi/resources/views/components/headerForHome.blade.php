@@ -45,10 +45,6 @@
                             <ul class="ah-list ah-list--design1 ah-list--link-color-white">
 
                                 <x-userInfo/>
-
-                                <li data-tooltip="tooltip" data-placement="left" title="Contact">
-
-                                    <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
                                 <li data-tooltip="tooltip" data-placement="left" title="Mail">
 
                                     <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
@@ -860,22 +856,30 @@
 
                             <!--====== List ======-->
                             <ul class="ah-list ah-list--design2 ah-list--link-color-white">
-                                <li>
+                                @foreach ($dataFromController as $category)
 
-                                    <a href="shop-side-version-2.html">HOMENS</a>
-                                </li>
-                                <li class="ah-list ah-list--design2 ah-list--link-color-white">
+                                    @if ($category->CATEGORIA_ID === 1)
+                                       
+                                        <li>
+                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">HOMENS</a>
+                                        </li>@endif    
+                                
+                                        @if ($category->CATEGORIA_ID === 2)
+                                        <li>
+        
+                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">MULHERES</a>
+        
+                                        </li>@endif  
+                                        
+                                        @if ($category->CATEGORIA_ID === 4)
+                                        <li>
 
-                                    <a href="shop-side-version-2.html">MULHERES</a>
+                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">ESPORTES</a>
+        
+                                        </li>@endif      
+                                @endforeach
 
-                                    <!--====== End - Dropdown ======-->
-                                </li>
-                                <li class="ah-list ah-list--design2 ah-list--link-color-white">
-
-                                    <a href="shop-side-version-2.html">CRIANÇAS</a>
-
-                                    <!--====== End - Dropdown ======-->
-                                </li>
+                               
                                 <li>
 
                                     <a href="shop-side-version-2.html">MAIS COMPRADOS</a>
