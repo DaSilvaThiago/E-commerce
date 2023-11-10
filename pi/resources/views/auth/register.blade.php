@@ -49,7 +49,7 @@
                                     <div class="l-f-o">
                                         <div class="l-f-o__pad-box">
                                             <h1 class="gl-h1">INFORMAÇÕES PESSOAIS</h1>
-                                            <form class="l-f-o__form" method="POST" action="{{route('register.store')}}">
+                                            <form class="l-f-o__form" method="POST" action="{{route('register')}}">
                                                 @csrf
                                                 <div class="u-s-m-b-30">
                                                     <label class="gl-label" for="reg-fname">NOME *</label>
@@ -75,7 +75,7 @@
                                                     <button class="btn btn--e-transparent-brand-b-2" type="submit">CRIAR</button>
                                                 </div>
                                         
-                                                <a class="gl-link" href="{{route('produtos.index')}}">Voltar para a loja</a>
+                                                <a class="gl-link" href="{{route('products.index')}}">Voltar para a loja</a>
                                             </form>
                                         </div>
                                     </div>

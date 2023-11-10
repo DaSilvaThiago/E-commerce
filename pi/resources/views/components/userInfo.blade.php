@@ -17,13 +17,13 @@
                     <span>Sair</span></a></li>
             @else
             <li>
-                <a href="#"><i class="fas fa-lock u-s-m-r-6"></i>
+                <a href="{{route('login')}}"><i class="fas fa-lock u-s-m-r-6"></i>
 
                     <span>Entrar</span></a></li>
                 @if (Route::has('register'))
                 <li>
 
-                    <a href="#"><i class="fas fa-user-plus u-s-m-r-6"></i>
+                    <a href="{{route('register')}}"><i class="fas fa-user-plus u-s-m-r-6"></i>
 
                         <span>Registrar-se</span></a></li>
                 @endif

@@ -13,7 +13,7 @@
                                     <ul class="breadcrumb__list">
                                         <li class="has-separator">
     
-                                            <a href="{{route('produtos.index')}}">Home</a></li>
+                                            <a href="{{route('products.index')}}">Home</a></li>
                                         <li class="is-marked">
     
                                             <a href="#">Login</a></li>
