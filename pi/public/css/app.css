@@ -6491,3 +6491,14 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   display: inline-block;
   padding: 31px 14px;
 }
+
+.custom-button2 {
+  border: none;
+  background: none;
+  white-space: nowrap;
+  color: rgb(37, 38, 38);
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-block;
+  padding: 31px 14px;
+}

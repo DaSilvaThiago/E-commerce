@@ -863,37 +863,50 @@
                             <!--====== List ======-->
                             <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
                                 @foreach ($dataFromController as $category)
-
-                                    @if ($category->CATEGORIA_ID === 1)
-                                       
-                                        <li>
-                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">HOMENS</a>
-                                        </li>@endif    
                                 
-                                        @if ($category->CATEGORIA_ID === 2)
-                                        <li>
-        
-                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">MULHERES</a>
-        
-                                        </li>@endif  
-                                        
-                                        @if ($category->CATEGORIA_ID === 4)
-                                        <li>
-
-                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">ESPORTES</a>
-        
-                                        </li>@endif      
-                                @endforeach
-
+                                @if ($category->CATEGORIA_ID === 1)
+                                
+                                <li>
+                                    <form class="main-form" action="{{route('search')}}" method="GET">
+                                        <input type="text" name="CATEGORIA_ID" value="{{$category->CATEGORIA_ID}}" style="display: none">
+                                            <button type="submit" class="custom-button2">HOMENS</button>
+                                        </form>
+                                    </li>
+                                    
+                                @endif    
+                            
+                                    @if ($category->CATEGORIA_ID === 2)
+                                    <li>
+                                        <form class="main-form" action="{{route('search')}}" method="GET">
+                                            <input type="text" name="CATEGORIA_ID" value="{{$category->CATEGORIA_ID}}" style="display: none">
+                                            <button type="submit" class="custom-button2">MULHERES</button>
+                                        </form>
+    
+                                    </li>@endif  
+                                    
+                                    @if ($category->CATEGORIA_ID === 4)
+                                    <li>
+                                        <form class="main-form" action="{{route('search')}}" method="GET">
+                                            <input type="text" name="CATEGORIA_ID" value="{{$category->CATEGORIA_ID}}" style="display: none">
+                                            <button type="submit" class="custom-button2">ESPORTES</button>
+                                        </form>
+    
+                                    </li>@endif      
+                            @endforeach
                                
-                                <li>
+                            <li>
+                                <form class="main-form" action="#" method="GET">
+                                    
+                                    <button type="submit" style="padding:10px 5px" class="custom-button2">MAIS COMPRADOS</button>
+                                </form>
+                            </li>
+                            <li>
+                                <form class="main-form" action="{{route('search')}}" method="GET">
+                                    <input type="text" name="orberByNew" value="newest" style="display: none">
+                                    <button type="submit" class="custom-button2">NOVOS</button>
+                                </form>
 
-                                    <a href="shop-side-version-2.html">MAIS COMPRADOS</a>
-                                </li>
-                                <li>
-
-                                    <a href="shop-side-version-2.html">NOVOS</a>
-                                </li>
+                            </li>
                             </ul>
                             <!--====== End - List ======-->
                         </div>
@@ -918,7 +931,7 @@
                             <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
                                 <li>
 
-                                    <a href="index.html"><i class="fas fa-home"></i></a></li>
+                                    <a href="{{route('products.index')}}"><i class="fas fa-home"></i></a></li>
                                 </li>
                                
                                 <li class="has-dropdown">

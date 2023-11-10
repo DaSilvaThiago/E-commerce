@@ -30,6 +30,15 @@ class ProductController extends Controller
             $query->where('PRODUTO_NOME', 'like', '%' . $searchTerm . '%');
         }
 
+        if (!empty($_GET['CATEGORIA_ID'])) {
+            $category = $_GET['CATEGORIA_ID'];
+            $query->where('CATEGORIA_ID', $category);
+        }
+
+        if (!empty($_GET['orberByNew'])) {
+            $searchTerm = $_GET['orberByNew'];
+            $query->orderBy('PRODUTO_ID','desc');
+        }
 
         if (!empty($_GET['minPrice']) && !empty($_GET['maxPrice'])) {
             $minPrice = $_GET['minPrice'];
@@ -56,71 +65,20 @@ class ProductController extends Controller
         $query = $query->paginate($productsPerPage);
 
         
-        if (!empty($_GET['productsPerPage']) && !empty($_GET['takeFormat']) && !empty($_GET['PRODUTO_NOME'])) {
+      
             if ($query->isEmpty()) {
-                return view('products.emptySearch');
+                return view('products.emptySearch', ['categories'=>CATEGORIA::all()]);
             }
             return view('products.searchProducts', [
-                'searchTerm' => $searchTerm,
-                'productsPerPage' => $productsPerPage,
-                'takeFormat' => $takeFormat,
+                'searchTerm' => (isset($searchTerm))?$searchTerm:'',
+                'productsPerPage' => (isset($productsPerPage)?$productsPerPage:''),
+                'takeFormat' => (isset($takeFormat)?$takeFormat:''),
                 'products' => $query,
-                'categories' => CATEGORIA::all()
+                'categories' => CATEGORIA::all(),
+                'minPrice' => (isset($minPrice))?$minPrice:'',
+                'maxPrice' => (isset($maxPrice))?$maxPrice:'',
             ]);
-        }
 
-        if (!empty($_GET['productsPerPage']) && !empty($_GET['takeFormat']) && !empty($minPrice) && !empty($maxPrice) && !empty($_GET['PRODUTO_NOME'])) {
-            if ($query->isEmpty()) {
-                return view('products.emptySearch');
-            }
-            return view('products.searchProducts', [
-                'searchTerm' => $searchTerm,
-                'minPrice' => $minPrice,
-                'maxPrice' => $maxPrice,
-                'productsPerPage' => $productsPerPage,
-                'takeFormat' => $takeFormat,
-                'products' => $query,
-                'categories' => CATEGORIA::all()
-            ]);
-        }
-
-        if (!empty($_GET['takeFormat']) && !empty($minPrice) && !empty($maxPrice) && !empty($_GET['PRODUTO_NOME'])) {
-            if ($query->isEmpty()) {
-                return view('products.emptySearch');
-            }
-            return view('products.searchProducts', [
-                'searchTerm' => $searchTerm,
-                'minPrice' => $minPrice,
-                'maxPrice' => $maxPrice,
-                'takeFormat' => $takeFormat,
-                'products' => $query,
-                'categories' => CATEGORIA::all()
-            ]);
-        }
-
-        if (!empty($minPrice) && !empty($maxPrice) && !empty($_GET['PRODUTO_NOME'])) {
-            if ($query->isEmpty()) {
-                return view('products.emptySearch');
-            }
-            return view('products.searchProducts', [
-                'searchTerm' => $searchTerm,
-                'minPrice' => $minPrice,
-                'maxPrice' => $maxPrice,
-                'products' => $query,
-                'categories' => CATEGORIA::all()
-            ]);
-        }
-
-        if (!empty($_GET['PRODUTO_NOME'])) {
-            if ($query->isEmpty()) {
-                return view('products.emptySearch');
-            }
-            return view('products.searchProducts', [
-                'searchTerm' => $searchTerm,
-                'products' => $query,
-                'categories' => CATEGORIA::all()
-            ]);
-        }
     }
 
 

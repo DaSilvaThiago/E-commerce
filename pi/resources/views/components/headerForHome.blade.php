@@ -895,7 +895,7 @@
                                     
                                
                                 <li>
-                                    <form class="main-form" action="{{route('search')}}" method="GET">
+                                    <form class="main-form" action="#" method="GET">
                                         
                                         <button type="submit" style="padding:10px 5px" class="custom-button">MAIS COMPRADOS</button>
                                     </form>
@@ -931,7 +931,7 @@
                             <ul class="ah-list ah-list--design1 ah-list--link-color-white">
                                 <li>
 
-                                    <a href="index.html"><i class="fas fa-home"></i></a></li>
+                                    <a href="{{route('products.index')}}"><i class="fas fa-home"></i></a></li>
                                 </li>
                                
                                 <li class="has-dropdown">

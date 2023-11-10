@@ -148,12 +148,11 @@
                             <div class="shop-p">
                                 <div class="shop-p__toolbar u-s-m-b-30">
                                     <div class="shop-p__meta-wrap u-s-m-b-60">
-                                        @if ($products->count() == 1)
-                                            <span class="shop-p__meta-text-1">{{$products->count()}} RESULTADO ENCONTRADO</span>  
+                                        @if ($products->total() == 1)
+                                            <span class="shop-p__meta-text-1">{{$products->total()}} RESULTADO ENCONTRADO</span>  
                                         @else
-                                            <span class="shop-p__meta-text-1">{{$products->count()}} RESULTADOS ENCONTRADOS</span>
+                                            <span class="shop-p__meta-text-1">{{$products->total()}} RESULTADOS ENCONTRADOS</span>
                                         @endif
-                                        
                                     </div>
                                     <div class="shop-p__tool-style">
                                         <div class="tool-style__group u-s-m-b-8">
