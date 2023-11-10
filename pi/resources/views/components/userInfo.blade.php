@@ -13,8 +13,13 @@
 
                         <span>Perfil</span></a></li>
                 <li>
-                    <a href="#"><i class="fas fa-lock-open u-s-m-r-6"></i>
-                    <span>Sair</span></a></li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a type="submit"><i class="fa-solid fa-arrow-right-from-bracket fa-xs" style="color: #000000;"></i>
+                            <span id="out-session-btn"">Sair</span></a>
+                        
+                    </form>
+                </li>
             @else
             <li>
                 <a href="{{route('login')}}"><i class="fas fa-lock u-s-m-r-6"></i>

@@ -247,6 +247,11 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   /**
    * Basic typography style for copy text
    */
+      #out-session-btn{
+        color: black;
+        font-size:10pt;
+      }
+
   body {
     color: #7f7f7f;
     font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
