@@ -5669,7 +5669,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
       display: none; }
     .ah-close {
       display: none; }
-    .ah-list > li > a:hover {
+    .ah-list > li > form > button:hover {
       color: #b70000; }
     .has-dropdown > ul > li:hover {
       background-color: #fbfbfb; }
@@ -6480,3 +6480,14 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   
 }
 
+
+.custom-button {
+  border: none;
+  background: none;
+  white-space: nowrap;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-block;
+  padding: 31px 14px;
+}

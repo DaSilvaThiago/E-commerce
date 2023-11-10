@@ -860,38 +860,52 @@
                             <span class="ah-close">✕ Close</span>
 
                             <!--====== List ======-->
-                            <ul class="ah-list ah-list--design2 ah-list--link-color-white">
+                            <ul class="ah-list ah-list--design2 custom-nav2">
                                 @foreach ($dataFromController as $category)
-
+                                
                                     @if ($category->CATEGORIA_ID === 1)
-                                       
-                                        <li>
-                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">HOMENS</a>
-                                        </li>@endif    
+                                    
+                                    <li>
+                                        <form class="main-form" action="{{route('search')}}" method="GET">
+                                            <input type="text" name="CATEGORIA_ID" value="{{$category->CATEGORIA_ID}}" style="display: none">
+                                                <button type="submit" class="custom-button">HOMENS</button>
+                                            </form>
+                                        </li>
+                                        
+                                    @endif    
                                 
                                         @if ($category->CATEGORIA_ID === 2)
                                         <li>
-        
-                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">MULHERES</a>
+                                            <form class="main-form" action="{{route('search')}}" method="GET">
+                                                <input type="text" name="CATEGORIA_ID" value="{{$category->CATEGORIA_ID}}" style="display: none">
+                                                <button type="submit" class="custom-button">MULHERES</button>
+                                            </form>
         
                                         </li>@endif  
                                         
                                         @if ($category->CATEGORIA_ID === 4)
                                         <li>
-
-                                            <a href="{{route('categoryFillproductsPage', [$category->CATEGORIA_ID])}}">ESPORTES</a>
+                                            <form class="main-form" action="{{route('search')}}" method="GET">
+                                                <input type="text" name="CATEGORIA_ID" value="{{$category->CATEGORIA_ID}}" style="display: none">
+                                                <button type="submit" class="custom-button">ESPORTES</button>
+                                            </form>
         
                                         </li>@endif      
                                 @endforeach
-
+                                    
                                
                                 <li>
-
-                                    <a href="shop-side-version-2.html">MAIS COMPRADOS</a>
+                                    <form class="main-form" action="{{route('search')}}" method="GET">
+                                        
+                                        <button type="submit" style="padding:10px 5px" class="custom-button">MAIS COMPRADOS</button>
+                                    </form>
                                 </li>
                                 <li>
+                                    <form class="main-form" action="{{route('search')}}" method="GET">
+                                        <input type="text" name="orberByNew" value="newest" style="display: none">
+                                        <button type="submit" class="custom-button">NOVOS</button>
+                                    </form>
 
-                                    <a href="shop-side-version-2.html">NOVOS</a>
                                 </li>
                             </ul>
                             <!--====== End - List ======-->

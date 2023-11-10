@@ -9,12 +9,6 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
-    public function categoryFillproductsPage(CATEGORIA $id){
-
-        return view('products.FilledByCategory', ['products' => PRODUTO::where('CATEGORIA_ID', $id)->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4)]);
-
-    }
-
     /**
      * Display a listing of the resource.
      */
@@ -35,6 +29,7 @@ class ProductController extends Controller
             $searchTerm = $_GET['PRODUTO_NOME'];
             $query->where('PRODUTO_NOME', 'like', '%' . $searchTerm . '%');
         }
+
 
         if (!empty($_GET['minPrice']) && !empty($_GET['maxPrice'])) {
             $minPrice = $_GET['minPrice'];
