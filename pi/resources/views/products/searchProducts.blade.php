@@ -28,7 +28,7 @@
                                                 <ul class="shop-w__category-list gl-scroll">
                                                     @foreach ($categories as $category)    
                                                         <li class="has-list">
-                                                            <a href="#">{{$category->CATEGORIA_NOME}}</a>
+                                                            <a href="search?CATEGORIA_ID={{$category->CATEGORIA_ID}}">{{$category->CATEGORIA_NOME}}</a>
                                                             <span class="category-list__text u-s-m-l-6">({{$category->products->count()}})</span>
                                                             <span class="js-shop-category-span is-expanded fas fa-plus u-s-m-l-6"></span>
                                                         </li>
