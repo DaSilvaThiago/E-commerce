@@ -15,19 +15,19 @@
                             <ul class="pd-breadcrumb__list">
                                 <li class="has-separator">
 
-                                    <a href="index.hml">Home</a>
+                                    <a href="#">Home</a>
                                 </li>
                                 <li class="has-separator">
 
-                                    <a href="shop-side-version-2.html">Roupas</a>
+                                    <a href="#">Roupas</a>
                                 </li>
                                 <li class="has-separator">
 
-                                    <a href="shop-side-version-2.html" class="categoria_produto"></a>
+                                    <a href="#" class="categoria_produto"></a>
                                 </li>
                                 <li class="is-marked">
 
-                                    <a href="shop-side-version-2.html" class="nome_produto"></a>
+                                    <a href="#" class="nome_produto"></a>
                                 </li>
                             </ul>
                         </div>

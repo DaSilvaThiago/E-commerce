@@ -318,27 +318,12 @@
                                                             @else
                                                                 data-estoque="{{0}}"
                                                             @endif >
-                                                            <span class="material-icons">zoom_in</span>
+                                                            <i class="fas fa-search-plus"></i>
                                                         </a>
                                                     </li>
                                                     <li>
 
-                                                        <a data-modal="modal" data-modal-id="#add-to-cart"><span
-                                                                class="material-icons">
-                                                                add_shopping_cart
-                                                            </span></a>
-                                                    </li>
-                                                    <li>
-
-                                                        <a href="signin.html"><span class="material-icons">
-                                                                favorite
-                                                            </span></a>
-                                                    </li>
-                                                    <li>
-
-                                                        <a href="signin.html"><span class="material-icons">
-                                                                email
-                                                            </span></a>
+                                                        <a data-modal="modal" data-modal-id="#add-to-cart"><i class="fas fa-plus-circle"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
