@@ -101,7 +101,7 @@
                                                         
                                                     <li class="js">
                                                         
-                                                        <a href="shop-side-version-2.html"><i
+                                                        <a href="search?CATEGORIA_ID={{$category->CATEGORIA_ID}}"><i
                                                                 class="fas fa-tv u-s-m-r-6"></i>
                                                                 
                                                                 <span>{{$category->CATEGORIA_NOME}}</span></a>
