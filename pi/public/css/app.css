@@ -6502,3 +6502,10 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   display: inline-block;
   padding: 31px 14px;
 }
+
+.btnToLogOut{
+  border: none;
+  background: none;
+  padding: 12px 0px;
+  margin-left: 20px;
+}

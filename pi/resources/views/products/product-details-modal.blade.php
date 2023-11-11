@@ -112,7 +112,7 @@
                                         favorite
                                         </span>
 
-                                        <a href="signin.html">Adicionar à lista de desejos</a></span>
+                                        <a href="#">Adicionar à lista de desejos</a></span>
                                 </div>
                             </div>
                             <div class="u-s-m-b-15">
@@ -122,10 +122,11 @@
                                         mail
                                         </span>
 
-                                        <a href="signin.html">Me avise quando chegar</a></span>
+                                        <a href="#">Me avise quando chegar</a></span>
                                 </div>
                             </div>
                             <div class="u-s-m-b-15">
+                                @auth
                                 <form class="pd-detail__form">
                                     <div class="pd-detail-inline-2">
                                         <div class="u-s-m-b-15">
@@ -152,6 +153,35 @@
                                         </div>
                                     </div>
                                 </form>
+                                @else
+                                    <form class="pd-detail__form">
+                                        <div class="pd-detail-inline-2">
+                                            <div class="u-s-m-b-15">
+
+                                                <!--====== Input Counter ======-->
+                                                <div class="input-counter">
+
+                                                    <span class="input-counter__minus material-icons">
+                                                        remove
+                                                        </span>
+
+                                                    <input class="input-counter__text input-counter--text-primary-style"
+                                                        type="text" value="1" data-min="1" data-max="1000">
+
+                                                    <span class="input-counter__plus material-icons">
+                                                        add
+                                                        </span>
+                                                </div>
+                                                <!--====== End - Input Counter ======-->
+                                            </div>
+                                            <div class="u-s-m-b-15">
+
+                                                <a href="{{route('login')}}"  class="btn btn--e-brand-b-2" >Por no Carrinho</a>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                @endauth
                             </div>
                         </div>
                         <!--====== End - Product Right Side Details ======-->
