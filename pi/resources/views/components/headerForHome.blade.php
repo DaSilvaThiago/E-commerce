@@ -939,7 +939,7 @@
 
                                    <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
 
-                                            <span class="total-item-round">2</span></a>
+                                            <span class="total-item-round">{{$user->carrinhoItem->where('USUARIO_ID', $user->USUARIO_ID)->count()}}</span></a>
 
                                     <!--====== Dropdown ======-->
 
@@ -949,6 +949,9 @@
                                         <!--====== Mini Product Container ======-->
                                         <div class="mini-product-container gl-scroll u-s-m-b-15">
 
+                                            @foreach ($user as $item)
+                                                
+                                            
                                             <!--====== Card for mini cart ======-->
                                             <div class="card-mini-product">
                                                 <div class="mini-product">
@@ -982,7 +985,7 @@
                                                 <a class="mini-product__delete-link far fa-trash-alt"></a>
                                             </div>
                                             <!--====== End - Card for mini cart ======-->
-
+                                            @endforeach
                                         </div>
                                         <!--====== End - Mini Product Container ======-->
 

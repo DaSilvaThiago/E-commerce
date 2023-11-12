@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $ITEM_QTD
  * 
  * @property PRODUTO $produto
- * @property USUARIO $uauario
+ * @property USUARIO $usuario
  *
  * @package App\Models
  */
@@ -43,7 +43,7 @@ class CARRINHOITEM extends Model
 		return $this->belongsTo(PRODUTO::class, 'PRODUTO_ID');
 	}
 
-	public function uauario()
+	public function usuario()
 	{
 		return $this->belongsTo(USUARIO::class, 'USUARIO_ID');
 	}

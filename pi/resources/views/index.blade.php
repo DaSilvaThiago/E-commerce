@@ -310,7 +310,7 @@
                                                             data-nome="{{$product->PRODUTO_NOME}}"
                                                             data-desc="{{$product->PRODUTO_DESC}}"
                                                             data-preco="{{$product->PRODUTO_PRECO}}"
-                                                            data-id="{{$product->PRODUTO_ID}}"
+                                                            data-idprod="{{$product->PRODUTO_ID}}"
                                                             data-desconto="{{$product->PRODUTO_DESCONTO}}"
                                                             data-fotos="{{$product->produtoImagens}}"
                                                             data-categoria="{{$product->categoria->CATEGORIA_NOME}}"

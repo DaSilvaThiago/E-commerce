@@ -3,7 +3,7 @@
         let nome = $(this).data('nome');
         let desc = $(this).data('desc');
         let preco = $(this).data('preco');
-        let produtoId = $(this).data('id');
+        let produtoId = $(this).data('idprod');
         let userId = $(this).data('usuario');
         let desconto = $(this).data('desconto');
         let fotos = $(this).data('fotos');

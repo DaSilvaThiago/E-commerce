@@ -131,17 +131,19 @@
                                     @csrf
                                     <div class="pd-detail-inline-2">
                                         <div class="u-s-m-b-15">
+                                            
                                             <input type="text" id="USUARIO_ID" name="USUARIO_ID" style="display: none">
-                                            <input type="text" id="PRODUTO_ID" name="PRODUTO_ID" style="display: none">
+                                            
+                                            
                                             <!--====== Input Counter ======-->
                                             <div class="input-counter">
-
+                                                
                                                 <span class="input-counter__minus material-icons">
                                                     remove
                                                     </span>
 
                                                 <input class="input-counter__text input-counter--text-primary-style"
-                                                    type="text" value="1" data-min="1" name="ITEM_QTD" data-max="1000">
+                                                type="text" value="1" data-min="1" name="ITEM_QTD" data-max="1000">
 
                                                 <span class="input-counter__plus material-icons">
                                                     add
@@ -150,6 +152,7 @@
                                             <!--====== End - Input Counter ======-->
                                         </div>
                                         <div class="u-s-m-b-15">
+                                            <input type="text" id="PRODUTO_ID" name="PRODUTO_ID" style="display: none">
 
                                             <button class="btn btn--e-brand-b-2" type="submit">Por no Carrinho</button>
                                         </div>
