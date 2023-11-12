@@ -1,4 +1,4 @@
-{{-- @dd($productsByUser); --}}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -777,23 +777,48 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="banner-bg__countdown">
-                                    <div class="countdown countdown--style-banner" data-countdown="2020/05/01"><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Days</span></div></div><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Hours</span></div></div><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Mins</span></div></div><div class="countdown__content"><div><span class="countdown__value">00</span><span class="countdown__key">Secs</span></div></div></div>
+                                    <div class="countdown countdown--style-banner">
+                                        <div class="countdown__content">
+                                            <div>
+                                                <span class="countdown__value" id="days"></span>
+                                                <span class="countdown__key">Dias</span>
+                                            </div>
+                                        </div>
+                                        <div class="countdown__content">
+                                            <div>
+                                                <span class="countdown__value" id="hours"></span>
+                                                <span class="countdown__key">Horas</span>
+                                            </div>
+                                        </div>
+                                        <div class="countdown__content">
+                                            <div>
+                                                <span class="countdown__value" id="mins"></span>
+                                                <span class="countdown__key">Mins</span>
+                                            </div>
+                                        </div>
+                                        <div class="countdown__content">
+                                            <div>
+                                                <span class="countdown__value" id="secs"></span>
+                                                <span class="countdown__key">Segs</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="banner-bg__wrap">
                                     <div class="banner-bg__text-1">
 
-                                        <span class="u-c-white">Global</span>
+                                        <span class="u-c-secondary">Oferta</span>
 
-                                        <span class="u-c-secondary">Offers</span></div>
+                                        <span class="u-c-secondary">Em Toda Loja</span></div>
                                     <div class="banner-bg__text-2">
 
-                                        <span class="u-c-secondary">Official Launch</span>
+                                        <span class="u-c-secondary">Qualquer Produto</span>
 
-                                        <span class="u-c-white">Don't Miss!</span></div>
+                                        <span class="u-c-secondary">Não Perca!</span></div>
 
-                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary">Enjoy Free Shipping when you buy 2 items and above!</span>
+                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary">Ganhe frete grátis ao comprar 2 ou mais produtos!</span>
 
-                                    <a class="banner-bg__shop-now btn--e-secondary" href="shop-side-version-2.html">Shop Now</a>
+                                    <a class="banner-bg__shop-now btn--e-secondary">Me Avise!</a>
                                 </div>
                             </div>
                         </div>
@@ -1184,6 +1209,32 @@
     
     </div>
     <!--====== End - Main App ======-->
+
+    <!--====== Counter time for section 5 ======-->
+        <script>
+            const countdownDate = new Date("2024-1-1").getTime();
+            
+            const interval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                const formattedHours = String(hours).padStart(2, '0');
+                const formattedMinutes = String(minutes).padStart(2, '0');
+                const formattedSeconds = String(seconds).padStart(2, '0');
+            
+                document.getElementById("days").innerText = days;
+                document.getElementById("hours").innerText = formattedHours;
+                document.getElementById("mins").innerText = formattedMinutes;
+                document.getElementById("secs").innerText = formattedSeconds;
+        
+            }, 1000);
+        </script>
+    <!--====== End - Counter time for section 5 ======-->
 
     <x-someScripts/>
 
