@@ -1392,7 +1392,7 @@
                                         <a href="index.html">Home</a></li>
                                     <li class="is-marked">
 
-                                        <a href="about.html">About</a></li>
+                                        <a href="cart.html">Cart</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1405,22 +1405,207 @@
             <!--====== Section 2 ======-->
             <div class="u-s-p-b-60">
 
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary">SHOPPING CART</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Intro ======-->
+
+
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="about">
-                                    <div class="about__container">
-                                        <div class="about__info">
-                                            <h2 class="about__h2">Welcome to Reshop Store!</h2>
-                                            <div class="about__p-wrap">
-                                                <p class="about__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 u-s-m-b-30">
+                                <div class="table-responsive">
+                                    <table class="table-p">
+                                        <tbody>
 
-                                            <a class="about__link btn--e-secondary" href="index.html" target="_blank">Shop Now</a>
-                                        </div>
-                                    </div>
+                                            <!--====== Row ======-->
+                                            <tr>
+                                                <td>
+                                                    <div class="table-p__box">
+                                                        <div class="table-p__img-wrap">
+
+                                                            <img class="u-img-fluid" src="images/product/electronic/product3.jpg" alt=""></div>
+                                                        <div class="table-p__info">
+
+                                                            <span class="table-p__name">
+
+                                                                <a href="product-detail.html">Yellow Wireless Headphone</a></span>
+
+                                                            <span class="table-p__category">
+
+                                                                <a href="shop-side-version-2.html">Electronics</a></span>
+                                                            <ul class="table-p__variant-list">
+                                                                <li>
+
+                                                                    <span>Size: 22</span></li>
+                                                                <li>
+
+                                                                    <span>Color: Red</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+
+                                                    <span class="table-p__price">$125.00</span></td>
+                                                <td>
+                                                    <div class="table-p__input-counter-wrap">
+
+                                                        <!--====== Input Counter ======-->
+                                                        <div class="input-counter">
+
+                                                            <span class="input-counter__minus fas fa-minus"></span>
+
+                                                            <input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000">
+
+                                                            <span class="input-counter__plus fas fa-plus"></span></div>
+                                                        <!--====== End - Input Counter ======-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-p__del-wrap">
+
+                                                        <a class="far fa-trash-alt table-p__delete-link" href="#"></a></div>
+                                                </td>
+                                            </tr>
+                                            <!--====== End - Row ======-->
+
+
+                                            <!--====== Row ======-->
+                                            <tr>
+                                                <td>
+                                                    <div class="table-p__box">
+                                                        <div class="table-p__img-wrap">
+
+                                                            <img class="u-img-fluid" src="images/product/women/product8.jpg" alt=""></div>
+                                                        <div class="table-p__info">
+
+                                                            <span class="table-p__name">
+
+                                                                <a href="product-detail.html">New Dress D Nice Elegant</a></span>
+
+                                                            <span class="table-p__category">
+
+                                                                <a href="shop-side-version-2.html">Women Clothing</a></span>
+                                                            <ul class="table-p__variant-list">
+                                                                <li>
+
+                                                                    <span>Size: 22</span></li>
+                                                                <li>
+
+                                                                    <span>Color: Red</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+
+                                                    <span class="table-p__price">$125.00</span></td>
+                                                <td>
+                                                    <div class="table-p__input-counter-wrap">
+
+                                                        <!--====== Input Counter ======-->
+                                                        <div class="input-counter">
+
+                                                            <span class="input-counter__minus fas fa-minus"></span>
+
+                                                            <input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000">
+
+                                                            <span class="input-counter__plus fas fa-plus"></span></div>
+                                                        <!--====== End - Input Counter ======-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-p__del-wrap">
+
+                                                        <a class="far fa-trash-alt table-p__delete-link" href="#"></a></div>
+                                                </td>
+                                            </tr>
+                                            <!--====== End - Row ======-->
+
+
+                                            <!--====== Row ======-->
+                                            <tr>
+                                                <td>
+                                                    <div class="table-p__box">
+                                                        <div class="table-p__img-wrap">
+
+                                                            <img class="u-img-fluid" src="images/product/men/product8.jpg" alt=""></div>
+                                                        <div class="table-p__info">
+
+                                                            <span class="table-p__name">
+
+                                                                <a href="product-detail.html">New Fashion D Nice Elegant</a></span>
+
+                                                            <span class="table-p__category">
+
+                                                                <a href="shop-side-version-2.html">Men Clothing</a></span>
+                                                            <ul class="table-p__variant-list">
+                                                                <li>
+
+                                                                    <span>Size: 22</span></li>
+                                                                <li>
+
+                                                                    <span>Color: Red</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+
+                                                    <span class="table-p__price">$125.00</span></td>
+                                                <td>
+                                                    <div class="table-p__input-counter-wrap">
+
+                                                        <!--====== Input Counter ======-->
+                                                        <div class="input-counter">
+
+                                                            <span class="input-counter__minus fas fa-minus"></span>
+
+                                                            <input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000">
+
+                                                            <span class="input-counter__plus fas fa-plus"></span></div>
+                                                        <!--====== End - Input Counter ======-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-p__del-wrap">
+
+                                                        <a class="far fa-trash-alt table-p__delete-link" href="#"></a></div>
+                                                </td>
+                                            </tr>
+                                            <!--====== End - Row ======-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="route-box">
+                                    <div class="route-box__g1">
+
+                                        <a class="route-box__link" href="shop-side-version-2.html"><i class="fas fa-long-arrow-alt-left"></i>
+
+                                            <span>CONTINUE SHOPPING</span></a></div>
+                                    <div class="route-box__g2">
+
+                                        <a class="route-box__link" href="cart.html"><i class="fas fa-trash"></i>
+
+                                            <span>CLEAR CART</span></a>
+
+                                        <a class="route-box__link" href="cart.html"><i class="fas fa-sync"></i>
+
+                                            <span>UPDATE CART</span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -1434,144 +1619,95 @@
             <!--====== Section 3 ======-->
             <div class="u-s-p-b-60">
 
-                <!--====== Section Intro ======-->
-                <div class="section__intro u-s-m-b-46">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary">Our Team Members</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Intro ======-->
-
-
                 <!--====== Section Content ======-->
                 <div class="section__content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
+                            <div class="col-lg-12 col-md-12 col-sm-12 u-s-m-b-30">
+                                <form class="f-cart">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                                            <div class="f-cart__pad-box">
+                                                <h1 class="gl-h1">ESTIMATE SHIPPING AND TAXES</h1>
 
-                                            <img class="aspect__img team-member__img" src="images/about/member-1.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
+                                                <span class="gl-text u-s-m-b-30">Enter your destination to get a shipping estimate.</span>
+                                                <div class="u-s-m-b-30">
 
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
+                                                    <!--====== Select Box ======-->
 
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
+                                                    <label class="gl-label" for="shipping-country">COUNTRY *</label><select class="select-box select-box--primary-style" id="shipping-country">
+                                                        <option selected value="">Choose Country</option>
+                                                        <option value="uae">United Arab Emirate (UAE)</option>
+                                                        <option value="uk">United Kingdom (UK)</option>
+                                                        <option value="us">United States (US)</option>
+                                                    </select>
+                                                    <!--====== End - Select Box ======-->
+                                                </div>
+                                                <div class="u-s-m-b-30">
 
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
+                                                    <!--====== Select Box ======-->
 
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
+                                                    <label class="gl-label" for="shipping-state">STATE/PROVINCE *</label><select class="select-box select-box--primary-style" id="shipping-state">
+                                                        <option selected value="">Choose State/Province</option>
+                                                        <option value="al">Alabama</option>
+                                                        <option value="al">Alaska</option>
+                                                        <option value="ny">New York</option>
+                                                    </select>
+                                                    <!--====== End - Select Box ======-->
+                                                </div>
+                                                <div class="u-s-m-b-30">
+
+                                                    <label class="gl-label" for="shipping-zip">ZIP/POSTAL CODE *</label>
+
+                                                    <input class="input-text input-text--primary-style" type="text" id="shipping-zip" placeholder="Zip/Postal Code"></div>
+                                                <div class="u-s-m-b-30">
+
+                                                    <a class="f-cart__ship-link btn--e-transparent-brand-b-2" href="cart.html">CALCULATE SHIPPING</a></div>
+
+                                                <span class="gl-text">Note: There are some countries where free shipping is available otherwise our flat rate charges or country delivery charges will be apply.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                                            <div class="f-cart__pad-box">
+                                                <h1 class="gl-h1">NOTE</h1>
+
+                                                <span class="gl-text u-s-m-b-30">Add Special Note About Your Product</span>
+                                                <div>
+
+                                                    <label for="f-cart-note"></label><textarea class="text-area text-area--primary-style" id="f-cart-note"></textarea></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                                            <div class="f-cart__pad-box">
+                                                <div class="u-s-m-b-30">
+                                                    <table class="f-cart__table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>SHIPPING</td>
+                                                                <td>$4.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>TAX</td>
+                                                                <td>$0.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>SUBTOTAL</td>
+                                                                <td>$379.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>GRAND TOTAL</td>
+                                                                <td>$379.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div>
+
+                                                    <button class="btn btn--e-brand-b-2" type="submit"> PROCEED TO CHECKOUT</button></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Ahnan Bashri</span>
-
-                                        <span class="team-member__job-title">Manager</span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-2.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Joseph Min</span>
-
-                                        <span class="team-member__job-title">UI, Designer</span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-3.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Mike Pipe</span>
-
-                                        <span class="team-member__job-title">App, Architect</span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-4.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Klronr Jim</span>
-
-                                        <span class="team-member__job-title">Team Leader</span></div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -1579,99 +1715,6 @@
                 <!--====== End - Section Content ======-->
             </div>
             <!--====== End - Section 3 ======-->
-
-
-            <!--====== Section 4 ======-->
-            <div class="u-s-p-b-90 u-s-m-b-30">
-
-                <!--====== Section Intro ======-->
-                <div class="section__intro u-s-m-b-46">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">CLIENTS FEEDBACK</h1>
-
-                                    <span class="section__span u-c-silver">WHAT OUR CLIENTS SAY</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Intro ======-->
-
-
-                <!--====== Section Content ======-->
-                <div class="section__content">
-                    <div class="container">
-
-                        <!--====== Testimonial Slider ======-->
-                        <div class="slider-fouc">
-                            <div class="owl-carousel" id="testimonial-slider">
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-1.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-2.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-3.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-4.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--====== End - Testimonial Slider ======-->
-                    </div>
-                </div>
-                <!--====== End - Section Content ======-->
-            </div>
-            <!--====== End - Section 4 ======-->
         </div>
         <!--====== End - App Content ======-->
 

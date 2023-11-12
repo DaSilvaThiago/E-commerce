@@ -127,7 +127,7 @@
                             </div>
                             <div class="u-s-m-b-15">
                                 @auth
-                                <form class="pd-detail__form">
+                                <form class="pd-detail__form" action="{{route('carrinho')}}" method="POST">
                                     <div class="pd-detail-inline-2">
                                         <div class="u-s-m-b-15">
 
