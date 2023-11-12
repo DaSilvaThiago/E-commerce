@@ -1,7 +1,13 @@
 <x-guest-layout >
-
-                <!--====== Main Header ======-->
-                <x-headerForAll :dataFromController="$categories"  />
+        @auth
+            <!--====== Header Wrapper ======-->
+            <x-headerForAll :dataFromController="$categories" :user="$productsByUser" />
+            <!--====== End - Header Wrapper ======-->    
+        @else
+            <x-headerForAll :dataFromController="$categories"  />
+        @endauth
+                    <!--====== Main Header ======-->
+                
                 <!--====== End - Main Header ======-->
     
     

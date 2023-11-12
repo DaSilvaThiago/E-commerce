@@ -892,21 +892,21 @@
                                         </form>
     
                                     </li>@endif      
-                            @endforeach
-                               
-                            <li>
-                                <form class="main-form" action="#" method="GET">
-                                    
-                                    <button type="submit" style="padding:10px 5px" class="custom-button2">MAIS COMPRADOS</button>
-                                </form>
-                            </li>
-                            <li>
-                                <form class="main-form" action="{{route('search')}}" method="GET">
-                                    <input type="text" name="orberByNew" value="newest" style="display: none">
-                                    <button type="submit" class="custom-button2">NOVOS</button>
-                                </form>
+                                @endforeach
+                                
+                                <li>
+                                    <form class="main-form" action="#" method="GET">
+                                        
+                                        <button type="submit" style="padding:10px 5px" class="custom-button2">MAIS COMPRADOS</button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form class="main-form" action="{{route('search')}}" method="GET">
+                                        <input type="text" name="orberByNew" value="newest" style="display: none">
+                                        <button type="submit" class="custom-button2">NOVOS</button>
+                                    </form>
 
-                            </li>
+                                </li>
                             </ul>
                             <!--====== End - List ======-->
                         </div>
@@ -938,7 +938,7 @@
 
                                    <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
 
-                                            <span class="total-item-round">2</span></a>
+                                            <span class="total-item-round">{{$user->count()}}</span></a>
 
                                     <!--====== Dropdown ======-->
 
@@ -947,7 +947,12 @@
 
                                         <!--====== Mini Product Container ======-->
                                         <div class="mini-product-container gl-scroll u-s-m-b-15">
-
+                                            @php
+                                                $total = 0;
+                                            @endphp
+                                            @foreach ($user as $item)
+                                                
+                                            
                                             <!--====== Card for mini cart ======-->
                                             <div class="card-mini-product">
                                                 <div class="mini-product">
@@ -957,7 +962,7 @@
                                                             href="product-detail.html">
 
                                                             <img class="u-img-fluid"
-                                                                src="images/product/electronic/product3.jpg"
+                                                                src="{{$item->produto->produtoImagens->first()->IMAGEM_URL}}"
                                                                 alt=""></a>
                                                     </div>
                                                     <div class="mini-product__info-wrapper">
@@ -965,23 +970,26 @@
                                                         <span class="mini-product__category">
 
                                                             <a
-                                                                href="shop-side-version-2.html">Electronics</a></span>
+                                                                href="shop-side-version-2.html">{{$item->produto->categoria->CATEGORIA_NOME}}</a></span>
 
                                                         <span class="mini-product__name">
 
-                                                            <a href="product-detail.html">Yellow Wireless
-                                                                Headphone</a></span>
+                                                            <a href="product-detail.html">{{$item->produto->PRODUTO_NOME}}</a></span>
 
-                                                        <span class="mini-product__quantity">1 x</span>
+                                                        <span class="mini-product__quantity">x{{$item->ITEM_QTD}}</span>
 
-                                                        <span class="mini-product__price">$8</span>
+                                                        <span class="mini-product__price">R${{$item->ITEM_QTD * ($item->produto->PRODUTO_PRECO - $item->produto->PRODUTO_DESCONTO)}}</span>
+                                                        @php
+                                                            $sum = $item->ITEM_QTD * ($item->produto->PRODUTO_PRECO - $item->produto->PRODUTO_DESCONTO);
+                                                            $total+=$sum;
+                                                        @endphp
                                                     </div>
                                                 </div>
 
                                                 <a class="mini-product__delete-link far fa-trash-alt"></a>
                                             </div>
                                             <!--====== End - Card for mini cart ======-->
-
+                                            @endforeach
                                         </div>
                                         <!--====== End - Mini Product Container ======-->
 
@@ -992,15 +1000,15 @@
 
                                                 <span class="subtotal-text">SUBTOTAL</span>
 
-                                                <span class="subtotal-value">$16</span>
+                                                <span class="subtotal-value">R${{$total}}</span>
                                             </div>
                                             <div class="mini-action">
 
                                                 <a class="mini-link btn--e-brand-b-2"
-                                                    href="checkout.html">PROCEED TO CHECKOUT</a>
+                                                    href="checkout.html">FINALIZAR COMPRA</a>
 
                                                 <a class="mini-link btn--e-transparent-secondary-b-2"
-                                                    href="cart.html">VIEW CART</a>
+                                                    href="cart.html">VER CARRINHO</a>
                                             </div>
                                         </div>
                                         <!--====== End - Mini Product Statistics ======-->

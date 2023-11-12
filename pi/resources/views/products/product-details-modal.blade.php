@@ -108,22 +108,39 @@
                             <div class="u-s-m-b-15">
                                 <div class="pd-detail__inline">
 
-                                    <span class="pd-detail__click-wrap"><span class="material-icons">
-                                        favorite
-                                        </span>
+                                    <span class="pd-detail__click-wrap"><i class="far fa-heart u-s-m-r-6"></i>
 
-                                        <a href="#">Adicionar à lista de desejos</a></span>
-                                </div>
+                                        <a href="#">Adicionar à lista de desejos</a>
+
+                                        <span class="pd-detail__click-count">(222)</span></span></div>
                             </div>
                             <div class="u-s-m-b-15">
                                 <div class="pd-detail__inline">
 
-                                    <span class="pd-detail__click-wrap"><span class="material-icons">
-                                        mail
-                                        </span>
+                                    <span class="pd-detail__click-wrap"><i class="far fa-envelope u-s-m-r-6"></i>
 
-                                        <a href="#">Me avise quando chegar</a></span>
-                                </div>
+                                        <a href="#">Me avise quando chegar</a>
+
+                                        <span class="pd-detail__click-count">(20)</span></span></div>
+                            </div>
+                            <div class="u-s-m-b-15">
+                                <ul class="pd-social-list">
+                                    <li>
+
+                                        <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li>
+
+                                        <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li>
+
+                                        <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li>
+
+                                        <a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li>
+
+                                        <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                </ul>
                             </div>
                             <div class="u-s-m-b-15">
                                 @auth
@@ -133,6 +150,7 @@
                                         <div class="u-s-m-b-15">
                                             
                                             <input type="text" id="USUARIO_ID" name="USUARIO_ID" style="display: none">
+                                            <input type="text" id="PRODUTO_ID" name="PRODUTO_ID" style="display: none">
                                             
                                             
                                             <!--====== Input Counter ======-->
@@ -152,7 +170,6 @@
                                             <!--====== End - Input Counter ======-->
                                         </div>
                                         <div class="u-s-m-b-15">
-                                            <input type="text" id="PRODUTO_ID" name="PRODUTO_ID" style="display: none">
 
                                             <button class="btn btn--e-brand-b-2" type="submit">Por no Carrinho</button>
                                         </div>
@@ -187,6 +204,21 @@
                                     </form>
 
                                 @endauth
+                            </div>
+                            <div class="u-s-m-b-15">
+
+                                <span class="pd-detail__label u-s-m-b-8">Política do produto:</span>
+                                <ul class="pd-detail__policy-list">
+                                    <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+
+                                        <span>Compra segura. </span></li>
+                                    <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+
+                                        <span>Reembolso total caso não receber o produto. </span></li>
+                                    <li><i class="fas fa-check-circle u-s-m-r-8"></i>
+
+                                        <span>Devolução caso o produto não seja o comprado. </span></li>
+                                </ul>
                             </div>
                         </div>
                         <!--====== End - Product Right Side Details ======-->
