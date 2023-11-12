@@ -10,13 +10,13 @@
     <!--====== Main App ======-->
     <div id="app">
 
+        <!--====== Header Wrapper ======-->
         @auth
-            <!--====== Header Wrapper ======-->
             <x-headerForHome :dataFromController="$categories" :user="$productsByUser" />
-            <!--====== End - Header Wrapper ======-->    
         @else
-        <x-headerForHome :dataFromController="$categories"/>
+            <x-headerForHome :dataFromController="$categories"/>
         @endauth
+        <!--====== End - Header Wrapper ======-->    
 
 
         <!--====== App Content ======-->
@@ -1108,39 +1108,51 @@
                             <div class="owl-carousel" id="brand-slider" data-item="5">
                                 <div class="brand-slide">
 
-                                    <a href="shop-side-version-2.html">
+                                    <a >
 
-                                        <img src="images/brand/b1.png" alt=""></a>
+                                        <img src="{{asset('images/section7/1.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
-                                    <a href="shop-side-version-2.html">
+                                    <a >
 
-                                        <img src="images/brand/b2.png" alt=""></a>
+                                        <img src="{{asset('images/section7/2.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
-                                    <a href="shop-side-version-2.html">
+                                    <a >
 
-                                        <img src="images/brand/b3.png" alt=""></a>
+                                        <img src="{{asset('images/section7/3.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
-                                    <a href="shop-side-version-2.html">
+                                    <a>
 
-                                        <img src="images/brand/b4.png" alt=""></a>
+                                        <img src="{{asset('images/section7/4.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
-                                    <a href="shop-side-version-2.html">
+                                    <a>
 
-                                        <img src="images/brand/b5.png" alt=""></a>
+                                        <img src="{{asset('images/section7/5.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
-                                    <a href="shop-side-version-2.html">
+                                    <a>
 
-                                        <img src="images/brand/b6.png" alt=""></a>
+                                        <img src="{{asset('images/section7/6.jpg')}}" alt=""></a>
+                                </div>
+                                <div class="brand-slide">
+
+                                    <a>
+
+                                        <img src="{{asset('images/section7/7.jpg')}}" alt=""></a>
+                                </div>
+                                <div class="brand-slide">
+
+                                    <a>
+
+                                        <img src="{{asset('images/section7/8.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -1171,7 +1183,6 @@
         <!--====== End - Modal Section ======-->
     
     </div>
-
     <!--====== End - Main App ======-->
 
     <x-someScripts/>
