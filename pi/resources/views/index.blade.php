@@ -10,9 +10,13 @@
     <!--====== Main App ======-->
     <div id="app">
 
-        <!--====== Header Wrapper ======-->
-        <x-headerForHome :dataFromController="$categories" :user="$productsByUser" />
-        <!--====== End - Header Wrapper ======-->
+        @auth
+            <!--====== Header Wrapper ======-->
+            <x-headerForHome :dataFromController="$categories" :user="$productsByUser" />
+            <!--====== End - Header Wrapper ======-->    
+        @else
+        <x-headerForHome :dataFromController="$categories"/>
+        @endauth
 
 
         <!--====== App Content ======-->

@@ -979,9 +979,9 @@
 
                                                         <span class="mini-product__quantity">x{{$item->ITEM_QTD}}</span>
 
-                                                        <span class="mini-product__price">R${{$item->ITEM_QTD * $item->produto->PRODUTO_PRECO}}</span>
+                                                        <span class="mini-product__price">R${{$item->ITEM_QTD * ($item->produto->PRODUTO_PRECO - $item->produto->PRODUTO_DESCONTO)}}</span>
                                                         @php
-                                                            $sum = $item->ITEM_QTD * $item->produto->PRODUTO_PRECO;
+                                                            $sum = $item->ITEM_QTD * ($item->produto->PRODUTO_PRECO - $item->produto->PRODUTO_DESCONTO);
                                                             $total+=$sum;
                                                         @endphp
                                                     </div>

@@ -41,20 +41,7 @@
         $.each(fotos, function(index, foto) {
             let imgElement = $('<div><img class="u-img-fluid" src="' + foto.IMAGEM_URL + '" alt="' + nome + '"></div>');
             modalBody.append(imgElement);
-        });
-        //imagens do carrossel
-        let modalCarousel = $('#js-product-detail-modal-thumbnail');
-        if (fotos.length == 1) {
-            for (let i = 0; i < 3; i++) {
-                let imgElement = $('<div><img class="u-img-fluid" src="" alt=""></div>');                
-            }        
-            modalCarousel.append(imgElement);
-        }
-        $.each(fotos, function(index, foto) {
-            
-                let imgElement = $('<div><img class="u-img-fluid" src=" ' + foto.IMAGEM_URL + ' " alt="' + nome + '"></div>');
-        
-            modalCarousel.append(imgElement);
+            exit();
         });
     });
 </script>
