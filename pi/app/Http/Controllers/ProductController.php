@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CARRINHOITEM;
 use App\Models\CATEGORIA;
 use App\Models\PRODUTO;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class ProductController extends Controller
     {
         if (auth()->check()) {
             $userId = Auth::user();
-            return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4), 'user' => $userId]);
+            $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', $userId->USUARIO_ID);
+            return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4), 'user' => $userId, 'productsByUser' => $productsByUser]);
         }
     
         return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4)]);

@@ -1,4 +1,4 @@
-
+{{-- @dd($productsByUser); --}}
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -11,7 +11,7 @@
     <div id="app">
 
         <!--====== Header Wrapper ======-->
-        <x-headerForHome :dataFromController="$categories" :user="$user" />
+        <x-headerForHome :dataFromController="$categories" :user="$productsByUser" />
         <!--====== End - Header Wrapper ======-->
 
 
