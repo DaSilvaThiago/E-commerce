@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CATEGORIA;
 use App\Models\PRODUTO;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -14,6 +15,11 @@ class ProductController extends Controller
      */
     public function index()
     {
+        if (auth()->check()) {
+            $userId = Auth::user();
+            return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4), 'user' => $userId]);
+        }
+    
         return view('index', ['products' => PRODUTO::orderBy('PRODUTO_ID', 'desc')->where('PRODUTO_ATIVO', 1)->take(12)->get(), 'categories' => CATEGORIA::all()->take(4)]);
     }
 

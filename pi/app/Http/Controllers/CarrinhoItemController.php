@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CARRINHOITEM;
 use Illuminate\Http\Request;
 
 class CarrinhoItemController extends Controller
@@ -27,7 +28,8 @@ class CarrinhoItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CARRINHOITEM::create($request->all());
+        return redirect(route('products.index'));
     }
 
     /**

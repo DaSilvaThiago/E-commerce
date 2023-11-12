@@ -310,6 +310,7 @@
                                                             data-nome="{{$product->PRODUTO_NOME}}"
                                                             data-desc="{{$product->PRODUTO_DESC}}"
                                                             data-preco="{{$product->PRODUTO_PRECO}}"
+                                                            data-id="{{$product->PRODUTO_ID}}"
                                                             data-desconto="{{$product->PRODUTO_DESCONTO}}"
                                                             data-fotos="{{$product->produtoImagens}}"
                                                             data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
@@ -317,7 +318,10 @@
                                                                 data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
                                                             @else
                                                                 data-estoque="{{0}}"
-                                                            @endif >
+                                                            @endif
+                                                            @auth
+                                                                data-usuario="{{$user->USUARIO_ID}}"
+                                                            @endauth >
                                                             <i class="fas fa-search-plus"></i>
                                                         </a>
                                                     </li>

@@ -3,6 +3,8 @@
         let nome = $(this).data('nome');
         let desc = $(this).data('desc');
         let preco = $(this).data('preco');
+        let produtoId = $(this).data('id');
+        let userId = $(this).data('usuario');
         let desconto = $(this).data('desconto');
         let fotos = $(this).data('fotos');
         let categoria = $(this).data('categoria');
@@ -11,7 +13,8 @@
         $('#js-product-detail-modal').empty();
         $('#js-product-detail-modal-thumbnail').empty();
 
-
+        $('#USUARIO_ID').val(userId);
+        $('#PRODUTO_ID').val(produtoId);
         let valorComDesconto = preco-desconto;
         let porcentagem = ((valorComDesconto-preco)/preco)*100
         $('.categoria_produto').text(categoria);

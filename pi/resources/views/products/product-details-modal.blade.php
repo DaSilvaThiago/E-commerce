@@ -127,10 +127,12 @@
                             </div>
                             <div class="u-s-m-b-15">
                                 @auth
-                                <form class="pd-detail__form" action="{{route('carrinho')}}" method="POST">
+                                <form class="pd-detail__form" action="{{route('cart.store')}}" method="POST">
+                                    @csrf
                                     <div class="pd-detail-inline-2">
                                         <div class="u-s-m-b-15">
-
+                                            <input type="text" id="USUARIO_ID" name="USUARIO_ID" style="display: none">
+                                            <input type="text" id="PRODUTO_ID" name="PRODUTO_ID" style="display: none">
                                             <!--====== Input Counter ======-->
                                             <div class="input-counter">
 
@@ -139,7 +141,7 @@
                                                     </span>
 
                                                 <input class="input-counter__text input-counter--text-primary-style"
-                                                    type="text" value="1" data-min="1" data-max="1000">
+                                                    type="text" value="1" data-min="1" name="ITEM_QTD" data-max="1000">
 
                                                 <span class="input-counter__plus material-icons">
                                                     add
