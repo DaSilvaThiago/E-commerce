@@ -15,8 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $PRODUTO_ID
  * @property int $ITEM_QTD
  * 
- * @property PRODUTO $p_r_o_d_u_t_o
- * @property USUARIO $u_s_u_a_r_i_o
+ * @property PRODUTO $produto
+ * @property USUARIO $uauario
  *
  * @package App\Models
  */

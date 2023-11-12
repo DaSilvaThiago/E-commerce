@@ -11,7 +11,7 @@
     <div id="app">
 
         <!--====== Header Wrapper ======-->
-        <x-headerForHome :dataFromController="$categories" />
+        <x-headerForHome :dataFromController="$categories" :user="$user" />
         <!--====== End - Header Wrapper ======-->
 
 

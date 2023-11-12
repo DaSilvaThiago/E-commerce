@@ -19,9 +19,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $USUARIO_SENHA
  * @property string $USUARIO_CPF
  * 
- * @property CARRINHOITEM $c_a_r_r_i_n_h_o_i_t_e_m
- * @property Collection|ENDERECO[] $e_n_d_e_r_e_c_o_s
- * @property Collection|PEDIDO[] $p_e_d_i_d_o_s
+ * @property CARRINHOITEM $carrinhoItem
+ * @property Collection|ENDERECO[] $enderecos
+ * @property Collection|PEDIDO[] $pedidos
  *
  * @package App\Models
  */
@@ -39,17 +39,17 @@ class User extends Authenticatable
 		'USUARIO_CPF'
 	];
 
-	public function c_a_r_r_i_n_h_o_i_t_e_m()
+	public function carrinhoItem()
 	{
 		return $this->hasOne(CARRINHOITEM::class, 'USUARIO_ID');
 	}
 
-	public function e_n_d_e_r_e_c_o_s()
+	public function enderecos()
 	{
 		return $this->hasMany(ENDERECO::class, 'USUARIO_ID');
 	}
 
-	public function p_e_d_i_d_o_s()
+	public function pedidos()
 	{
 		return $this->hasMany(PEDIDO::class, 'USUARIO_ID');
 	}
