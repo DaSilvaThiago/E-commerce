@@ -307,7 +307,6 @@
                                                         <a 
                                                             data-modal="modal" 
                                                             data-modal-id="#quick-look" 
-                                                            href="#" 
                                                             data-bs-toggle="modal"
                                                             class="ProductsDetailModal"
                                                             data-bs-target="#ProductsDetailModal"
@@ -433,7 +432,7 @@
                                     @endforeach
                                     
                                 </div>
-                                <div class="filter__grid-wrapper u-s-m-t-30">
+                                <div class="filter__grid-wrapper u-s-m-t-30 toHideAndScrol">
                                     <div class="row">
                                         @foreach ($categories as $category)
                                             @if ($category->CATEGORIA_ID == 1)
@@ -457,7 +456,6 @@
                                                                                 <a 
                                                                                     data-modal="modal" 
                                                                                     data-modal-id="#quick-look" 
-                                                                                    href="#" 
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
@@ -538,7 +536,6 @@
                                                                                 <a 
                                                                                     data-modal="modal" 
                                                                                     data-modal-id="#quick-look" 
-                                                                                    href="#" 
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
@@ -619,7 +616,6 @@
                                                                                 <a 
                                                                                     data-modal="modal" 
                                                                                     data-modal-id="#quick-look" 
-                                                                                    href="#" 
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
@@ -700,7 +696,6 @@
                                                                                 <a 
                                                                                     data-modal="modal" 
                                                                                     data-modal-id="#quick-look" 
-                                                                                    href="#" 
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
@@ -763,12 +758,6 @@
                                             @endif
                                         @endforeach
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="load-more">
-
-                                    <button class="btn btn--e-brand" type="button">CARREGAR MAIS</button>
                                 </div>
                             </div>
                         </div>

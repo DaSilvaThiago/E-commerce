@@ -6509,3 +6509,12 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
   padding: 12px 0px;
   margin-left: 20px;
 }
+
+.toHideAndScrol{
+  height: 750px !important;
+
+  overflow-y: scroll;
+}
+.toHideAndScrol::-webkit-scrollbar {
+  display: none;
+}
