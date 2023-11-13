@@ -19,7 +19,7 @@
 
     <!--====== App ======-->
     <script src="{{asset('js/app.js')}}"></script>
-
+    <a id="topScroll" href="#top" style="position: fixed; z-index: 100;"><i class="fa-solid fa-arrow-up" style="color: #000000;"></i></a>
     <script src="https://kit.fontawesome.com/eabf20875e.js" crossorigin="anonymous"></script>
 
     <!--====== Noscript ======-->

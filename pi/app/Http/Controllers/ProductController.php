@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
 
+    public function productDetails(PRODUTO $id){
+        return view('products.productDetails', ['prduct' => $id, 'categories' => CATEGORIA::all()] );
+    }
+
     /**
      * Display a listing of the resource.
      */

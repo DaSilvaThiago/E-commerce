@@ -290,7 +290,7 @@
                                         <div class="product-r__container">
 
                                             <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                href="product-detail.html">
+                                                href="{{route('productDetails', $product->PRODUTO_ID)}}">
                                                 @php
                                                     $primaryImage = $product->produtoImagens->first();
                                                 @endphp
@@ -368,7 +368,7 @@
                                                 @endif
                                             </div>
 
-                                            <span class="product-r__description">{{ $product->PRODUTO_DESC }}</span>
+                                            <span class="product-r__description">{{ substr($product->PRODUTO_DESC, 0, 200) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -839,8 +839,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="column-product">
 
-                                    <span class="column-product__title u-c-secondary u-s-m-b-25">SPECIAL
-                                        PRODUCTS</span>
+                                    <span class="column-product__title u-c-secondary u-s-m-b-25">MAIS VENDIDOS DO DIA</span>
                                     <ul class="column-product__list">
                                         <li class="column-product__item">
                                             <div class="product-l">
@@ -926,8 +925,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="column-product">
 
-                                    <span class="column-product__title u-c-secondary u-s-m-b-25">WEEKLY
-                                        PRODUCTS</span>
+                                    <span class="column-product__title u-c-secondary u-s-m-b-25">PRODUTOS DA SEMANA</span>
                                     <ul class="column-product__list">
                                         <li class="column-product__item">
                                             <div class="product-l">
@@ -1019,7 +1017,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="column-product">
 
-                                    <span class="column-product__title u-c-secondary u-s-m-b-25">FLASH PRODUCTS</span>
+                                    <span class="column-product__title u-c-secondary u-s-m-b-25">ACABANDO O ESTOQUE</span>
                                     <ul class="column-product__list">
                                         <li class="column-product__item">
                                             <div class="product-l">
@@ -1210,9 +1208,9 @@
     </div>
     <!--====== End - Main App ======-->
 
-    <!--====== Counter time for section 5 ======-->
+    <!--====== timer for section 5 ======-->
         <script>
-            const countdownDate = new Date("2024-1-1").getTime();
+            const countdownDate = new Date("2024-01-01").getTime();
             
             const interval = setInterval(function() {
                 const now = new Date().getTime();
