@@ -6437,11 +6437,12 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
 
   /* rating-stars */
 
-
+#stock{
+  margin-top: 20px;
+}
 
 .rate {
     float: left;
-    height: 40px;
     padding-right: 16px;
 }
 .rate:not(:checked) > input {
@@ -6454,7 +6455,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:26px;
+    font-size:20px;
     color:#ccc;
 }
 .rate:not(:checked) > label:before {
