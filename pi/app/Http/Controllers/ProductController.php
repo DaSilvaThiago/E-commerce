@@ -13,7 +13,7 @@ class ProductController extends Controller
 
     public function productDetails(PRODUTO $id){
         
-        return view('products.productDetails', ['product' => $id, 'categories' => CATEGORIA::all()] );
+        return view('products.productDetails', ['product' => $id, 'categories' => CATEGORIA::all(), 'products' => PRODUTO::all()] );
     }
 
     /**

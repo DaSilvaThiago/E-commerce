@@ -43,8 +43,7 @@
 
                                                 <span class="u-c-brand">R$99.90</span></span>
 
-                                            <a class="shop-now-link btn--e-brand"
-                                                href="shop-side-version-2.html">COMPRAR</a>
+                                            <a class="shop-now-link btn--e-brand">COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -69,8 +68,7 @@
 
                                                 <span class="u-c-brand">R$180.00</span></span>
 
-                                            <a class="shop-now-link btn--e-brand"
-                                                href="shop-side-version-2.html">COMPRAR</a>
+                                            <a class="shop-now-link btn--e-brand">COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -93,8 +91,7 @@
 
                                             <span class="content-span-4 u-c-white">Adiquira já
 
-                                                <a class="shop-now-link btn--e-brand"
-                                                    href="shop-side-version-2.html">VER MAIS</a>
+                                                <a class="shop-now-link btn--e-brand">VER MAIS</a>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +120,7 @@
                                     <div class="promotion-o__content">
 
                                         <a class="promotion-o__link btn--e-white-brand"
-                                            href="shop-side-version-2.html">Roupas de Mulher</a>
+                                            href="search?CATEGORIA_ID=2">Roupas de Mulher</a>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +134,7 @@
                                     <div class="promotion-o__content">
 
                                         <a class="promotion-o__link btn--e-white-brand"
-                                            href="shop-side-version-2.html">Acessórios</a>
+                                            >Acessórios</a>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +148,7 @@
                                     <div class="promotion-o__content">
 
                                         <a class="promotion-o__link btn--e-white-brand"
-                                            href="shop-side-version-2.html">Roupas de Homem</a>
+                                            href="search?CATEGORIA_ID=1">Roupas de Homem</a>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +170,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
 
-                                    <a class="i3-banner" href="shop-side-version-2.html">
+                                    <a class="i3-banner">
                                         <div class="aspect aspect--bg-grey-fb aspect--square">
 
                                             <img class="aspect__img i3-banner__img"
@@ -188,8 +185,7 @@
                                                 <div class="product-short__container">
                                                     <div class="product-short__img-wrap">
 
-                                                        <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                            href="product-detail.html">
+                                                        <a class="aspect aspect--bg-grey-fb aspect--square u-d-block">
 
                                                             <img class="aspect__img product-short__img"
                                                                 src="{{ asset('images/section2/2.jpg') }}"
@@ -203,11 +199,11 @@
 
                                                         <span class="product-short__name">
 
-                                                            <a href="product-detail.html">G-SHOCK</a></span>
+                                                            <a >G-SHOCK</a></span>
 
                                                         <span class="product-short__category">
 
-                                                            <a href="shop-side-version-2.html">Acessório
+                                                            <a>Acessório
                                                                 Masculino</a></span>
                                                     </div>
                                                 </div>
@@ -219,7 +215,7 @@
                                                     <div class="product-short__img-wrap">
 
                                                         <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                            href="product-detail.html">
+                                                            >
 
                                                             <img class="aspect__img product-short__img"
                                                                 src="{{ asset('images/section2/1.jpg') }}"
@@ -231,19 +227,19 @@
 
                                                         <span class="product-short__name">
 
-                                                            <a href="product-detail.html">Bucket The North
+                                                            <a >Bucket The North
                                                                 Face</a></span>
 
                                                         <span class="product-short__category">
 
-                                                            <a href="shop-side-version-2.html">Acessório
+                                                            <a >Acessório
                                                                 Uniseex</a></span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <a class="i3-banner" href="shop-side-version-2.html">
+                                            <a class="i3-banner">
                                                 <div class="aspect aspect--bg-grey-fb aspect--1048-334">
                                                     <img class="aspect__img i3-banner__img"
                                                         src="{{ asset('images/section2/4.jpg') }}" alt="">
@@ -348,13 +344,13 @@
                                             <span class="product-r__category">
 
                                                 <a
-                                                    href="shop-side-version-2.html">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
+                                                    href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
                                             <div class="product-r__n-p-wrap">
 
                                                 <span class="product-r__name">
 
                                                     <a
-                                                        href="product-detail.html">{{ $product->PRODUTO_NOME }}</a></span>
+                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}">{{ $product->PRODUTO_NOME }}</a></span>
                                                 @if ($product->PRODUTO_DESCONTO)
                                                     <div class="priceSold">
                                                         <span
@@ -444,7 +440,7 @@
                                                                 <div class="product-bs__wrap">
 
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="product-detail.html">
+                                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}">
 
                                                                         <img class="aspect__img"
                                                                             src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
@@ -495,11 +491,11 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="shop-side-version-2.html">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="product-detail.html">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -524,7 +520,7 @@
                                                                 <div class="product-bs__wrap">
 
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="product-detail.html">
+                                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}">
 
                                                                         <img class="aspect__img"
                                                                             src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
@@ -575,11 +571,11 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="shop-side-version-2.html">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="product-detail.html">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -655,11 +651,11 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="shop-side-version-2.html">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="product-detail.html">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -684,7 +680,7 @@
                                                                 <div class="product-bs__wrap">
 
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="product-detail.html">
+                                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}html">
 
                                                                         <img class="aspect__img"
                                                                             src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
@@ -735,11 +731,11 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="shop-side-version-2.html">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="product-detail.html">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
                                                                         class="fas fa-star"></i><i class="fas fa-star"></i><i
