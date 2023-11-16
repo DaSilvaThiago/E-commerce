@@ -38,6 +38,6 @@ require __DIR__.'/auth.php';
 Route::get('/', [ProductController::class, 'index'])->name('products.index');
 Route::get('/search', [ProductController::class, 'search'])->name('search');
 Route::get('/products/FilledByCategory{id}', [ProductController::class, 'categoryFillproductsPage'])->name('categoryFillproductsPage');
-Route::get('/productDetails', [ProductController::class, 'productDetails'])->name('productDetails');
+Route::get('/productDetails/{id}', [ProductController::class, 'productDetails'])->name('productDetails');
 
 

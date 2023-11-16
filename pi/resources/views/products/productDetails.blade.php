@@ -29,13 +29,10 @@
                                         <a href="index.hml">Home</a></li>
                                     <li class="has-separator">
 
-                                        <a href="shop-side-version-2.html">Electronics</a></li>
-                                    <li class="has-separator">
-
-                                        <a href="shop-side-version-2.html">DSLR Cameras</a></li>
+                                     <a href="shop-side-version-2.html">{{$product->categoria->CATEGORIA_NOME}}</a></li>
                                     <li class="is-marked">
 
-                                        <a href="shop-side-version-2.html">Nikon Cameras</a></li>
+                                        <a href="shop-side-version-2.html">{{$product->PRODUTO_NOME}}</a></li>
                                 </ul>
                             </div>
                             <!--====== End - Product Breadcrumb ======-->
@@ -45,43 +42,23 @@
                             <div class="pd u-s-m-b-30">
                                 <div class="slider-fouc pd-wrap">
                                     <div id="pd-o-initiate">
-                                        <div class="pd-o-img-wrap" data-src="images/product/product-d-1.jpg">
+                                        @foreach ($product->produtoImagens as $image)
+                                            <div class="pd-o-img-wrap" data-src="images/product/product-d-1.jpg">
 
-                                            <img class="u-img-fluid" src="images/product/product-d-1.jpg" data-zoom-image="images/product/product-d-1.jpg" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="images/product/product-d-2.jpg">
-
-                                            <img class="u-img-fluid" src="images/product/product-d-2.jpg" data-zoom-image="images/product/product-d-2.jpg" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="images/product/product-d-3.jpg">
-
-                                            <img class="u-img-fluid" src="images/product/product-d-3.jpg" data-zoom-image="images/product/product-d-3.jpg" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="images/product/product-d-4.jpg">
-
-                                            <img class="u-img-fluid" src="images/product/product-d-4.jpg" data-zoom-image="images/product/product-d-4.jpg" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="images/product/product-d-5.jpg">
-
-                                            <img class="u-img-fluid" src="images/product/product-d-5.jpg" data-zoom-image="images/product/product-d-5.jpg" alt=""></div>
+                                                <img class="u-img-fluid" src="{{$image->IMAGEM_URL}}" data-zoom-image="images/product/product-d-1.jpg" alt=""></div>
+                                        @endforeach
                                     </div>
 
-                                    <span class="pd-text">Click for larger zoom</span>
+                                    <span class="pd-text">Click para dar zoom</span>
                                 </div>
                                 <div class="u-s-m-t-15">
                                     <div class="slider-fouc">
                                         <div id="pd-o-thumbnail">
-                                            <div>
+                                            @foreach ($product->produtoImagens as $image)
+                                                <div class="pd-o-img-wrap" data-src="images/product/product-d-1.jpg">
 
-                                                <img class="u-img-fluid" src="images/product/product-d-1.jpg" alt=""></div>
-                                            <div>
-
-                                                <img class="u-img-fluid" src="images/product/product-d-2.jpg" alt=""></div>
-                                            <div>
-
-                                                <img class="u-img-fluid" src="images/product/product-d-3.jpg" alt=""></div>
-                                            <div>
-
-                                                <img class="u-img-fluid" src="images/product/product-d-4.jpg" alt=""></div>
-                                            <div>
-
-                                                <img class="u-img-fluid" src="images/product/product-d-5.jpg" alt=""></div>
+                                                <img class="u-img-fluid" src="{{$image->IMAGEM_URL}}" data-zoom-image="images/product/product-d-1.jpg" alt=""></div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -94,13 +71,15 @@
                             <div class="pd-detail">
                                 <div>
 
-                                    <span class="pd-detail__name">Nikon Camera 4k Lens Zoom Pro</span></div>
+                                    <span class="pd-detail__name">{{$product->PRODUTO_NOME}}</span></div>
                                 <div>
                                     <div class="pd-detail__inline">
 
-                                        <span class="pd-detail__price">$6.99</span>
+                                        <span class="pd-detail__price">
+                                            R${{$product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO}}
+                                        </span>
 
-                                        <span class="pd-detail__discount">(76% OFF)</span><del class="pd-detail__del">$28.97</del></div>
+                                        <span class="pd-detail__discount">({{floor(($product->PRODUTO_DESCONTO / $product->PRODUTO_PRECO) * 100)}}% OFF)</span><del class="pd-detail__del"> R${{$product->PRODUTO_PRECO}}</del></div>
                                 </div>
                                 <div class="u-s-m-b-15">
                                     <div class="pd-detail__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
