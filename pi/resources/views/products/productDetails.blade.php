@@ -4,7 +4,7 @@
         <x-headerForAll :dataFromController="$categories" :user="$productsByUser" />
         <!--====== End - Header Wrapper ======-->    
     @else
-        <x-headerForAll :dataFromController="$categories"  />
+        <x-headerForAll :dataFromController="$categories" />
     @endauth
                 <!--====== Main Header ======-->
             
@@ -227,8 +227,8 @@
                                             <div class="pd-detail-inline-2">
                                                 <div class="u-s-m-b-15">
                                                     
-                                                    <input type="text" id="USUARIO_ID" name="USUARIO_ID" style="display: none">
-                                                    <input type="text" id="PRODUTO_ID" name="PRODUTO_ID" style="display: none">
+                                                    <input type="text" value="{{$user->USUARIO_ID}}" name="USUARIO_ID" style="display: none">
+                                                    <input type="text" value="{{$product->PRODUTO_ID}}" name="PRODUTO_ID" style="display: none">
                                                     
                                                     
                                                     <!--====== Input Counter ======-->
@@ -331,7 +331,6 @@
                                             <div class="u-s-m-b-15">
                                                 <p>{{$product->PRODUTO_DESC}}</p>
                                             </div>
-                                            <div class="u-s-m-b-30"><iframe src="https://www.youtube.com/embed/qKqSBm07KZk" allowfullscreen></iframe></div>
                                             <div class="u-s-m-b-30">
                                                 <ul>
                                                     <li><i class="fas fa-check u-s-m-r-8"></i>

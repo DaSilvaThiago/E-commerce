@@ -12,7 +12,12 @@ class ProductController extends Controller
 {
 
     public function productDetails(PRODUTO $id){
-        
+
+        if (auth()->check()) {
+            $userId = Auth::user();
+            $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', $userId->USUARIO_ID);
+            return view('products.productDetails', ['product' => $id, 'products' => PRODUTO::all(), 'categories' => CATEGORIA::all(), 'user' => $userId, 'productsByUser' => $productsByUser]);
+        }
         return view('products.productDetails', ['product' => $id, 'categories' => CATEGORIA::all(), 'products' => PRODUTO::all()] );
     }
 
@@ -78,7 +83,21 @@ class ProductController extends Controller
         $query = $query->paginate($productsPerPage);
 
         
-      
+        if (auth()->check()) {
+            $userId = Auth::user();
+            $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', $userId->USUARIO_ID);
+            return view('products.searchProducts', [
+                'searchTerm' => (isset($searchTerm))?$searchTerm:'',
+                'productsPerPage' => (isset($productsPerPage)?$productsPerPage:''),
+                'takeFormat' => (isset($takeFormat)?$takeFormat:''),
+                'products' => $query,
+                'categories' => CATEGORIA::all(),
+                'minPrice' => (isset($minPrice))?$minPrice:'',
+                'maxPrice' => (isset($maxPrice))?$maxPrice:'',
+                'user' => $userId,
+                'productsByUser' => $productsByUser
+            ]);
+        }else{
             if ($query->isEmpty()) {
                 return view('products.emptySearch', ['categories'=>CATEGORIA::all()]);
             }
@@ -91,7 +110,7 @@ class ProductController extends Controller
                 'minPrice' => (isset($minPrice))?$minPrice:'',
                 'maxPrice' => (isset($maxPrice))?$maxPrice:'',
             ]);
-
+        }
     }
 
 

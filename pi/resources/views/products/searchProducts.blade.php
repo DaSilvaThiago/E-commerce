@@ -113,7 +113,7 @@
                                     <div class="u-s-m-b-30">
                                         <div class="shop-w shop-w--style">
                                             <div class="shop-w__intro-wrap">
-                                                <h1 class="shop-w__h">PRICE</h1>
+                                                <h1 class="shop-w__h">PREÇO</h1>
 
                                                 <span class="fas fa-minus shop-w__toggle" data-target="#s-price" data-toggle="collapse"></span>
                                             </div>
@@ -218,7 +218,7 @@
                                                 <div class="product-m">
                                                     <div class="product-m__thumb">
 
-                                                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                        <a class="aspect aspect--bg-grey aspect--square u-d-block" href="{{route('productDetails', $product->PRODUTO_ID)}}">
                                                             @php
                                                                 $primaryImage = $product->produtoImagens->first();
                                                             @endphp
@@ -251,15 +251,15 @@
                                                         </div>
                                                         <div class="product-m__add-cart">
 
-                                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">ADD no Carrinho</a></div>
+                                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Adicionar ao Carrinho</a></div>
                                                     </div>
                                                     <div class="product-m__content">
                                                         <div class="product-m__category">
 
-                                                            <a href="shop-side-version-2.html">{{ $product->categoria->CATEGORIA_NOME}}</a></div>
+                                                            <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{ $product->categoria->CATEGORIA_NOME}}</a></div>
                                                         <div class="product-m__name">
 
-                                                            <a href="product-detail.html">{{ $product->PRODUTO_NOME}}</a></div>
+                                                            <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{ $product->PRODUTO_NOME}}</a></div>
                                                         <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
 
                                                         </div>
