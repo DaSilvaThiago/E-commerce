@@ -55,7 +55,11 @@ class UsuarioController extends Controller
     public function show(User $id)
     {
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', $id->USUARIO_ID);
-        return view('dashboard', ['productsByUser' => $productsByUser, 'categories' => CATEGORIA::all(), 'user' => $id, 'productsByUser' => $productsByUser]);
+        return view('dashboard', [
+            'productsByUser' => $productsByUser,
+            'categories' => CATEGORIA::all(),
+            'user' => $id
+        ]);
         
     }
 
