@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\USUARIO;
 use App\Http\Controllers\Controller;
+use App\Models\CARRINHOITEM;
+use App\Models\CATEGORIA;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -50,9 +52,11 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(User $id)
     {
-        //
+        $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', $id->USUARIO_ID);
+        return view('dashboard', ['productsByUser' => $productsByUser, 'categories' => CATEGORIA::all(), 'user' => $id, 'productsByUser' => $productsByUser]);
+        
     }
 
     /**

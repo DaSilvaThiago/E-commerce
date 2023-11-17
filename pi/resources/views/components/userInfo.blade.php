@@ -6,8 +6,10 @@
         <ul style="width:120px">
             @auth
                 <li>
-
-                    <a href="#"><i class="fas fa-user-circle u-s-m-r-6"></i>
+                    @php
+                        $userId = Auth::user()->USUARIO_ID;
+                    @endphp
+                    <a href="{{route('dashboard', $userId)}}"><i class="fas fa-user-circle u-s-m-r-6"></i>
 
                         <span>Perfil</span></a></li>
                 <li>

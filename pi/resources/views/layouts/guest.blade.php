@@ -8,8 +8,8 @@
 
     <!--====== Main App ======-->
     <div id="app">
-        <a id="topScroll" href="#top" style="position: fixed; z-index: 100;"><i class="fa-solid fa-arrow-up" style="color: #000000;"></i></a>
-{{$slot}}
+        
+    {{$slot}}
 
 
         <!--====== Main Footer ======-->
