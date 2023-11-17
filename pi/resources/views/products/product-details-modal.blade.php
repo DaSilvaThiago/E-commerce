@@ -90,7 +90,7 @@
                                     </div>
                                     <span class="pd-detail__review u-s-m-l-4">
 
-                                        <a href="product-detail.html" class="reviews"></a></span>
+                                        <a class="reviews"></a></span>
                                 </div>
                             </div>
                             <div class="u-s-m-b-15">

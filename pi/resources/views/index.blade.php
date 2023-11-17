@@ -440,11 +440,16 @@
                                                                 <div class="product-bs__wrap">
 
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}">
-
-                                                                        <img class="aspect__img"
-                                                                            src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
-                                                                            alt=""></a>
+                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
+                                                                    @php
+                                                                        $primaryImage = $product->produtoImagens->first();
+                                                                    @endphp
+                    
+                                                                    @if ($primaryImage)
+                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                            alt="">
+                                                                    @endif
+                                                                    </a>
                                                                     <div class="product-bs__action-wrap">
                                                                         
                                                                          <ul class="product-bs__action-list">
@@ -519,12 +524,18 @@
                                                             <div class="product-bs__container">
                                                                 <div class="product-bs__wrap">
 
+                                                                   
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}">
-
-                                                                        <img class="aspect__img"
-                                                                            src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
-                                                                            alt=""></a>
+                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
+                                                                    @php
+                                                                        $primaryImage = $product->produtoImagens->first();
+                                                                    @endphp
+                    
+                                                                    @if ($primaryImage)
+                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                            alt="">
+                                                                    @endif
+                                                                    </a>
                                                                     <div class="product-bs__action-wrap">
                                                                         
                                                                          <ul class="product-bs__action-list">
@@ -599,12 +610,18 @@
                                                             <div class="product-bs__container">
                                                                 <div class="product-bs__wrap">
 
+                                                                
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="product-detail.html">
-
-                                                                        <img class="aspect__img"
-                                                                            src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
-                                                                            alt=""></a>
+                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
+                                                                    @php
+                                                                        $primaryImage = $product->produtoImagens->first();
+                                                                    @endphp
+                    
+                                                                    @if ($primaryImage)
+                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                            alt="">
+                                                                    @endif
+                                                                    </a>
                                                                     <div class="product-bs__action-wrap">
                                                                         
                                                                          <ul class="product-bs__action-list">
@@ -679,12 +696,18 @@
                                                             <div class="product-bs__container">
                                                                 <div class="product-bs__wrap">
 
+                                                                
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}html">
-
-                                                                        <img class="aspect__img"
-                                                                            src="{{$product->produtoImagens->first()->IMAGEM_URL}}"
-                                                                            alt=""></a>
+                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
+                                                                    @php
+                                                                        $primaryImage = $product->produtoImagens->first();
+                                                                    @endphp
+                    
+                                                                    @if ($primaryImage)
+                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                            alt="">
+                                                                    @endif
+                                                                    </a>
                                                                     <div class="product-bs__action-wrap">
                                                                         
                                                                          <ul class="product-bs__action-list">
