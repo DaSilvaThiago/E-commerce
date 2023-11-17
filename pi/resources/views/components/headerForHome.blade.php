@@ -960,7 +960,7 @@
                                                     <div class="mini-product__image-wrapper">
 
                                                         <a class="mini-product__link"
-                                                            href="product-detail.html">
+                                                            href="{{route('productDetails', $item->produto->PRODUTO_ID)}}">
 
                                                             <img class="u-img-fluid"
                                                                 src="{{$item->produto->produtoImagens->first()->IMAGEM_URL}}"
@@ -971,11 +971,11 @@
                                                         <span class="mini-product__category">
 
                                                             <a
-                                                                href="shop-side-version-2.html">{{$item->produto->categoria->CATEGORIA_NOME}}</a></span>
+                                                                href="search?CATEGORIA_ID={{$item->produto->categoria->CATEGORIA_ID}}">{{$item->produto->categoria->CATEGORIA_NOME}}</a></span>
 
                                                         <span class="mini-product__name">
 
-                                                            <a href="product-detail.html">{{$item->produto->PRODUTO_NOME}}</a></span>
+                                                            <a href="{{route('productDetails', $item->produto->PRODUTO_ID)}}">{{$item->produto->PRODUTO_NOME}}</a></span>
 
                                                         <span class="mini-product__quantity">x{{$item->ITEM_QTD}}</span>
 
