@@ -16,7 +16,7 @@
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button class="btnToLogOut" type="submit"><i class="fa-solid fa-arrow-right-from-bracket fa-xs" style="color: #000000;"></i>
-                            <span id="out-session-btn"">Sair</span></button>
+                            <span id="out-session-btn">Sair</span></button>
                         
                     </form>
                 </li>

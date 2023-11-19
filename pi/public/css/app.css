@@ -248,8 +248,10 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
    * Basic typography style for copy text
    */
       #out-session-btn{
+        margin-left: 4px;
         color: black;
         font-size:10pt;
+        font-weight: 550;
       }
 
   body {
