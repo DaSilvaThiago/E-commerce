@@ -38,6 +38,7 @@ class RegisteredUserController extends Controller
             'USUARIO_SENHA' => ['required'],
             'USUARIO_CPF' => ['required', 'max:11'],
         ]);
+        
 
         $user = User::create([
             'USUARIO_NOME' => $request->USUARIO_NOME,

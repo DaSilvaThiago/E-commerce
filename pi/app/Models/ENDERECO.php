@@ -22,8 +22,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $ENDERECO_CIDADE
  * @property string $ENDERECO_ESTADO
  * 
- * @property USUARIO $u_s_u_a_r_i_o
- * @property Collection|PEDIDO[] $p_e_d_i_d_o_s
+ * @property USUARIO $usuario
+ * @property Collection|PEDIDO[] $pedidos
  *
  * @package App\Models
  */
@@ -48,12 +48,12 @@ class ENDERECO extends Model
 		'ENDERECO_ESTADO'
 	];
 
-	public function u_s_u_a_r_i_o()
+	public function usuario()
 	{
 		return $this->belongsTo(USUARIO::class, 'USUARIO_ID');
 	}
 
-	public function p_e_d_i_d_o_s()
+	public function pedidos()
 	{
 		return $this->hasMany(PEDIDO::class, 'ENDERECO_ID');
 	}

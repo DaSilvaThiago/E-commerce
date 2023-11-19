@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class AuthenticatedSessionController extends Controller
@@ -21,12 +22,16 @@ class AuthenticatedSessionController extends Controller
     
     public function store(LoginRequest $request): RedirectResponse
     {
-        $usuario = User::where('USUARIO_EMAIL', $request->USUARIO_EMAIL)->first();
+        if (User::where('USUARIO_EMAIL', $request->USUARIO_EMAIL)->first()) {
+            $usuario = User::where('USUARIO_EMAIL', $request->USUARIO_EMAIL)->first();
+        }else {
+            return Redirect::back()->withErrors(['error' => 'Digite os dados corretamente!']);
+        }
         if(Hash::check($request->USUARIO_SENHA, $usuario->USUARIO_SENHA)){
             Auth::login($usuario);
             return redirect("/");
         }else{
-            return redirect("/login");
+            return Redirect::back()->withErrors(['error' => 'Digite os dados corretamente!']);
         }
     }
 

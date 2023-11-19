@@ -84,7 +84,15 @@
                                                 <div class="u-s-m-b-15">    
                                                     <button class="btn btn--e-transparent-brand-b-2" type="submit">CRIAR</button>
                                                 </div>
-                                        
+                                                @if ($errors->any())
+                                                <div class="alert alert-danger">
+                                                    <ul>
+                                                        @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
                                                 <a class="gl-link" href="{{route('products.index')}}">Voltar para a loja</a>
                                             </form>
                                         </div>
