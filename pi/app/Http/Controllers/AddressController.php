@@ -6,9 +6,7 @@ use App\Models\CARRINHOITEM;
 use App\Models\CATEGORIA;
 use App\Models\ENDERECO;
 use App\Models\User;
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class AddressController extends Controller
 {
@@ -21,7 +19,7 @@ class AddressController extends Controller
         $addressByUser = ENDERECO::all()->where('USUARIO_ID', $id->USUARIO_ID);
         return view('profile.address.index', [
             'productsByUser' => $productsByUser,
-            '$addressByUser' => $addressByUser,
+            'addressByUser' => $addressByUser,
             'categories' => CATEGORIA::all(),
             'user' => $id
         ]);

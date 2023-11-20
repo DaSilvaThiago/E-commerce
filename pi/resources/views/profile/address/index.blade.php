@@ -52,7 +52,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Editar</th>
-                                                    <th>Endereço</th>
+                                                    <th>Nome do Endereço</th>
                                                     <th>Logradouro</th>
                                                     <th>Numero</th>
                                                     <th>Complemento</th>
@@ -61,31 +61,22 @@
                                                     <th>Estado</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
+                                                <tbody>
+                                                    @foreach ($addressByUser as $address)
+                                                    <tr>
+                                                        <td>
 
-                                                        <a class="address-book-edit btn--e-transparent-platinum-b-2" href="dash-address-edit.html">Editar</a></td>
-                                                    <td>John Doe</td>
-                                                    <td>4247 Ashford Drive Virginia VA-20006 USA</td>
-                                                    <td>Virginia VA-20006 USA</td>
-                                                    <td>(+0) 900901904</td>
-                                                    <td>
-                                                        <div class="gl-text">Default Shipping Address</div>
-                                                        <div class="gl-text">Default Billing Address</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-
-                                                        <a class="address-book-edit btn--e-transparent-platinum-b-2" href="dash-address-edit.html">Edit</a></td>
-                                                    <td>Doe John</td>
-                                                    <td>1484 Abner Road</td>
-                                                    <td>Eau Claire WI - Wisconsin</td>
-                                                    <td>(+0) 7154419563</td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
+                                                            <a class="address-book-edit btn--e-transparent-platinum-b-2" href="dash-address-edit.html">Editar</a></td>
+                                                        <td>{{$address->ENDERECO_NOME}}</td>
+                                                        <td>{{$address->ENDERECO_LOGRADOURO}}</td>
+                                                        <td>{{$address->ENDERECO_NUMERO}}</td>
+                                                        <td>{{$address->ENDERECO_COMPLEMENTO ? $address->ENDERECO_COMPLEMENTO : " "}}</td>
+                                                        <td>{{$address->ENDERECO_CEP}}</td>
+                                                        <td>{{$address->ENDERECO_CIDADE}}</td>
+                                                        <td>{{$address->ENDERECO_ESTADO}}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
                                         </table>
                                     </div>
                                 </div>
