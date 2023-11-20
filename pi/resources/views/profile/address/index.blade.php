@@ -42,7 +42,7 @@
 
                                                 <span class="dash__link dash__link--black u-s-m-r-8">
 
-                                                    <a href="">Escolher endereço padrão</a></span></div>
+                                                    {{$addressByUser->count()}} Endereços Cadastrados</span></div>
                                         </div>
                                     </div>
                                 </div>
