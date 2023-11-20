@@ -66,7 +66,7 @@
                                                         <span class="dash__text-2 u-s-m-b-8">Padrão de entrega</span>
                                                         <div class="dash__link dash__link--secondary u-s-m-b-8">
 
-                                                            <a href="dash-address-book.html">Editar</a>
+                                                            <a href="{{route('profile.address', $user->USUARIO_ID)}}">Editar</a>
                                                         </div>
 
                                                         <span class="dash__text">4247 Ashford Drive Virginia - VA-20006

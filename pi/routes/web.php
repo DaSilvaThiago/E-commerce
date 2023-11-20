@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarrinhoItemController;
@@ -28,6 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/cart', [CarrinhoItemController::class, 'store'])->name('cart.store');
+    Route::get('/profile/address/{id}', [AddressController::class, 'index'])->name('profile.address');
+    Route::get('/profile/address/create/{id}', [AddressController::class, 'create'])->name('create.address');
+    Route::post('/profile/address/store/{id}', [AddressController::class, 'store'])->name('store.address');
 });
 
 require __DIR__.'/auth.php';

@@ -13,7 +13,7 @@
             </li>
             <li>
 
-                <a href="dash-address-book.html">Endereços</a>
+                <a href="{{route('profile.address', $user->USUARIO_ID)}}">Endereços</a>
             </li>
             <li>
 
