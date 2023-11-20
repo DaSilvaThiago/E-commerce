@@ -63,14 +63,12 @@
                                                     <div class="dash__pad-3">
                                                         <h2 class="dash__h2 u-s-m-b-8">ENDEREÇOS</h2>
 
-                                                        <span class="dash__text-2 u-s-m-b-8">Padrão de entrega</span>
                                                         <div class="dash__link dash__link--secondary u-s-m-b-8">
 
                                                             <a href="{{route('profile.address', $user->USUARIO_ID)}}">Editar</a>
                                                         </div>
 
-                                                        <span class="dash__text">4247 Ashford Drive Virginia - VA-20006
-                                                            - USA</span>
+                                                        <span class="dash__text"></span>
 
                                                         <span class="dash__text">(+0) 900901904</span>
                                                     </div>

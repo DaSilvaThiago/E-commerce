@@ -64,9 +64,7 @@
                                                 <tbody>
                                                     @foreach ($addressByUser as $address)
                                                     <tr>
-                                                        <td>
-
-                                                            <a class="address-book-edit btn--e-transparent-platinum-b-2" href="dash-address-edit.html">Editar</a></td>
+                                                        <td><a class="address-book-edit btn--e-transparent-platinum-b-2" href="{{route('edit.address', $address->ENDERECO_ID)}}">Editar</a></td>
                                                         <td>{{$address->ENDERECO_NOME}}</td>
                                                         <td>{{$address->ENDERECO_LOGRADOURO}}</td>
                                                         <td>{{$address->ENDERECO_NUMERO}}</td>
@@ -84,7 +82,8 @@
 
                                     <a class="dash__custom-link btn--e-brand-b-2" href="{{route('create.address', $user->USUARIO_ID)}}"><i class="fas fa-plus u-s-m-r-8"></i>
 
-                                        <span>Add New Address</span></a></div>
+                                        <span>Novo Endereço</span></a></div>
+
                             </div>
                         </div>
                     </div>

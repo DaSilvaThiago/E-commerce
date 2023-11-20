@@ -32,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile/address/{id}', [AddressController::class, 'index'])->name('profile.address');
     Route::get('/profile/address/create/{id}', [AddressController::class, 'create'])->name('create.address');
     Route::post('/profile/address/store/{id}', [AddressController::class, 'store'])->name('store.address');
+    Route::get('/profile/address/edit/{id}', [AddressController::class, 'edit'])->name('edit.address');
+    Route::put('/profile/address/update/{id}', [AddressController::class, 'update'])->name('update.address');
 });
 
 require __DIR__.'/auth.php';
