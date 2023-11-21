@@ -24,6 +24,7 @@ class CARRINHOITEM extends Model
 {
 	protected $table = 'CARRINHO_ITEM';
 	public $incrementing = false;
+	protected $primaryKey = ['PRODUTO_ID', 'USUARIO_ID'];
 	public $timestamps = false;
 
 	protected $casts = [
@@ -45,6 +46,7 @@ class CARRINHOITEM extends Model
 
 	public function usuario()
 	{
-		return $this->belongsTo(USUARIO::class, 'USUARIO_ID');
+		return $this->belongsTo(User::class, 'USUARIO_ID');
 	}
+
 }

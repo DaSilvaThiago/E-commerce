@@ -50,7 +50,7 @@ class ENDERECO extends Model
 
 	public function usuario()
 	{
-		return $this->belongsTo(USUARIO::class, 'USUARIO_ID');
+		return $this->belongsTo(User::class, 'USUARIO_ID');
 	}
 
 	public function pedidos()

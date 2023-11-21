@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\CARRINHOITEM;
+use App\Models\PRODUTO;
+use App\Models\User;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CarrinhoItemController extends Controller
 {
@@ -51,9 +55,19 @@ class CarrinhoItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update($user_id, $produto_id)
     {
-        //
+        
+        $item = CARRINHOITEM::where('USUARIO_ID', $user_id)
+            ->where('PRODUTO_ID', $produto_id)
+            ->first();
+
+        if ($item) {
+            $item->ITEM_QTD = 0;
+            $item->save();
+        }
+
+        return Redirect::back();
     }
 
     /**

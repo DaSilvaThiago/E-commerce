@@ -57,7 +57,7 @@ class PEDIDO extends Model
 
 	public function u_s_u_a_r_i_o()
 	{
-		return $this->belongsTo(USUARIO::class, 'USUARIO_ID');
+		return $this->belongsTo(User::class, 'USUARIO_ID');
 	}
 
 	public function p_e_d_i_d_o_i_t_e_m()

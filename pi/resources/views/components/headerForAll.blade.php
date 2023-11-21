@@ -985,8 +985,12 @@
                                                         @endphp
                                                     </div>
                                                 </div>
-
-                                                <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                <?php
+                                                $user_id = $item->usuario->USUARIO_ID; // Replace with the actual user ID
+                                                $produto_id = $item->produto->PRODUTO_ID; // Replace with the actual product ID
+                                             ?>
+                                             
+                                                <a href="{{ route('update.cart', ['user_id' => $user_id, 'produto_id' => $produto_id]) }}" class="mini-product__delete-link far fa-trash-alt"></a>
                                             </div>
                                             <!--====== End - Card for mini cart ======-->
                                             @endforeach
