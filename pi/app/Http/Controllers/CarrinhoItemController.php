@@ -52,7 +52,7 @@ class CarrinhoItemController extends Controller
                 return Redirect::back();
         }else {
             CARRINHOITEM::create($request->all());
-            return redirect(route('products.index'));
+            return Redirect::back();
         }
     }
 
