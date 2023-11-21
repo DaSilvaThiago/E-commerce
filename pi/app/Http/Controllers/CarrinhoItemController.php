@@ -32,8 +32,21 @@ class CarrinhoItemController extends Controller
      */
     public function store(Request $request)
     {
-        CARRINHOITEM::create($request->all());
-        return redirect(route('products.index'));
+        $user_id = $request->input('USUARIO_ID');
+        $produto_id = $request->input('PRODUTO_ID');
+    
+        $item = CARRINHOITEM::where('USUARIO_ID', $user_id)
+            ->where('PRODUTO_ID', $produto_id)
+            ->first();
+    
+        if ($item) {
+                $item->ITEM_QTD = $request->input('ITEM_QTD');
+                $item->save();
+                return Redirect::back();
+        }else {
+            CARRINHOITEM::create($request->all());
+            return redirect(route('products.index'));
+        }
     }
 
     /**
@@ -57,7 +70,6 @@ class CarrinhoItemController extends Controller
      */
     public function update($user_id, $produto_id)
     {
-        
         $item = CARRINHOITEM::where('USUARIO_ID', $user_id)
             ->where('PRODUTO_ID', $produto_id)
             ->first();
