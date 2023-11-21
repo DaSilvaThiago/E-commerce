@@ -386,9 +386,9 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">PRODUTOS MAIS VENDIDOS</h1>
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">PRODUTOS POR CATEGORIA</h1>
 
-                                    <span class="section__span u-c-silver u-s-m-b-16">ENCONTRE OS PRODUTOS MAIS VENDIDOS NA CHARLIE</span>
+                                    <span class="section__span u-c-silver u-s-m-b-16">ENCONTRE OS PRODUTOS MAIS BEM AVALIADOS</span>
                                 </div>
                             </div>
                         </div>
