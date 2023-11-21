@@ -6521,3 +6521,9 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
 .toHideAndScrol::-webkit-scrollbar {
   display: none;
 }
+
+.buttonToAddOrGetOut{
+  margin-top: 20px;
+}
+
+

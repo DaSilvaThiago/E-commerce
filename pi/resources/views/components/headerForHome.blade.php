@@ -1010,7 +1010,7 @@
                                                         COMPRA</a>
 
                                                     <a class="mini-link btn--e-transparent-secondary-b-2"
-                                                        href="cart.html">VER CARRINHO</a>
+                                                        href="{{route('cart')}}">VER CARRINHO</a>
                                                 </div>
                                             </div>
                                             <!--====== End - Mini Product Statistics ======-->

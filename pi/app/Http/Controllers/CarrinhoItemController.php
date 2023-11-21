@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\CARRINHOITEM;
+use App\Models\CATEGORIA;
 use App\Models\PRODUTO;
 use App\Models\User;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class CarrinhoItemController extends Controller
@@ -16,7 +18,12 @@ class CarrinhoItemController extends Controller
      */
     public function index()
     {
-        //
+        $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+        return view('profile.cart', [
+            'productsByUser' => $productsByUser,
+            'categories' => CATEGORIA::all(),
+            'user' => Auth::user()
+        ]);
     }
 
     /**
