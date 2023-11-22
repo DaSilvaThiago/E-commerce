@@ -132,7 +132,7 @@
                                                 @php
                                                     $subtotal += $item->ITEM_QTD * $item->produto->PRODUTO_PRECO;
                                                     $total += $item->ITEM_QTD * ($item->produto->PRODUTO_PRECO - $item->produto->PRODUTO_DESCONTO);
-                                                    $descontos += $item->produto->PRODUTO_DESCONTO;
+                                                    $descontos += $item->ITEM_QTD * $item->produto->PRODUTO_DESCONTO;
                                                @endphp
                                             @endif
                                         @endforeach
