@@ -1006,7 +1006,7 @@
                                                 </div>
                                                 <div class="mini-action">
 
-                                                    <a class="mini-link btn--e-brand-b-2" href="checkout.html">FINALIZAR
+                                                    <a class="mini-link btn--e-brand-b-2" href="{{route('order')}}">FINALIZAR
                                                         COMPRA</a>
 
                                                     <a class="mini-link btn--e-transparent-secondary-b-2"

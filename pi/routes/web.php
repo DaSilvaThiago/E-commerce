@@ -4,7 +4,6 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarrinhoItemController;
-use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsuarioController;
@@ -36,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile/address/store/{id}', [AddressController::class, 'store'])->name('store.address');
     Route::get('/profile/address/edit/{id}', [AddressController::class, 'edit'])->name('edit.address');
     Route::put('/profile/address/update/{id}', [AddressController::class, 'update'])->name('update.address');
+    Route::get('/order', [PedidoController::class, 'index'])->name('order');
 });
 
 require __DIR__.'/auth.php';
