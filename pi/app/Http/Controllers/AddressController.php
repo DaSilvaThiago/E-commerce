@@ -8,6 +8,7 @@ use App\Models\ENDERECO;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class AddressController extends Controller
 {
@@ -62,7 +63,7 @@ class AddressController extends Controller
             'ENDERECO_CIDADE' => $request->ENDERECO_CIDADE,
             'ENDERECO_ESTADO' => $request->ENDERECO_ESTADO
         ]);
-        return redirect(route('profile.address', $id->USUARIO_ID));
+        return Redirect::back();
     }
 
     /**

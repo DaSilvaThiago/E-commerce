@@ -143,7 +143,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 u-s-m-b-30">
-                            <form class="f-cart" action="">
+                            
                                 <div class="f-cart__pad-box">
                                     <div class="u-s-m-b-30">
                                         <table class="f-cart__table">
@@ -163,12 +163,12 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div>
+                                    <div class="f-cart" style="margin-left: 70px">
 
-                                        <button class="btn btn--e-brand-b-2" type="submit"> FINALIZAR COMPRA</button>
+                                        <a class="btn btn--e-brand-b-2" href="{{route('order')}}"> FINALIZAR COMPRA</a>
                                     </div>
                                 </div>
-                            </form>
+                            
                         </div>
                         <div class="col-lg-12">
                             <div class="route-box">

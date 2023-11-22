@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CARRINHOITEM;
 use App\Models\CATEGORIA;
+use App\Models\ENDERECO;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,9 +16,11 @@ class PedidoController extends Controller
     public function index()
     {
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+        $addressByUser = ENDERECO::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
         return view('profile.order', [
             'productsByUser' => $productsByUser,
             'categories' => CATEGORIA::all(),
+            'addressByUser' => $addressByUser,
             'user' => Auth::user()
         ]);
     }
