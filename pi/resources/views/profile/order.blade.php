@@ -156,6 +156,11 @@
                                 <div class="o-summary">
                                     <div class="o-summary__section u-s-m-b-30">
                                         <div class="o-summary__item-wrap gl-scroll">
+                                            @php
+                                            $subtotal = 0;
+                                            $total = 0;
+                                            $descontos = 0;
+                                        @endphp
                                             @foreach ($productsByUser as $item)
                                                 @if (!$item->ITEM_QTD == 0)
                                                     <div class="o-card">
@@ -186,6 +191,11 @@
                                                         <a href="{{ route('update.cart', ['user_id' => $user_id, 'produto_id' => $produto_id]) }}"
                                                             class="o-card__del far fa-trash-alt"></a>
                                                     </div>
+                                                    @php
+                                                    $subtotal += $item->ITEM_QTD * $item->produto->PRODUTO_PRECO;
+                                                    $total += $item->ITEM_QTD * ($item->produto->PRODUTO_PRECO - $item->produto->PRODUTO_DESCONTO);
+                                                    $descontos += $item->ITEM_QTD * $item->produto->PRODUTO_DESCONTO;
+                                               @endphp
                                                 @endif
                                             @endforeach
                                         </div>
@@ -238,6 +248,7 @@
                                                             <td>{{ $address->ENDERECO_CIDADE }}</td>
                                                             <td>{{ $address->ENDERECO_ESTADO }}</td>
                                                         </tr>
+                                                        
                                                         @endforeach
                                                         </tr>
                                                     </tbody>
@@ -251,20 +262,16 @@
                                             <table class="o-summary__table">
                                                 <tbody>
                                                     <tr>
-                                                        <td>SHIPPING</td>
-                                                        <td>$4.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>TAX</td>
-                                                        <td>$0.00</td>
-                                                    </tr>
-                                                    <tr>
                                                         <td>SUBTOTAL</td>
-                                                        <td>$379.00</td>
+                                                        <td>R${{ $subtotal }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>GRAND TOTAL</td>
-                                                        <td>$379.00</td>
+                                                        <td>DESCONTOS</td>
+                                                        <td>R${{ $descontos }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>TOTAL</td>
+                                                        <td>R${{ $total }}</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
