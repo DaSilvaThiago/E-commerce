@@ -49,4 +49,9 @@ class CARRINHOITEM extends Model
 		return $this->belongsTo(User::class, 'USUARIO_ID');
 	}
 
+	protected function setKeysForSaveQuery($query){
+        return $query->where('USUARIO_ID', $this->getAttribute('USUARIO_ID'))
+                     ->where('PRODUTO_ID', $this->getAttribute('PRODUTO_ID'));
+    }
+
 }

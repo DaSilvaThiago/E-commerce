@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\CARRINHOITEM;
 use App\Models\CATEGORIA;
 use App\Models\ENDERECO;
+use App\Models\PEDIDO;
+use App\Models\PEDIDOITEM;
+use App\Models\PEDIDOSTATUS;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,7 +41,31 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $userId = Auth::id();
+        $address = $request->ENDERECO_ID; 
+        $status = PEDIDOSTATUS::where('STATUS_ID', 5);
+        $date = today()->format('d-m-Y');
+        
+        PEDIDO::create([
+            'USUARIO_ID' => $userId,
+            'ENDERECO_ID' => $address,
+            'STATUS_ID' => $status,
+            'PEDIDO_DATA' => $date,
+        ]);
+
+        dd(PEDIDO::all());
+        $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+
+
+        // foreach ($productsByUser as $product => $value) {
+        //     dd($value);
+            
+        //     PEDIDOITEM::create([
+        //         'PRODUTO_ID' => $value->PRODUTO_ID,
+        //         'PRODUTO_ID' => $value->PRODUTO_ID,
+        //     ]);
+        // }
+
     }
 
     /**

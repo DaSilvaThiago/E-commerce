@@ -18,10 +18,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $STATUS_ID
  * @property Carbon $PEDIDO_DATA
  * 
- * @property ENDERECO $e_n_d_e_r_e_c_o
- * @property PEDIDOSTATUS $p_e_d_i_d_o_s_t_a_t_u_s
- * @property USUARIO $u_s_u_a_r_i_o
- * @property PEDIDOITEM $p_e_d_i_d_o_i_t_e_m
+ * @property ENDERECO $endereco
+ * @property PEDIDOSTATUS $pedidoStatus
+ * @property USUARIO $usuario
+ * @property PEDIDOITEM $pedidoItem
  *
  * @package App\Models
  */
@@ -45,23 +45,30 @@ class PEDIDO extends Model
 		'PEDIDO_DATA'
 	];
 
-	public function e_n_d_e_r_e_c_o()
+	public function endereco()
 	{
 		return $this->belongsTo(ENDERECO::class, 'ENDERECO_ID');
 	}
 
-	public function p_e_d_i_d_o_s_t_a_t_u_s()
+	public function pedidoStatus()
 	{
 		return $this->belongsTo(PEDIDOSTATUS::class, 'STATUS_ID');
 	}
 
-	public function u_s_u_a_r_i_o()
+	public function usuario()
 	{
 		return $this->belongsTo(User::class, 'USUARIO_ID');
 	}
 
-	public function p_e_d_i_d_o_i_t_e_m()
+	public function pedidoItem()
 	{
 		return $this->hasOne(PEDIDOITEM::class, 'PEDIDO_ID');
 	}
+	
+	protected function setKeysForSaveQuery($query){
+        return $query->where('USUARIO_ID', $this->getAttribute('USUARIO_ID'))
+                     ->where('PRODUTO_ID', $this->getAttribute('PRODUTO_ID'));
+    }
 }
+
+

@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $STATUS_ID
  * @property string $STATUS_DESC
  * 
- * @property Collection|PEDIDO[] $p_e_d_i_d_o_s
+ * @property Collection|PEDIDO[] $pedidos
  *
  * @package App\Models
  */
@@ -29,7 +29,7 @@ class PEDIDOSTATUS extends Model
 		'STATUS_DESC'
 	];
 
-	public function p_e_d_i_d_o_s()
+	public function pedidos()
 	{
 		return $this->hasMany(PEDIDO::class, 'STATUS_ID');
 	}
