@@ -43,7 +43,7 @@ class PedidoController extends Controller
     {
         $userId = Auth::id();
         $address = $request->ENDERECO_ID; 
-        $status = PEDIDOSTATUS::where('STATUS_ID', 5);
+        $status = PEDIDOSTATUS::where('STATUS_ID', 5)->value('STATUS_ID');
         $date = today()->format('d-m-Y');
         
         PEDIDO::create([
@@ -55,7 +55,7 @@ class PedidoController extends Controller
 
         dd(PEDIDO::all());
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
-
+        
 
         // foreach ($productsByUser as $product => $value) {
         //     dd($value);

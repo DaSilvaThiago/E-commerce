@@ -26,6 +26,7 @@ class PEDIDOSTATUS extends Model
 	public $timestamps = false;
 
 	protected $fillable = [
+		
 		'STATUS_DESC'
 	];
 

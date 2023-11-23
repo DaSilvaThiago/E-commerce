@@ -65,10 +65,6 @@ class PEDIDO extends Model
 		return $this->hasOne(PEDIDOITEM::class, 'PEDIDO_ID');
 	}
 	
-	protected function setKeysForSaveQuery($query){
-        return $query->where('USUARIO_ID', $this->getAttribute('USUARIO_ID'))
-                     ->where('PRODUTO_ID', $this->getAttribute('PRODUTO_ID'));
-    }
 }
 
 
