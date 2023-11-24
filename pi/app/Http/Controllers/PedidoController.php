@@ -53,18 +53,31 @@ class PedidoController extends Controller
             'PEDIDO_DATA' => $date,
         ]);
 
-        dd(PEDIDO::all());
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
-        
 
-        // foreach ($productsByUser as $product => $value) {
-        //     dd($value);
+        $order_id = PEDIDO::orderBy('PEDIDO_ID', 'desc')->first()->PEDIDO_ID;
+        
+        foreach ($productsByUser as $value) {
             
-        //     PEDIDOITEM::create([
-        //         'PRODUTO_ID' => $value->PRODUTO_ID,
-        //         'PRODUTO_ID' => $value->PRODUTO_ID,
-        //     ]);
-        // }
+            $product_id = $value->produto->PRODUTO_ID;
+            $productQtt = $value->ITEM_QTD;
+            $productPrice = ($value->produto->PRODUTO_PRECO - $value->produto->PRODUTO_DESCONTO) * $value->ITEM_QTD; 
+            
+            if ($productPrice > 999) {
+                $productPrice = 999.99;
+            }
+
+            PEDIDOITEM::create([
+                'PRODUTO_ID' => $product_id,
+                'PEDIDO_ID' => $order_id,
+                'ITEM_QTD' => $productQtt,
+                'ITEM_PRECO' => $productPrice,
+            ]);
+            
+        }
+        dd('foi');
+            
+
 
     }
 

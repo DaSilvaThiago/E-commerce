@@ -16,8 +16,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $ITEM_QTD
  * @property float $ITEM_PRECO
  * 
- * @property PEDIDO $p_e_d_i_d_o
- * @property PRODUTO $p_r_o_d_u_t_o
+ * @property PEDIDO $pedido
+ * @property PRODUTO $produto
  *
  * @package App\Models
  */
@@ -25,6 +25,7 @@ class PEDIDOITEM extends Model
 {
 	protected $table = 'PEDIDO_ITEM';
 	public $incrementing = false;
+	protected $primaryKey = ['PRODUTO_ID', 'PEDIDO_ID'];
 	public $timestamps = false;
 
 	protected $casts = [
@@ -41,13 +42,18 @@ class PEDIDOITEM extends Model
 		'ITEM_PRECO'
 	];
 
-	public function p_e_d_i_d_o()
+	public function pedido()
 	{
 		return $this->belongsTo(PEDIDO::class, 'PEDIDO_ID');
 	}
 
-	public function p_r_o_d_u_t_o()
+	public function produto()
 	{
 		return $this->belongsTo(PRODUTO::class, 'PRODUTO_ID');
 	}
+
+	protected function setKeysForSaveQuery($query){
+        return $query->where('PEDIDO_ID', $this->getAttribute('PEDIDO_ID'))
+                     ->where('PRODUTO_ID', $this->getAttribute('PRODUTO_ID'));
+    }
 }
