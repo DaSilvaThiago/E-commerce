@@ -57,6 +57,7 @@ class PedidoController extends Controller
 
         $order_id = PEDIDO::orderBy('PEDIDO_ID', 'desc')->first()->PEDIDO_ID;
         
+       
         foreach ($productsByUser as $value) {
             
             $product_id = $value->produto->PRODUTO_ID;
@@ -66,19 +67,25 @@ class PedidoController extends Controller
             if ($productPrice > 999) {
                 $productPrice = 999.99;
             }
-
+            
             PEDIDOITEM::create([
                 'PRODUTO_ID' => $product_id,
                 'PEDIDO_ID' => $order_id,
                 'ITEM_QTD' => $productQtt,
                 'ITEM_PRECO' => $productPrice,
             ]);
-            
+
+            $item = CARRINHOITEM::where('USUARIO_ID', Auth::user()->USUARIO_ID)
+            ->where('PRODUTO_ID', $product_id)
+            ->first();
+
+            if ($item) {
+                $item->ITEM_QTD = 0;
+                $item->save();
+            }
+ 
         }
-        dd('foi');
-            
-
-
+        
     }
 
     /**
