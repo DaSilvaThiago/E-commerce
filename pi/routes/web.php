@@ -35,9 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile/address/store/{id}', [AddressController::class, 'store'])->name('store.address');
     Route::get('/profile/address/edit/{id}', [AddressController::class, 'edit'])->name('edit.address');
     Route::put('/profile/address/update/{id}', [AddressController::class, 'update'])->name('update.address');
-    Route::get('/order', [PedidoController::class, 'index'])->name('order');
+    Route::get('/order', [PedidoController::class, 'create'])->name('order');
     Route::post('/order', [PedidoController::class, 'store'])->name('store.order');
     Route::get('/ManageOrder/{id}', [PedidoController::class, 'manage'])->name('manage.order');
+    Route::get('/listOrders', [PedidoController::class, 'index'])->name('order.index');
 });
 
 require __DIR__.'/auth.php';

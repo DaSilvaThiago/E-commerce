@@ -60,9 +60,9 @@ class PEDIDO extends Model
 		return $this->belongsTo(User::class, 'USUARIO_ID');
 	}
 
-	public function pedidoItem()
+	public function pedidoItems()
 	{
-		return $this->hasOne(PEDIDOITEM::class, 'PEDIDO_ID');
+		return $this->hasMany(PEDIDOITEM::class, 'PEDIDO_ID');
 	}
 	
 }

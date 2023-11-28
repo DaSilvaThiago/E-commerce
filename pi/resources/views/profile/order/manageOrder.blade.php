@@ -55,7 +55,7 @@
                                         <div class="dash__pad-2">
                                             <div class="dash-l-r">
                                                 <div>
-                                                    <div class="manage-o__text-2 u-c-secondary">Order #{{$order->PEDIDO_ID}}</div>
+                                                    <div class="manage-o__text-2 u-c-secondary">Pedido #{{$order->PEDIDO_ID}}</div>
                                                     <div class="manage-o__text u-c-silver">Realizado em {{$order->PEDIDO_DATA->format('d/m/Y')}}</div>
                                                 </div>
                                                 <div>

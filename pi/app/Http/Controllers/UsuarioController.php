@@ -60,7 +60,7 @@ class UsuarioController extends Controller
             'productsByUser' => CARRINHOITEM::all()->where('USUARIO_ID', $id->USUARIO_ID),
             'categories' => CATEGORIA::all(),
             'user' => $id,
-            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID)->sortByDesc('PEDIDO_ID')->values(),
             'itens' => PEDIDOITEM::all()
         ]);
         

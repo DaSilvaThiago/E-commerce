@@ -18,12 +18,18 @@ class PedidoController extends Controller
      */
     public function index()
     {
+        $orderStatus = PEDIDOSTATUS::all();
+        $address = ENDERECO::all();
+        $ordersTolist = PEDIDO::where('USUARIO_ID', Auth::user()->USUARIO_ID)->OrderByDesc('PEDIDO_ID')->paginate(3);
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
-        $addressByUser = ENDERECO::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
-        return view('profile.order', [
-            'productsByUser' => $productsByUser,
+
+        return view('profile.order.list', [
             'categories' => CATEGORIA::all(),
-            'addressByUser' => $addressByUser,
+            'productsByUser' => $productsByUser,
+            'orderStatus' => $orderStatus,
+            'address' => $address,
+            'orders' => PEDIDO::where('USUARIO_ID', Auth::user()->USUARIO_ID),
+            'ordersTolist' => $ordersTolist,
             'user' => Auth::user()
         ]);
     }
@@ -33,7 +39,14 @@ class PedidoController extends Controller
      */
     public function create()
     {
-        //
+        $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+        $addressByUser = ENDERECO::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+        return view('profile.order.order', [
+            'productsByUser' => $productsByUser,
+            'categories' => CATEGORIA::all(),
+            'addressByUser' => $addressByUser,
+            'user' => Auth::user()
+        ]);
     }
 
     /**
@@ -100,7 +113,7 @@ class PedidoController extends Controller
     public function success($id)
     {
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
-        return view('profile.successOrder', [
+        return view('profile.order.successOrder', [
             'categories' => CATEGORIA::all(),
             'productsByUser' => $productsByUser,
             'order' => $id,
@@ -118,7 +131,7 @@ class PedidoController extends Controller
         $orderStatus = PEDIDOSTATUS::all();
         $address = ENDERECO::all();
         $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
-        return view('profile.manageOrder', [
+        return view('profile.order.manageOrder', [
             'categories' => CATEGORIA::all(),
             'order' => $order,
             'categories' => CATEGORIA::all(),

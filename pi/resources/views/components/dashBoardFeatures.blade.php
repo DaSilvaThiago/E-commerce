@@ -17,7 +17,7 @@
             </li>
             <li>
 
-                <a href="dash-my-order.html">Meus Pedidos</a>
+                <a href="{{route('order.index')}}">Meus Pedidos</a>
             </li>
         </ul>
     </div>
