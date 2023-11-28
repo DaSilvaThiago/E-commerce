@@ -30,7 +30,7 @@
                             <div class="col-lg-3 col-md-12">
 
                                 <!--====== Dashboard Features ======-->
-                                <x-dashBoardFeatures :user="$user" />
+                                <x-dashBoardFeatures :user="$user" :orders="$orders"/>
                                 <!--====== End - Dashboard Features ======-->
                             </div>
                             <div class="col-lg-9 col-md-12">
@@ -78,33 +78,27 @@
                                     </div>
                                 </div>
                                 <div class="dash__box dash__box--shadow dash__box--bg-white dash__box--radius">
-                                    <h2 class="dash__h2 u-s-p-xy-20">RECENT ORDERS</h2>
+                                    <h2 class="dash__h2 u-s-p-xy-20">PEDIDOS RECENTES</h2>
                                     <div class="dash__table-wrap gl-scroll">
                                         <table class="dash__table">
                                             <thead>
                                                 <tr>
-                                                    <th>Order #</th>
-                                                    <th>Placed On</th>
-                                                    <th>Items</th>
+                                                    <th>Pedido #</th>
+                                                    <th>Feito Em</th>
+                                                    <th>Status</th>
                                                     <th>Total</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            @foreach ($orders as $order)
                                                 <tr>
-                                                    <td>3054231326</td>
-                                                    <td>26/13/2016</td>
-                                                    <td>
-                                                        <div class="dash__table-img-wrap">
-
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/electronic/product3.jpg"
-                                                                alt="">
-                                                        </div>
-                                                    </td>
+                                                    <td>{{$order->PEDIDO_ID}}</td>
+                                                    <td>{{$order->PEDIDO_DATA->format('d.m.Y')}}</td>
+                                                    <td>{{$order->pedidoStatus->STATUS_DESC}}</td>
                                                     <td>
                                                         <div class="dash__table-total">
 
-                                                            <span>$126.00</span>
+                                                            <span>R$</span>
                                                             <div class="dash__link dash__link--brand">
 
                                                                 <a href="dash-manage-order.html">MANAGE</a>
@@ -112,70 +106,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>3054231326</td>
-                                                    <td>26/13/2016</td>
-                                                    <td>
-                                                        <div class="dash__table-img-wrap">
-
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/electronic/product14.jpg"
-                                                                alt="">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dash__table-total">
-
-                                                            <span>$126.00</span>
-                                                            <div class="dash__link dash__link--brand">
-
-                                                                <a href="dash-manage-order.html">MANAGE</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3054231326</td>
-                                                    <td>26/13/2016</td>
-                                                    <td>
-                                                        <div class="dash__table-img-wrap">
-
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/men/product8.jpg" alt="">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dash__table-total">
-
-                                                            <span>$126.00</span>
-                                                            <div class="dash__link dash__link--brand">
-
-                                                                <a href="dash-manage-order.html">MANAGE</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3054231326</td>
-                                                    <td>26/13/2016</td>
-                                                    <td>
-                                                        <div class="dash__table-img-wrap">
-
-                                                            <img class="u-img-fluid"
-                                                                src="images/product/women/product10.jpg" alt="">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dash__table-total">
-
-                                                            <span>$126.00</span>
-                                                            <div class="dash__link dash__link--brand">
-
-                                                                <a href="dash-manage-order.html">MANAGE</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

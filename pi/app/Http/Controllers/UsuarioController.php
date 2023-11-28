@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\USUARIO;
 use App\Http\Controllers\Controller;
 use App\Models\CARRINHOITEM;
+use App\Models\PEDIDO;
+use App\Models\PEDIDOITEM;
 use App\Models\CATEGORIA;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -58,7 +60,9 @@ class UsuarioController extends Controller
         return view('dashboard', [
             'productsByUser' => $productsByUser,
             'categories' => CATEGORIA::all(),
-            'user' => $id
+            'user' => $id,
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
+            'itens' => PEDIDOITEM::all()
         ]);
         
     }
