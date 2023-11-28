@@ -106,7 +106,7 @@
                                                             <span>R$ {{$total}}</span>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">VER PEDIDO</a>
+                                                                <a href="{{route('manage.order', $order->PEDIDO_ID)}}">VER PEDIDO</a>
                                                             </div>
                                                         </div>
                                                     </td>

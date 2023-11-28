@@ -71,14 +71,16 @@ class PedidoController extends Controller
             if ($productPrice > 999) {
                 $productPrice = 999.99;
             }
-            
-            PEDIDOITEM::create([
-                'PRODUTO_ID' => $product_id,
+            if ($productQtt > 0) {
+                
+                PEDIDOITEM::create([
+                    'PRODUTO_ID' => $product_id,
                 'PEDIDO_ID' => $order_id,
                 'ITEM_QTD' => $productQtt,
                 'ITEM_PRECO' => $productPrice,
             ]);
-
+        }
+            
             $item = CARRINHOITEM::where('USUARIO_ID', Auth::user()->USUARIO_ID)
             ->where('PRODUTO_ID', $product_id)
             ->first();
@@ -109,9 +111,24 @@ class PedidoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function manage(PEDIDO $id)
     {
-        //
+        $order = $id;
+        $orderItems = PEDIDOITEM::all()->where('PEDIDO_ID', $id->PEDIDO_ID);
+        $orderStatus = PEDIDOSTATUS::all();
+        $address = ENDERECO::all();
+        $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+        return view('profile.manageOrder', [
+            'categories' => CATEGORIA::all(),
+            'order' => $order,
+            'categories' => CATEGORIA::all(),
+            'productsByUser' => $productsByUser,
+            'orderItems' => $orderItems,
+            'orderStatus' => $orderStatus,
+            'address' => $address,
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
+            'user' => Auth::user()
+        ]);
     }
 
     /**

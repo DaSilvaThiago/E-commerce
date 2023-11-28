@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile/address/update/{id}', [AddressController::class, 'update'])->name('update.address');
     Route::get('/order', [PedidoController::class, 'index'])->name('order');
     Route::post('/order', [PedidoController::class, 'store'])->name('store.order');
+    Route::get('/ManageOrder/{id}', [PedidoController::class, 'manage'])->name('manage.order');
 });
 
 require __DIR__.'/auth.php';
