@@ -85,15 +85,21 @@ class PedidoController extends Controller
             }
  
         }
-        
+        return $this->success($order_id);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function success($id)
     {
-        //
+        $productsByUser = CARRINHOITEM::all()->where('USUARIO_ID', Auth::user()->USUARIO_ID);
+        return view('profile.successOrder', [
+            'categories' => CATEGORIA::all(),
+            'productsByUser' => $productsByUser,
+            'order' => $id,
+            'user' => Auth::user()
+            ]);
     }
 
     /**

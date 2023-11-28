@@ -3086,8 +3086,8 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
                 transform: translateY(-50%);
         right: 8px; }
     .empty__redirect-link {
-      border-radius: 40px;
-      padding: 16px;
+      border-radius: 20px;
+      padding: 10px;
       display: inline-block;
       font-weight: 600;
       font-size: 13px; }
