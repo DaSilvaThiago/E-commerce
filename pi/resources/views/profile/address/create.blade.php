@@ -33,7 +33,7 @@
 
                                     <!--====== Dashboard Features ======-->
                                    
-                                   <x-dashBoardFeatures :user="$user" />
+                                    <x-dashBoardFeatures :user="$user" :orders="$orders"/>
                                     <!--====== End - Dashboard Features ======-->
                                 </div>
                                 <div class="col-lg-9 col-md-12">

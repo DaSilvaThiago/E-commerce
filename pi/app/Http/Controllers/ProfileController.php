@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\CARRINHOITEM;
 use App\Models\CATEGORIA;
+use App\Models\PEDIDO;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -24,6 +25,7 @@ class ProfileController extends Controller
         return view('profile.edit', [
             'productsByUser' => $productsByUser,
             'user' => $id,
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
             'categories' => CATEGORIA::all()
         ]);
     }

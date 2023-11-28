@@ -68,9 +68,9 @@
                                                             <a href="{{route('profile.address', $user->USUARIO_ID)}}">Editar</a>
                                                         </div>
 
-                                                        <span class="dash__text"></span>
-
-                                                        <span class="dash__text">(+0) 900901904</span>
+                                                        <span class="dash__text">{{$user->enderecos->first()->ENDERECO_NOME}}</span>
+                                                        <span class="dash__text">{{$user->enderecos->first()->ENDERECO_LOGRADOURO}}</span>
+                                                        <span class="dash__text">{{$user->enderecos->first()->ENDERECO_NUMERO}}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,11 +97,16 @@
                                                     <td>{{$order->pedidoStatus->STATUS_DESC}}</td>
                                                     <td>
                                                         <div class="dash__table-total">
-
-                                                            <span>R$</span>
+                                                            @php
+                                                                $total = 0;
+                                                                foreach ($itens->where('PEDIDO_ID', $order->PEDIDO_ID) as $product) {
+                                                                    $total += $product->ITEM_PRECO;
+                                                                }
+                                                            @endphp
+                                                            <span>R$ {{$total}}</span>
                                                             <div class="dash__link dash__link--brand">
 
-                                                                <a href="dash-manage-order.html">MANAGE</a>
+                                                                <a href="dash-manage-order.html">VER PEDIDO</a>
                                                             </div>
                                                         </div>
                                                     </td>

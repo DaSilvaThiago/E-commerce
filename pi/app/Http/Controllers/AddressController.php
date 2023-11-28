@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CARRINHOITEM;
 use App\Models\CATEGORIA;
 use App\Models\ENDERECO;
+use App\Models\PEDIDO;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +24,7 @@ class AddressController extends Controller
             'productsByUser' => $productsByUser,
             'addressByUser' => $addressByUser,
             'categories' => CATEGORIA::all(),
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
             'user' => $id
         ]);
     }
@@ -36,6 +38,7 @@ class AddressController extends Controller
         return view('profile.address.create', [
             'productsByUser' => $productsByUser,
             'categories' => CATEGORIA::all(),
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
             'user' => $id
         ]);
     }
@@ -85,6 +88,7 @@ class AddressController extends Controller
             'productsByUser' => $productsByUser,
             'addressByUser' => $addressByUser,
             'categories' => CATEGORIA::all(),
+            'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID),
             'user' => Auth::user()
         ]);
     }

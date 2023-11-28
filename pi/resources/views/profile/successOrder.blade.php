@@ -56,13 +56,13 @@
                                         
                                             <p class="dash__text-2" style="
                                             margin-bottom: 25px">Parabéns! Seu pedido foi concluído com sucesso. <br> Agradecemos por escolher nossa loja. <br> Boas compras!</p>
-                                            <a class="empty__redirect-link btn--e-brand" href="{{route('dashboard', $user)}}"> Perfil</a>
-                                                        
+                                            <div id="buttonOnOrderSuc">
+                                            <a class="button-86" href="{{route('dashboard', $user)}}">Perfil</a>
                                           
                                                        
-                                            <a class="empty__redirect-link btn--e-brand" href="shop-side-version-2.html"> Ver pedido</a> </div>
-                                
-                            
+                                            <a class="button-86" href="{{route('dashboard', $user)}}">Ver Pedido</a>
+                                        </div>
+                                            
                             </div>
                         </div>
                     </div>

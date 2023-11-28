@@ -36,7 +36,15 @@
             </div>
         </div>
         <!--====== End - Section 1 ======-->
-
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+     @endif
 
         <!--====== Section 3 ======-->
         <div class="u-s-p-b-60">

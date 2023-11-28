@@ -46,6 +46,10 @@ class PedidoController extends Controller
         $status = PEDIDOSTATUS::where('STATUS_ID', 5)->value('STATUS_ID');
         $date = today()->format('d-m-Y');
         
+        if (!$address) {
+            return redirect()->back()->withErrors(['address' => 'Escolha algum endereço']);
+        }
+        
         PEDIDO::create([
             'USUARIO_ID' => $userId,
             'ENDERECO_ID' => $address,
