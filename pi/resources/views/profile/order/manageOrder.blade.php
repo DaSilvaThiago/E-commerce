@@ -81,40 +81,114 @@
                                                 </div>
                                                 <div class="dash-l-r">
                                                     <div class="manage-o__text u-c-secondary">Sera entregue em {{$order->PEDIDO_DATA->addDays(7)->format('d/m/Y')}}</div>
-                                                    <div class="manage-o__icon"><i class="fas fa-truck u-s-m-r-5"></i>
-
+                                                    <div class="manage-o__icon">
+                                                        <i class="fas fa-truck u-s-m-r-5"></i>
                                                         <span class="manage-o__text">Correios</span></div>
-                                                </div>
-                                                <div class="manage-o__timeline">
-                                                    <div class="timeline-row">
-                                                        <div class="col-lg-4 u-s-m-b-30">
-                                                            <div class="timeline-step">
-                                                                <div class="timeline-l-i timeline-l-i--finish">
-
-                                                                    <span class="timeline-circle"></span></div>
-
-                                                                <span class="timeline-text">Processando</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 u-s-m-b-30">
-                                                            <div class="timeline-step">
-                                                                <div class="timeline-l-i ">
-
-                                                                    <span class="timeline-circle"></span></div>
-
-                                                                <span class="timeline-text">Enviado</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 u-s-m-b-30">
-                                                            <div class="timeline-step">
-                                                                <div class="timeline-l-i">
-
-                                                                    <span class="timeline-circle"></span></div>
-
-                                                                <span class="timeline-text">Entregue</span>
-                                                            </div>
-                                                        </div>
                                                     </div>
+                                                <div class="manage-o__timeline">
+                                                    @php
+                                                        $orderDate = $order->PEDIDO_DATA;
+                                                        $daysElapsed = now()->diffInDays($orderDate);
+                                                    @endphp
+
+                                                    @if ($daysElapsed <= 2)
+                                                        <!-- HTML !-->
+                                                    <a class="button-5" style="margin-bottom: 42px" href="">Cancelar Pedido</a>
+                                                    <span style="margin-left: 220px; font-size:10pt">O pedido só pode ser cancelado enquanto está processando.</span>
+                                                        <div class="timeline-row">
+                                                            
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i timeline-l-i--finish">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Processando</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i ">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Enviado</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Entregue</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                           
+                                                    @elseif  ($daysElapsed <= 4)
+                                                        <div class="timeline-row">
+                                                                
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i timeline-l-i--finish">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Processando</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i timeline-l-i--finish">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Enviado</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Entregue</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @else
+                                                        <div class="timeline-row">
+                                                                    
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i timeline-l-i--finish">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Processando</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i timeline-l-i--finish">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Enviado</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 u-s-m-b-30">
+                                                                <div class="timeline-step">
+                                                                    <div class="timeline-l-i timeline-l-i--finish">
+
+                                                                        <span class="timeline-circle"></span></div>
+
+                                                                    <span class="timeline-text">Entregue</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                    
                                                 </div>
                                                 @foreach ($orderItems as $item)
                                                 <div class="manage-o__description">
