@@ -85,16 +85,22 @@
                                                 <tr>
                                                     <th>Pedido #</th>
                                                     <th>Feito Em</th>
-                                                    <th>Status</th>
-                                                    <th>Total</th>
+                                                    <th>Peças</th>
+                                                    <th>Itens</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             @foreach ($orders as $order)
+                                                @php
+                                                        $itensInOrder = 0;
+                                                    @endphp
                                                 <tr>
                                                     <td>{{$order->PEDIDO_ID}}</td>
                                                     <td>{{$order->PEDIDO_DATA->format('d.m.Y')}}</td>
-                                                    <td>{{$order->pedidoStatus->STATUS_DESC}}</td>
+                                                    @php
+                                                        $itensInOrder += $order->pedidoItems->count();
+                                                    @endphp
+                                                    <td>{{$itensInOrder}}</td>
                                                     <td>
                                                         <div class="dash__table-total">
                                                             @php
