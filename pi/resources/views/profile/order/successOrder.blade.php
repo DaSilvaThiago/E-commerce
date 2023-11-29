@@ -60,7 +60,7 @@
                                             <a class="button-86" href="{{route('dashboard', $user)}}">Perfil</a>
                                           
                                                        
-                                            <a class="button-86" href="{{route('dashboard', $user)}}">Ver Pedido</a>
+                                            <a class="button-86" href="{{route('manage.order', $order)}}">Ver Pedido</a>
                                         </div>
                                             
                             </div>
