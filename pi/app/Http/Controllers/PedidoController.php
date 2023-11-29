@@ -10,6 +10,7 @@ use App\Models\PEDIDOITEM;
 use App\Models\PEDIDOSTATUS;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class PedidoController extends Controller
 {
@@ -155,8 +156,13 @@ class PedidoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(PEDIDO $id)
     {
-        //
+        $order = PEDIDO::find($id->PEDIDO_ID);
+
+        $order->STATUS_ID = 3;
+        $order->save();
+
+        return redirect(route('dashboard', Auth::id()))->with(['set' => 'Pedido cancelado com sucesso!']);
     }
 }

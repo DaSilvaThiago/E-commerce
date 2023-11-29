@@ -61,6 +61,7 @@ class UsuarioController extends Controller
             'categories' => CATEGORIA::all(),
             'user' => $id,
             'orders' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID)->sortByDesc('PEDIDO_ID')->values(),
+            'ordersToList' => PEDIDO::all()->where('USUARIO_ID', $id->USUARIO_ID)->whereNotIn('STATUS_ID', [3])->sortByDesc('PEDIDO_ID')->values(),
             'itens' => PEDIDOITEM::all()
         ]);
         

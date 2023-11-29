@@ -90,7 +90,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach ($orders as $order)
+                                            @foreach ($ordersToList as $order)
                                                 @php
                                                         $itensInOrder = 0;
                                                     @endphp

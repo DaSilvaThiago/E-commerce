@@ -93,7 +93,7 @@
 
                                                     @if ($daysElapsed <= 2)
                                                         <!-- HTML !-->
-                                                    <a class="button-5" style="margin-bottom: 42px" href="">Cancelar Pedido</a>
+                                                    <a class="button-5" style="margin-bottom: 42px" onclick="return confirm('Tem certeza que quer cancelar o pedido?')" href="{{route('delete.order', $order->PEDIDO_ID)}}">Cancelar Pedido</a>
                                                     <span style="margin-left: 220px; font-size:10pt">O pedido só pode ser cancelado enquanto está processando.</span>
                                                         <div class="timeline-row">
                                                             

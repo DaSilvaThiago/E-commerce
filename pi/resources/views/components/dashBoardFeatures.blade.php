@@ -31,7 +31,7 @@
                     <span class="dash__w-icon dash__w-icon-style-1"><i
                             class="fas fa-cart-arrow-down"></i></span>
 
-                    <span class="dash__w-text">{{$orders->count()}}</span>
+                    <span class="dash__w-text">{{$orders->whereNotIn('STATUS_ID', [3])->count()}}</span>
 
                     <span class="dash__w-name">Pedidos Feitos</span>
                 </div>
@@ -42,9 +42,9 @@
                     <span class="dash__w-icon dash__w-icon-style-2"><i
                             class="fas fa-times"></i></span>
 
-                    <span class="dash__w-text">0</span>
+                    <span class="dash__w-text">{{$orders->where('STATUS_ID', 3)->count()}}</span>
 
-                    <span class="dash__w-name">Cancel Orders</span>
+                    <span class="dash__w-name">Pedidos Cancelados</span>
                 </div>
             </li>
         </ul>

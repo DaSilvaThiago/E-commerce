@@ -83,12 +83,14 @@
                                                                         $orderDate = $order->PEDIDO_DATA;
                                                                         $daysElapsed = now()->diffInDays($orderDate);
                                                                     @endphp
-                                                                    @if ($daysElapsed <= 2)
+                                                                    @if ($order->STATUS_ID == 3)
+                                                                    <span class="manage-o__badge badge--delivered">Cancelado</span>                                                               
+                                                                    @elseif ($daysElapsed <= 2)
                                                                         <span class="manage-o__badge badge--processing">Processando</span>                                                               
                                                                     @elseif  ($daysElapsed <= 4)
                                                                         <span class="manage-o__badge badge--shipped">Enviado</span>
                                                                     @else
-                                                                        <span class="manage-o__badge badge--delivered">Entregue</span>
+                                                                        <span class="manage-o__badge badge--shipped">Entregue</span>
                                                                     @endif
                                                                 </div>
                                                                 <div>

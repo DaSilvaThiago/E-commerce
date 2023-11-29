@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/order', [PedidoController::class, 'store'])->name('store.order');
     Route::get('/ManageOrder/{id}', [PedidoController::class, 'manage'])->name('manage.order');
     Route::get('/listOrders', [PedidoController::class, 'index'])->name('order.index');
+    Route::get('/deleteOrder/{id}', [PedidoController::class, 'delete'])->name('delete.order');
 });
 
 require __DIR__.'/auth.php';
