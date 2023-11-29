@@ -68,9 +68,9 @@
                                                             <a href="{{route('profile.address', $user->USUARIO_ID)}}">Editar</a>
                                                         </div>
 
-                                                        <span class="dash__text">{{$user->enderecos->first()->ENDERECO_NOME}}</span>
-                                                        <span class="dash__text">{{$user->enderecos->first()->ENDERECO_LOGRADOURO}}</span>
-                                                        <span class="dash__text">{{$user->enderecos->first()->ENDERECO_NUMERO}}</span>
+                                                        <span class="dash__text">{{isset($user->enderecos->first()->ENDERECO_NOME)?$user->enderecos->first()->ENDERECO_NOME: 'nenhum endereço'}}</span>
+                                                        <span class="dash__text">{{isset($user->enderecos->first()->ENDERECO_LOGRADOURO)?$user->enderecos->first()->ENDERECO_LOGRADOURO: 'cadastrado'}}</span>
+                                                        <span class="dash__text">{{isset($user->enderecos->first()->ENDERECO_NUMERO)?$user->enderecos->first()->ENDERECO_NUMERO: ''}}</span>
                                                     </div>
                                                 </div>
                                             </div>
