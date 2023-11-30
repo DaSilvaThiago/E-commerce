@@ -59,12 +59,15 @@
                                                         <label class="gl-label" for="ENDERECO_NOME">ENDEREÇO NOME *</label>
 
                                                         <input class="input-text input-text--primary-style" value="{{old('ENDERECO_NOME')}}" name="ENDERECO_NOME" type="text" id="address-fname" placeholder="Endereço" required></div>
-                                                    <div class="u-s-m-b-30">
+                                                        <div class="u-s-m-b-30">
 
-                                                        <label class="gl-label" for="ENDERECO_LOGRADOURO">LOGRADOURO *</label>
-
-                                                        <input class="input-text input-text--primary-style" name="ENDERECO_LOGRADOURO" value="{{old('ENDERECO_LOGRADOURO')}}" type="text" id="address-lname" placeholder="Logradouro" required></div>
-                                                </div>
+                                                            <!--====== Select Box ======-->
+    
+                                                            <label class="gl-label" for="address-country">CEP *</label>
+                                                            <input class="input-text input-text--primary-style" value="{{old('ENDERECO_CEP')}}" name="ENDERECO_CEP" required type="text" id="cep" placeholder="Cep">
+                                                            <!--====== End - Select Box ======-->
+                                                        </div>
+                                                    </div>
                                                 <div class="gl-inline">
                                                     <div class="u-s-m-b-30">
 
@@ -75,23 +78,22 @@
 
                                                         <label class="gl-label" for="ENDERECO_ESTADO">ESTADO *</label>
 
-                                                        <input class="input-text input-text--primary-style" value="{{old('ENDERECO_ESTADO')}}" name="ENDERECO_ESTADO" required type="text" id="address-street" placeholder="Estado"></div>
+                                                        <input class="input-text input-text--primary-style" value="{{old('ENDERECO_ESTADO')}}" name="ENDERECO_ESTADO" required type="text" id="estado" placeholder="Estado"></div>
                                                 </div>
                                                 <div class="gl-inline">
-                                                    <div class="u-s-m-b-30">
+                                                    
+                                                        <div class="u-s-m-b-30">
 
-                                                        <!--====== Select Box ======-->
+                                                        <label class="gl-label" for="ENDERECO_LOGRADOURO">LOGRADOURO *</label>
 
-                                                        <label class="gl-label" for="address-country">CEP *</label>
-                                                        <input class="input-text input-text--primary-style" value="{{old('ENDERECO_CEP')}}" name="ENDERECO_CEP" required type="text" id="address-street" placeholder="Cep">
-                                                        <!--====== End - Select Box ======-->
-                                                    </div>
+                                                        <input class="input-text input-text--primary-style" name="ENDERECO_LOGRADOURO" value="{{old('ENDERECO_LOGRADOURO')}}" type="text" id="logradouro" placeholder="Logradouro" required></div>
+                                                
                                                     <div class="u-s-m-b-30">
 
                                                         <!--====== Select Box ======-->
 
                                                         <label class="gl-label" for="address-state">CIDADE *</label>
-                                                        <input class="input-text input-text--primary-style" value="{{old('ENDERECO_CIDADE')}}" name="ENDERECO_CIDADE" required type="text" id="address-street" placeholder="Cidade">
+                                                        <input class="input-text input-text--primary-style" value="{{old('ENDERECO_CIDADE')}}" name="ENDERECO_CIDADE" required type="text" id="cidade" placeholder="Cidade">
                                                         <!--====== End - Select Box ======-->
                                                     </div>
                                                 </div>

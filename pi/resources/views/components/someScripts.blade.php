@@ -39,3 +39,20 @@
             </div>
         </div>
     </noscript>
+
+    <script>
+        let cep = document.getElementById('cep');
+        let logradouro = document.getElementById('logradouro');
+        let cidade = document.getElementById('cidade');
+        let estado = document.getElementById('estado');
+
+        cep.addEventListener('focusout', (e) => {
+            let cepValue = cep.value;
+            let url = `https://viacep.com.br/ws/${cepValue}/json/`;
+            fetch(url).then(response => response.json()).then(data => {
+                logradouro.value = data.logradouro;
+                cidade.value = data.localidade;
+                estado.value = data.uf;
+            })
+        })
+    </script>

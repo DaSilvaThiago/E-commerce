@@ -81,14 +81,14 @@
                                                 <label class="gl-label" for="billing-fname">NOME DO ENDEREÇO *</label>
 
                                                 <input class="input-text input-text--primary-style" name="ENDERECO_NOME" type="text"
-                                                    id="billing-fname" data-bill="" placeholder="casa">
+                                                    id="" data-bill="" placeholder="casa">
                                             </div>
                                             <div class="u-s-m-b-15">
 
                                                 <label class="gl-label" for="billing-lname">CEP *</label>
 
                                                 <input class="input-text input-text--primary-style" type="text"
-                                                    id="billing-lname" data-bill="" name="ENDERECO_CEP" placeholder="00000-000">
+                                                    id="cep" data-bill="" maxlength="8" name="ENDERECO_CEP" placeholder="00000-000">
                                             </div>
                                         </div>
                                         <!--====== End - First Name, Last Name ======-->
@@ -100,7 +100,7 @@
                                             <label class="gl-label" for="billing-email">LOGRADOURO *</label>
 
                                             <input class="input-text input-text--primary-style" type="text"
-                                                id="billing-email" data-bill="" name="ENDERECO_LOGRADOURO" placeholder="Rua x">
+                                                id="logradouro" data-bill="" name="ENDERECO_LOGRADOURO" placeholder="Rua x">
                                         </div>
                                         <!--====== End - E-MAIL ======-->
 
@@ -111,7 +111,7 @@
                                             <label class="gl-label" for="billing-phone">NUMERO *</label>
 
                                             <input class="input-text input-text--primary-style" type="text"
-                                                id="billing-phone" data-bill="" name="ENDERECO_NUMERO" placeholder="01">
+                                                id="" data-bill="" name="ENDERECO_NUMERO" placeholder="01">
                                         </div>
                                         <!--====== End - PHONE ======-->
 
@@ -122,7 +122,7 @@
                                             <label class="gl-label" for="billing-street">COMPLEMENTO </label>
 
                                             <input class="input-text input-text--primary-style" type="text"
-                                                id="billing-street" placeholder=""
+                                                id="" placeholder=""
                                                 data-bill="" name="ENDERECO_COMPLEMENTO" >
                                         </div>
                                         <!--====== End - Street Address ======-->
@@ -134,7 +134,7 @@
                                             <label class="gl-label" for="billing-town-city">CIDADE *</label>
 
                                             <input class="input-text input-text--primary-style" type="text"
-                                                id="billing-town-city" data-bill="" name="ENDERECO_CIDADE" placeholder="são paulo">
+                                                id="cidade" data-bill="" name="ENDERECO_CIDADE" placeholder="são paulo">
                                         </div>
                                         <!--====== End - Town / City ======-->
 
@@ -145,7 +145,7 @@
                                             <label class="gl-label" for="billing-zip">ESTADO *</label>
 
                                             <input class="input-text input-text--primary-style" type="text"
-                                                id="billing-zip"  data-bill="" placeholder="SP" name="ENDERECO_ESTADO">
+                                                id="estado"  data-bill="" placeholder="SP" name="ENDERECO_ESTADO">
                                         </div>
                                         <!--====== End - ZIP/POSTAL ======-->
 
