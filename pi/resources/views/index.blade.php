@@ -318,9 +318,17 @@
 
                                                     @auth
                                                         <li>
-
-                                                            <a data-modal="modal" data-modal-id="#add-to-cart"><i
-                                                                    class="fas fa-plus-circle"></i></a>
+                                                            <form class="pd-detail__form" action="{{route('cart.store')}}" method="POST">
+                                                                @csrf
+                                                                        
+                                                                        <input type="text" value="{{$user->USUARIO_ID}}" name="USUARIO_ID" style="display: none">
+                                                                        <input type="text" value="{{$product->PRODUTO_ID}}" name="PRODUTO_ID" style="display: none">
+                                                                        <input type="text" value="1" name="ITEM_QTD"  style="display: none">
+                                                                          
+                                                                        <button type="submit"><i
+                                                                    class="fas fa-plus-circle"></i></button>
+                                                        
+                                                            </form>
                                                         </li>
                                                     @else
                                                         <li>
@@ -469,10 +477,17 @@
 
                                                                             @auth
                                                                                 <li>
-
-                                                                                    <a data-modal="modal"
-                                                                                        data-modal-id="#add-to-cart"><i
-                                                                                            class="fas fa-plus-circle"></i></a>
+                                                                                    <form class="pd-detail__form" action="{{route('cart.store')}}" method="POST">
+                                                                                        @csrf
+                                                                                                
+                                                                                                <input type="text" value="{{$user->USUARIO_ID}}" name="USUARIO_ID" style="display: none">
+                                                                                                <input type="text" value="{{$product->PRODUTO_ID}}" name="PRODUTO_ID" style="display: none">
+                                                                                                <input type="text" value="1" name="ITEM_QTD"  style="display: none">
+                                                                                                  
+                                                                                                <button type="submit"><i
+                                                                                            class="fas fa-plus-circle"></i></button>
+                                                                                
+                                                                                    </form>
                                                                                 </li>
                                                                             @else
                                                                                 <li>

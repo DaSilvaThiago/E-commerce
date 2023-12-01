@@ -928,7 +928,7 @@
                                 @auth
                                     <li class="has-dropdown">
 
-                                        <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
+                                        <a class="mini-cart-shop-link" href="{{route('cart')}}" ><i class="fas fa-shopping-bag"></i>
 
                                             <span
                                                 class="total-item-round">{{ $user->where('ITEM_QTD', '>', 0)->count() }}</span></a>
@@ -954,7 +954,7 @@
                                                                         href="{{ route('productDetails', $item->produto->PRODUTO_ID) }}">
 
                                                                         <img class="u-img-fluid"
-                                                                            src="{{ $item->produto->produtoImagens->first()->IMAGEM_URL }}"
+                                                                            src="{{ isset($item->produto->produtoImagens->first()->IMAGEM_URL)?$item->produto->produtoImagens->first()->IMAGEM_URL:"" }}"
                                                                             alt=""></a>
                                                                 </div>
                                                                 <div class="mini-product__info-wrapper">

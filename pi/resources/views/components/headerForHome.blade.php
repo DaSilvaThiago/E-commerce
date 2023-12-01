@@ -955,7 +955,7 @@
                                                                         href="{{ route('productDetails', $item->produto->PRODUTO_ID) }}">
 
                                                                         <img class="u-img-fluid"
-                                                                            src="{{ $item->produto->produtoImagens->first()->IMAGEM_URL }}"
+                                                                            src="{{ isset($item->produto->produtoImagens->first()->IMAGEM_URL)?$item->produto->produtoImagens->first()->IMAGEM_URL:"" }}"
                                                                             alt=""></a>
                                                                 </div>
                                                                 <div class="mini-product__info-wrapper">
