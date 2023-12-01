@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
-<x-headHtml/>
+<x-headHtml />
 
 <body class="config">
-    <x-preloader/>
+    <x-preloader />
 
     <!--====== Main App ======-->
     <div id="app">
@@ -14,9 +13,9 @@
         @auth
             <x-headerForHome :dataFromController="$categories" :user="$productsByUser" />
         @else
-            <x-headerForHome :dataFromController="$categories"/>
+            <x-headerForHome :dataFromController="$categories" />
         @endauth
-        <!--====== End - Header Wrapper ======-->    
+        <!--====== End - Header Wrapper ======-->
 
 
         <!--====== App Content ======-->
@@ -133,8 +132,7 @@
                                     </div>
                                     <div class="promotion-o__content">
 
-                                        <a class="promotion-o__link btn--e-white-brand"
-                                            >Acessórios</a>
+                                        <a class="promotion-o__link btn--e-white-brand">Acessórios</a>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +197,7 @@
 
                                                         <span class="product-short__name">
 
-                                                            <a >G-SHOCK</a></span>
+                                                            <a>G-SHOCK</a></span>
 
                                                         <span class="product-short__category">
 
@@ -214,8 +212,7 @@
                                                 <div class="product-short__container">
                                                     <div class="product-short__img-wrap">
 
-                                                        <a class="aspect aspect--bg-grey-fb aspect--square u-d-block"
-                                                            >
+                                                        <a class="aspect aspect--bg-grey-fb aspect--square u-d-block">
 
                                                             <img class="aspect__img product-short__img"
                                                                 src="{{ asset('images/section2/1.jpg') }}"
@@ -227,12 +224,12 @@
 
                                                         <span class="product-short__name">
 
-                                                            <a >Bucket The North
+                                                            <a>Bucket The North
                                                                 Face</a></span>
 
                                                         <span class="product-short__category">
 
-                                                            <a >Acessório
+                                                            <a>Acessório
                                                                 Uniseex</a></span>
                                                     </div>
                                                 </div>
@@ -286,7 +283,7 @@
                                         <div class="product-r__container">
 
                                             <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                href="{{route('productDetails', $product->PRODUTO_ID)}}">
+                                                href="{{ route('productDetails', $product->PRODUTO_ID) }}">
                                                 @php
                                                     $primaryImage = $product->produtoImagens->first();
                                                 @endphp
@@ -300,27 +297,21 @@
                                                 <ul class="product-r__action-list">
                                                     <li class="margin">
 
-                                                        <a 
-                                                            data-modal="modal" 
-                                                            data-modal-id="#quick-look" 
-                                                            data-bs-toggle="modal"
-                                                            class="ProductsDetailModal"
+                                                        <a data-modal="modal" data-modal-id="#quick-look"
+                                                            data-bs-toggle="modal" class="ProductsDetailModal"
                                                             data-bs-target="#ProductsDetailModal"
-                                                            data-nome="{{$product->PRODUTO_NOME}}"
-                                                            data-desc="{{$product->PRODUTO_DESC}}"
-                                                            data-preco="{{$product->PRODUTO_PRECO}}"
-                                                            data-idprod="{{$product->PRODUTO_ID}}"
-                                                            data-desconto="{{$product->PRODUTO_DESCONTO}}"
-                                                            data-fotos="{{$product->produtoImagens}}"
-                                                            data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
-                                                            @if ($product->produtoEstoque)
-                                                                data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                            data-nome="{{ $product->PRODUTO_NOME }}"
+                                                            data-desc="{{ $product->PRODUTO_DESC }}"
+                                                            data-preco="{{ $product->PRODUTO_PRECO }}"
+                                                            data-idprod="{{ $product->PRODUTO_ID }}"
+                                                            data-desconto="{{ $product->PRODUTO_DESCONTO }}"
+                                                            data-fotos="{{ $product->produtoImagens }}"
+                                                            data-categoria="{{ $product->categoria->CATEGORIA_NOME }}"
+                                                            @if ($product->produtoEstoque) data-estoque="{{ $product->produtoEstoque->PRODUTO_QTD }}"
                                                             @else
-                                                                data-estoque="{{0}}"
-                                                            @endif
+                                                                data-estoque="{{ 0 }}" @endif
                                                             @auth
-                                                                data-usuario="{{$user->USUARIO_ID}}"
-                                                            @endauth >
+                                                                data-usuario="{{ $user->USUARIO_ID }}" @endauth>
                                                             <i class="fas fa-search-plus"></i>
                                                         </a>
                                                     </li>
@@ -328,12 +319,14 @@
                                                     @auth
                                                         <li>
 
-                                                            <a data-modal="modal" data-modal-id="#add-to-cart"><i class="fas fa-plus-circle"></i></a>
+                                                            <a data-modal="modal" data-modal-id="#add-to-cart"><i
+                                                                    class="fas fa-plus-circle"></i></a>
                                                         </li>
                                                     @else
                                                         <li>
 
-                                                            <a href="{{route('login')}}"><i class="fas fa-plus-circle"></i></a>
+                                                            <a href="{{ route('login') }}"><i
+                                                                    class="fas fa-plus-circle"></i></a>
                                                         </li>
                                                     @endauth
                                                 </ul>
@@ -344,13 +337,13 @@
                                             <span class="product-r__category">
 
                                                 <a
-                                                    href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
+                                                    href="search?CATEGORIA_ID={{ $product->categoria->CATEGORIA_ID }}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
                                             <div class="product-r__n-p-wrap">
 
                                                 <span class="product-r__name">
 
                                                     <a
-                                                        href="{{route('productDetails', $product->PRODUTO_ID)}}">{{ $product->PRODUTO_NOME }}</a></span>
+                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">{{ $product->PRODUTO_NOME }}</a></span>
                                                 @if ($product->PRODUTO_DESCONTO)
                                                     <div class="priceSold">
                                                         <span
@@ -364,7 +357,8 @@
                                                 @endif
                                             </div>
 
-                                            <span class="product-r__description">{{ substr($product->PRODUTO_DESC, 0, 200) }}</span>
+                                            <span
+                                                class="product-r__description">{{ substr($product->PRODUTO_DESC, 0, 200) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -388,7 +382,8 @@
                                 <div class="section__text-wrap">
                                     <h1 class="section__heading u-c-secondary u-s-m-b-12">PRODUTOS POR CATEGORIA</h1>
 
-                                    <span class="section__span u-c-silver u-s-m-b-16">ENCONTRE OS PRODUTOS MAIS BEM AVALIADOS</span>
+                                    <span class="section__span u-c-silver u-s-m-b-16">ENCONTRE OS PRODUTOS MAIS BEM
+                                        AVALIADOS</span>
                                 </div>
                             </div>
                         </div>
@@ -413,20 +408,16 @@
                                         <div class="filter__category-wrapper">
 
                                             <button class="btn filter__btn filter__btn--style-2" type="button"
-                                                
-                                                    @if ($category->CATEGORIA_ID == 1)
-                                                        data-filter=".outwear"
+                                                @if ($category->CATEGORIA_ID == 1) data-filter=".outwear"
                                                     @elseif ($category->CATEGORIA_ID == 2)
                                                         data-filter=".bottom"
                                                     @elseif ($category->CATEGORIA_ID == 3)
                                                         data-filter=".footwear"
                                                     @else
-                                                        data-filter=".accessories"
-                                                    @endif
-                                                >{{$category->CATEGORIA_NOME}}</button>
+                                                        data-filter=".accessories" @endif>{{ $category->CATEGORIA_NOME }}</button>
                                         </div>
                                     @endforeach
-                                    
+
                                 </div>
                                 <div class="filter__grid-wrapper u-s-m-t-30 toHideAndScrol">
                                     <div class="row">
@@ -440,41 +431,38 @@
                                                                 <div class="product-bs__wrap">
 
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
-                                                                    @php
-                                                                        $primaryImage = $product->produtoImagens->first();
-                                                                    @endphp
-                    
-                                                                    @if ($primaryImage)
-                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
-                                                                            alt="">
-                                                                    @endif
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">
+                                                                        @php
+                                                                            $primaryImage = $product->produtoImagens->first();
+                                                                        @endphp
+
+                                                                        @if ($primaryImage)
+                                                                            <img class="aspect__img"
+                                                                                src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                                alt="">
+                                                                        @endif
                                                                     </a>
                                                                     <div class="product-bs__action-wrap">
-                                                                        
-                                                                         <ul class="product-bs__action-list">
+
+                                                                        <ul class="product-bs__action-list">
                                                                             <li>
-                                                                                <a 
-                                                                                    data-modal="modal" 
-                                                                                    data-modal-id="#quick-look" 
+                                                                                <a data-modal="modal"
+                                                                                    data-modal-id="#quick-look"
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
-                                                                                    data-nome="{{$product->PRODUTO_NOME}}"
-                                                                                    data-desc="{{$product->PRODUTO_DESC}}"
-                                                                                    data-preco="{{$product->PRODUTO_PRECO}}"
-                                                                                    data-idprod="{{$product->PRODUTO_ID}}"
-                                                                                    data-desconto="{{$product->PRODUTO_DESCONTO}}"
-                                                                                    data-fotos="{{$product->produtoImagens}}"
-                                                                                    data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
-                                                                                    @if ($product->produtoEstoque)
-                                                                                        data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                                                    data-nome="{{ $product->PRODUTO_NOME }}"
+                                                                                    data-desc="{{ $product->PRODUTO_DESC }}"
+                                                                                    data-preco="{{ $product->PRODUTO_PRECO }}"
+                                                                                    data-idprod="{{ $product->PRODUTO_ID }}"
+                                                                                    data-desconto="{{ $product->PRODUTO_DESCONTO }}"
+                                                                                    data-fotos="{{ $product->produtoImagens }}"
+                                                                                    data-categoria="{{ $product->categoria->CATEGORIA_NOME }}"
+                                                                                    @if ($product->produtoEstoque) data-estoque="{{ $product->produtoEstoque->PRODUTO_QTD }}"
                                                                                     @else
-                                                                                        data-estoque="{{0}}"
-                                                                                    @endif
+                                                                                        data-estoque="{{ 0 }}" @endif
                                                                                     @auth
-                                                                                        data-usuario="{{$user->USUARIO_ID}}"
-                                                                                    @endauth >
+                                                                                        data-usuario="{{ $user->USUARIO_ID }}" @endauth>
                                                                                     <i class="fas fa-search-plus"></i>
                                                                                 </a>
                                                                             </li>
@@ -482,12 +470,15 @@
                                                                             @auth
                                                                                 <li>
 
-                                                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a data-modal="modal"
+                                                                                        data-modal-id="#add-to-cart"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @else
                                                                                 <li>
 
-                                                                                    <a href="{{route('login')}}"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="{{ route('login') }}"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @endauth
                                                                         </ul>
@@ -496,22 +487,28 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a
+                                                                        href="search?CATEGORIA_ID={{ $product->categoria->CATEGORIA_ID }}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">{{ $product->PRODUTO_NOME }}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
                                                                         class="far fa-star"></i>
 
                                                                     <span class="product-bs__review">(23)</span>
                                                                 </div>
 
-                                                                <span class="product-bs__price">R${{$product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO}}
+                                                                <span
+                                                                    class="product-bs__price">R${{ $product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO }}
 
-                                                                    <span class="product-bs__discount">R${{$product->PRODUTO_PRECO}}</span></span>
+                                                                    <span
+                                                                        class="product-bs__discount">R${{ $product->PRODUTO_PRECO }}</span></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -524,43 +521,40 @@
                                                             <div class="product-bs__container">
                                                                 <div class="product-bs__wrap">
 
-                                                                   
+
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
-                                                                    @php
-                                                                        $primaryImage = $product->produtoImagens->first();
-                                                                    @endphp
-                    
-                                                                    @if ($primaryImage)
-                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
-                                                                            alt="">
-                                                                    @endif
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">
+                                                                        @php
+                                                                            $primaryImage = $product->produtoImagens->first();
+                                                                        @endphp
+
+                                                                        @if ($primaryImage)
+                                                                            <img class="aspect__img"
+                                                                                src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                                alt="">
+                                                                        @endif
                                                                     </a>
                                                                     <div class="product-bs__action-wrap">
-                                                                        
-                                                                         <ul class="product-bs__action-list">
+
+                                                                        <ul class="product-bs__action-list">
                                                                             <li>
-                                                                                <a 
-                                                                                    data-modal="modal" 
-                                                                                    data-modal-id="#quick-look" 
+                                                                                <a data-modal="modal"
+                                                                                    data-modal-id="#quick-look"
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
-                                                                                    data-nome="{{$product->PRODUTO_NOME}}"
-                                                                                    data-desc="{{$product->PRODUTO_DESC}}"
-                                                                                    data-preco="{{$product->PRODUTO_PRECO}}"
-                                                                                    data-idprod="{{$product->PRODUTO_ID}}"
-                                                                                    data-desconto="{{$product->PRODUTO_DESCONTO}}"
-                                                                                    data-fotos="{{$product->produtoImagens}}"
-                                                                                    data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
-                                                                                    @if ($product->produtoEstoque)
-                                                                                        data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                                                    data-nome="{{ $product->PRODUTO_NOME }}"
+                                                                                    data-desc="{{ $product->PRODUTO_DESC }}"
+                                                                                    data-preco="{{ $product->PRODUTO_PRECO }}"
+                                                                                    data-idprod="{{ $product->PRODUTO_ID }}"
+                                                                                    data-desconto="{{ $product->PRODUTO_DESCONTO }}"
+                                                                                    data-fotos="{{ $product->produtoImagens }}"
+                                                                                    data-categoria="{{ $product->categoria->CATEGORIA_NOME }}"
+                                                                                    @if ($product->produtoEstoque) data-estoque="{{ $product->produtoEstoque->PRODUTO_QTD }}"
                                                                                     @else
-                                                                                        data-estoque="{{0}}"
-                                                                                    @endif
+                                                                                        data-estoque="{{ 0 }}" @endif
                                                                                     @auth
-                                                                                        data-usuario="{{$user->USUARIO_ID}}"
-                                                                                    @endauth >
+                                                                                        data-usuario="{{ $user->USUARIO_ID }}" @endauth>
                                                                                     <i class="fas fa-search-plus"></i>
                                                                                 </a>
                                                                             </li>
@@ -568,12 +562,15 @@
                                                                             @auth
                                                                                 <li>
 
-                                                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a data-modal="modal"
+                                                                                        data-modal-id="#add-to-cart"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @else
                                                                                 <li>
 
-                                                                                    <a href="{{route('login')}}"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="{{ route('login') }}"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @endauth
                                                                         </ul>
@@ -582,25 +579,31 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a
+                                                                        href="search?CATEGORIA_ID={{ $product->categoria->CATEGORIA_ID }}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">{{ $product->PRODUTO_NOME }}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
                                                                         class="far fa-star"></i>
 
                                                                     <span class="product-bs__review">(23)</span>
                                                                 </div>
 
-                                                                <span class="product-bs__price">R${{$product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO}}
+                                                                <span
+                                                                    class="product-bs__price">R${{ $product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO }}
 
-                                                                    <span class="product-bs__discount">R${{$product->PRODUTO_PRECO}}</span></span>
+                                                                    <span
+                                                                        class="product-bs__discount">R${{ $product->PRODUTO_PRECO }}</span></span>
                                                             </div>
                                                         </div>
-                                                    </div>    
+                                                    </div>
                                                 @endforeach
                                             @elseif ($category->CATEGORIA_ID == 3)
                                                 @foreach ($products->where('CATEGORIA_ID', $category->CATEGORIA_ID) as $product)
@@ -610,43 +613,40 @@
                                                             <div class="product-bs__container">
                                                                 <div class="product-bs__wrap">
 
-                                                                
+
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
-                                                                    @php
-                                                                        $primaryImage = $product->produtoImagens->first();
-                                                                    @endphp
-                    
-                                                                    @if ($primaryImage)
-                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
-                                                                            alt="">
-                                                                    @endif
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">
+                                                                        @php
+                                                                            $primaryImage = $product->produtoImagens->first();
+                                                                        @endphp
+
+                                                                        @if ($primaryImage)
+                                                                            <img class="aspect__img"
+                                                                                src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                                alt="">
+                                                                        @endif
                                                                     </a>
                                                                     <div class="product-bs__action-wrap">
-                                                                        
-                                                                         <ul class="product-bs__action-list">
+
+                                                                        <ul class="product-bs__action-list">
                                                                             <li>
-                                                                                <a 
-                                                                                    data-modal="modal" 
-                                                                                    data-modal-id="#quick-look" 
+                                                                                <a data-modal="modal"
+                                                                                    data-modal-id="#quick-look"
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
-                                                                                    data-nome="{{$product->PRODUTO_NOME}}"
-                                                                                    data-desc="{{$product->PRODUTO_DESC}}"
-                                                                                    data-preco="{{$product->PRODUTO_PRECO}}"
-                                                                                    data-idprod="{{$product->PRODUTO_ID}}"
-                                                                                    data-desconto="{{$product->PRODUTO_DESCONTO}}"
-                                                                                    data-fotos="{{$product->produtoImagens}}"
-                                                                                    data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
-                                                                                    @if ($product->produtoEstoque)
-                                                                                        data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                                                    data-nome="{{ $product->PRODUTO_NOME }}"
+                                                                                    data-desc="{{ $product->PRODUTO_DESC }}"
+                                                                                    data-preco="{{ $product->PRODUTO_PRECO }}"
+                                                                                    data-idprod="{{ $product->PRODUTO_ID }}"
+                                                                                    data-desconto="{{ $product->PRODUTO_DESCONTO }}"
+                                                                                    data-fotos="{{ $product->produtoImagens }}"
+                                                                                    data-categoria="{{ $product->categoria->CATEGORIA_NOME }}"
+                                                                                    @if ($product->produtoEstoque) data-estoque="{{ $product->produtoEstoque->PRODUTO_QTD }}"
                                                                                     @else
-                                                                                        data-estoque="{{0}}"
-                                                                                    @endif
+                                                                                        data-estoque="{{ 0 }}" @endif
                                                                                     @auth
-                                                                                        data-usuario="{{$user->USUARIO_ID}}"
-                                                                                    @endauth >
+                                                                                        data-usuario="{{ $user->USUARIO_ID }}" @endauth>
                                                                                     <i class="fas fa-search-plus"></i>
                                                                                 </a>
                                                                             </li>
@@ -654,12 +654,15 @@
                                                                             @auth
                                                                                 <li>
 
-                                                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a data-modal="modal"
+                                                                                        data-modal-id="#add-to-cart"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @else
                                                                                 <li>
 
-                                                                                    <a href="{{route('login')}}"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="{{ route('login') }}"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @endauth
                                                                         </ul>
@@ -668,25 +671,31 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a
+                                                                        href="search?CATEGORIA_ID={{ $product->categoria->CATEGORIA_ID }}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">{{ $product->PRODUTO_NOME }}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
                                                                         class="far fa-star"></i>
 
                                                                     <span class="product-bs__review">(23)</span>
                                                                 </div>
 
-                                                                <span class="product-bs__price">R${{$product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO}}
+                                                                <span
+                                                                    class="product-bs__price">R${{ $product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO }}
 
-                                                                    <span class="product-bs__discount">R${{$product->PRODUTO_PRECO}}</span></span>
+                                                                    <span
+                                                                        class="product-bs__discount">R${{ $product->PRODUTO_PRECO }}</span></span>
                                                             </div>
                                                         </div>
-                                                    </div>    
+                                                    </div>
                                                 @endforeach
                                             @else
                                                 @foreach ($products->where('CATEGORIA_ID', $category->CATEGORIA_ID) as $product)
@@ -696,43 +705,40 @@
                                                             <div class="product-bs__container">
                                                                 <div class="product-bs__wrap">
 
-                                                                
+
                                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block"
-                                                                    href="{{route('productDetails', $product->PRODUTO_ID)}}">
-                                                                    @php
-                                                                        $primaryImage = $product->produtoImagens->first();
-                                                                    @endphp
-                    
-                                                                    @if ($primaryImage)
-                                                                        <img class="aspect__img" src="{{ $primaryImage->IMAGEM_URL }}"
-                                                                            alt="">
-                                                                    @endif
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">
+                                                                        @php
+                                                                            $primaryImage = $product->produtoImagens->first();
+                                                                        @endphp
+
+                                                                        @if ($primaryImage)
+                                                                            <img class="aspect__img"
+                                                                                src="{{ $primaryImage->IMAGEM_URL }}"
+                                                                                alt="">
+                                                                        @endif
                                                                     </a>
                                                                     <div class="product-bs__action-wrap">
-                                                                        
-                                                                         <ul class="product-bs__action-list">
+
+                                                                        <ul class="product-bs__action-list">
                                                                             <li>
-                                                                                <a 
-                                                                                    data-modal="modal" 
-                                                                                    data-modal-id="#quick-look" 
+                                                                                <a data-modal="modal"
+                                                                                    data-modal-id="#quick-look"
                                                                                     data-bs-toggle="modal"
                                                                                     class="ProductsDetailModal"
                                                                                     data-bs-target="#ProductsDetailModal"
-                                                                                    data-nome="{{$product->PRODUTO_NOME}}"
-                                                                                    data-desc="{{$product->PRODUTO_DESC}}"
-                                                                                    data-preco="{{$product->PRODUTO_PRECO}}"
-                                                                                    data-idprod="{{$product->PRODUTO_ID}}"
-                                                                                    data-desconto="{{$product->PRODUTO_DESCONTO}}"
-                                                                                    data-fotos="{{$product->produtoImagens}}"
-                                                                                    data-categoria="{{$product->categoria->CATEGORIA_NOME}}"
-                                                                                    @if ($product->produtoEstoque)
-                                                                                        data-estoque="{{$product->produtoEstoque->PRODUTO_QTD}}"
+                                                                                    data-nome="{{ $product->PRODUTO_NOME }}"
+                                                                                    data-desc="{{ $product->PRODUTO_DESC }}"
+                                                                                    data-preco="{{ $product->PRODUTO_PRECO }}"
+                                                                                    data-idprod="{{ $product->PRODUTO_ID }}"
+                                                                                    data-desconto="{{ $product->PRODUTO_DESCONTO }}"
+                                                                                    data-fotos="{{ $product->produtoImagens }}"
+                                                                                    data-categoria="{{ $product->categoria->CATEGORIA_NOME }}"
+                                                                                    @if ($product->produtoEstoque) data-estoque="{{ $product->produtoEstoque->PRODUTO_QTD }}"
                                                                                     @else
-                                                                                        data-estoque="{{0}}"
-                                                                                    @endif
+                                                                                        data-estoque="{{ 0 }}" @endif
                                                                                     @auth
-                                                                                        data-usuario="{{$user->USUARIO_ID}}"
-                                                                                    @endauth >
+                                                                                data-usuario="{{ $user->USUARIO_ID }}" @endauth>
                                                                                     <i class="fas fa-search-plus"></i>
                                                                                 </a>
                                                                             </li>
@@ -740,12 +746,15 @@
                                                                             @auth
                                                                                 <li>
 
-                                                                                    <a data-modal="modal" data-modal-id="#add-to-cart"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a data-modal="modal"
+                                                                                        data-modal-id="#add-to-cart"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @else
                                                                                 <li>
 
-                                                                                    <a href="{{route('login')}}"><i class="fas fa-plus-circle"></i></a>
+                                                                                    <a href="{{ route('login') }}"><i
+                                                                                            class="fas fa-plus-circle"></i></a>
                                                                                 </li>
                                                                             @endauth
                                                                         </ul>
@@ -754,25 +763,31 @@
 
                                                                 <span class="product-bs__category">
 
-                                                                    <a href="search?CATEGORIA_ID={{$product->categoria->CATEGORIA_ID}}">{{$product->categoria->CATEGORIA_NOME}}</a></span>
+                                                                    <a
+                                                                        href="search?CATEGORIA_ID={{ $product->categoria->CATEGORIA_ID }}">{{ $product->categoria->CATEGORIA_NOME }}</a></span>
 
                                                                 <span class="product-bs__name">
 
-                                                                    <a href="{{route('productDetails', $product->PRODUTO_ID)}}">{{$product->PRODUTO_NOME}}</a></span>
+                                                                    <a
+                                                                        href="{{ route('productDetails', $product->PRODUTO_ID) }}">{{ $product->PRODUTO_NOME }}</a></span>
                                                                 <div class="product-bs__rating gl-rating-style"><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                                        class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
+                                                                        class="fas fa-star"></i><i
                                                                         class="far fa-star"></i>
 
                                                                     <span class="product-bs__review">(23)</span>
                                                                 </div>
 
-                                                                <span class="product-bs__price">R${{$product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO}}
+                                                                <span
+                                                                    class="product-bs__price">R${{ $product->PRODUTO_PRECO - $product->PRODUTO_DESCONTO }}
 
-                                                                    <span class="product-bs__discount">R${{$product->PRODUTO_PRECO}}</span></span>
+                                                                    <span
+                                                                        class="product-bs__discount">R${{ $product->PRODUTO_PRECO }}</span></span>
                                                             </div>
                                                         </div>
-                                                    </div>    
+                                                    </div>
                                                 @endforeach
                                             @endif
                                         @endforeach
@@ -828,14 +843,17 @@
 
                                         <span class="u-c-secondary">Oferta</span>
 
-                                        <span class="u-c-secondary">Em Toda Loja</span></div>
+                                        <span class="u-c-secondary">Em Toda Loja</span>
+                                    </div>
                                     <div class="banner-bg__text-2">
 
                                         <span class="u-c-secondary">Qualquer Produto</span>
 
-                                        <span class="u-c-secondary">Não Perca!</span></div>
+                                        <span class="u-c-secondary">Não Perca!</span>
+                                    </div>
 
-                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary">Ganhe frete grátis ao comprar 2 ou mais produtos!</span>
+                                    <span class="banner-bg__text-block banner-bg__text-3 u-c-secondary">Ganhe frete
+                                        grátis ao comprar 2 ou mais produtos!</span>
 
                                     <a class="banner-bg__shop-now btn--e-secondary">Me Avise!</a>
                                 </div>
@@ -858,275 +876,121 @@
                             <div class="col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="column-product">
 
-                                    <span class="column-product__title u-c-secondary u-s-m-b-25">MAIS VENDIDOS DO DIA</span>
+                                    <span class="column-product__title u-c-secondary u-s-m-b-25">MAIS VENDIDOS
+                                        MASCULINO</span>
                                     <ul class="column-product__list">
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
+                                        @foreach ($bestSellers->take(3)->where('CATEGORIA_ID', 1) as $item)
+                                            <li class="column-product__item">
+                                                <div class="product-l">
+                                                    <div class="product-l__img-wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
+                                                        <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
+                                                            href="{{ route('productDetails', $item->PRODUTO_ID) }}">
 
-                                                        <img class="aspect__img"
-                                                            src="images/product/men/product9.jpg"
-                                                            alt=""></a>
+                                                            <img class="aspect__img"
+                                                                src="{{ $item->produtoImagens->first()->IMAGEM_URL }}"
+                                                                alt=""></a>
+                                                    </div>
+                                                    <div class="product-l__info-wrap">
+
+                                                        <span class="product-l__category">
+                                                            <a
+                                                                href="search?CATEGORIA_ID={{ $item->categoria->CATEGORIA_ID }}">{{ $item->categoria->CATEGORIA_NOME }}</a></span>
+
+                                                        <span class="product-l__name">
+
+                                                            <a
+                                                                href="{{ route('productDetails', $item->PRODUTO_ID) }}">{{ $item->PRODUTO_NOME }}</a></span>
+
+                                                        <span class="product-l__price">R$
+                                                            {{ $item->PRODUTO_PRECO }}</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-l__info-wrap">
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Men Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Fashion A Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
-
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
-
-                                                        <img class="aspect__img"
-                                                            src="images/product/men/product10.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="product-l__info-wrap">
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Men Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Fashion B Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
-
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
-
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product9.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="product-l__info-wrap">
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Dress A Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00</span>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="column-product">
 
-                                    <span class="column-product__title u-c-secondary u-s-m-b-25">PRODUTOS DA SEMANA</span>
+                                    <span class="column-product__title u-c-secondary u-s-m-b-25">OS MAIS
+                                        VENDIDOS</span>
                                     <ul class="column-product__list">
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
+                                        @foreach ($bestSellers->take(3) as $item)
+                                            <li class="column-product__item">
+                                                <div class="product-l">
+                                                    <div class="product-l__img-wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
+                                                        <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
+                                                            href="{{ route('productDetails', $item->PRODUTO_ID) }}">
 
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product10.jpg"
-                                                            alt=""></a>
+                                                            <img class="aspect__img"
+                                                                src="{{ $item->produtoImagens->first()->IMAGEM_URL }}"
+                                                                alt=""></a>
+                                                    </div>
+                                                    <div class="product-l__info-wrap">
+
+                                                        <span class="product-l__category">
+
+                                                            <a
+                                                                href="search?CATEGORIA_ID={{ $item->categoria->CATEGORIA_ID }}">{{ $item->categoria->CATEGORIA_NOME }}</a></span>
+
+                                                        <span class="product-l__name">
+
+                                                            <a
+                                                                href="{{ route('productDetails', $item->PRODUTO_ID) }}">{{ $item->PRODUTO_NOME }}</a></span>
+
+                                                        <span class="product-l__price">R$
+                                                            {{ $item->PRODUTO_PRECO - $item->PRODUTO_DESCONTO }}
+
+                                                            <span class="product-l__discount">R$
+                                                                {{ $item->PRODUTO_PRECO }}</span></span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-l__info-wrap">
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Dress B Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00
-
-                                                        <span class="product-l__discount">$160</span></span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
-
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
-
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product11.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="product-l__info-wrap">
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Dress C Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00
-
-                                                        <span class="product-l__discount">$160</span></span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
-
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
-
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product12.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="product-l__info-wrap">
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Dress D Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00
-
-                                                        <span class="product-l__discount">$160</span></span>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6 u-s-m-b-30">
                                 <div class="column-product">
 
-                                    <span class="column-product__title u-c-secondary u-s-m-b-25">ACABANDO O ESTOQUE</span>
+                                    <span class="column-product__title u-c-secondary u-s-m-b-25">MAIS VENDIDOS
+                                        UNISSEX</span>
                                     <ul class="column-product__list">
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
+                                        @foreach ($bestSellers->take(3)->where('CATEGORIA_ID', 3) as $item)
+                                            <li class="column-product__item">
+                                                <div class="product-l">
+                                                    <div class="product-l__img-wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
+                                                        <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
+                                                            href="{{ route('productDetails', $item->PRODUTO_ID) }}">
 
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product13.jpg"
-                                                            alt=""></a>
+                                                            <img class="aspect__img"
+                                                                src="{{ $item->produtoImagens->first()->IMAGEM_URL }}"
+                                                                alt=""></a>
+                                                    </div>
+                                                    <div class="product-l__info-wrap">
+                                                        <div class="product-l__rating gl-rating-style"><i
+                                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                                class="fas fa-star"></i><i class="far fa-star"></i><i
+                                                                class="far fa-star"></i></div>
+                                                        <span class="product-l__category">
+                                                            <a
+                                                                href="search?CATEGORIA_ID={{ $item->categoria->CATEGORIA_ID }}">{{ $item->categoria->CATEGORIA_NOME }}</a></span>
+
+                                                        <span class="product-l__name">
+
+                                                            <a
+                                                                href="{{ route('productDetails', $item->PRODUTO_ID) }}">{{ $item->PRODUTO_NOME }}</a></span>
+
+                                                        <span class="product-l__price">R$
+                                                            {{ $item->PRODUTO_PRECO }}</span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-l__info-wrap">
-                                                    <div class="product-l__rating gl-rating-style"><i
-                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                            class="fas fa-star"></i><i class="far fa-star"></i><i
-                                                            class="far fa-star"></i></div>
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">New Dress E Nice
-                                                            Elegant</a></span>
-
-                                                    <span class="product-l__price">$125.00</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
-
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
-
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product1.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="product-l__info-wrap">
-                                                    <div class="product-l__rating gl-rating-style"><i
-                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                            class="fas fa-star"></i><i class="far fa-star"></i><i
-                                                            class="far fa-star"></i></div>
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">Women intimate Bra</a></span>
-
-                                                    <span class="product-l__price">$125.00</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="column-product__item">
-                                            <div class="product-l">
-                                                <div class="product-l__img-wrap">
-
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block product-l__link"
-                                                        href="product-detail.html">
-
-                                                        <img class="aspect__img"
-                                                            src="images/product/women/product2.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="product-l__info-wrap">
-                                                    <div class="product-l__rating gl-rating-style"><i
-                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                                            class="fas fa-star"></i><i class="far fa-star"></i><i
-                                                            class="far fa-star"></i></div>
-
-                                                    <span class="product-l__category">
-
-                                                        <a href="shop-side-version-2.html">Women Clothing</a></span>
-
-                                                    <span class="product-l__name">
-
-                                                        <a href="product-detail.html">Women Wedding Event
-                                                            Dress</a></span>
-
-                                                    <span class="product-l__price">$125.00</span>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -1150,51 +1014,51 @@
                             <div class="owl-carousel" id="brand-slider" data-item="5">
                                 <div class="brand-slide">
 
-                                    <a >
+                                    <a>
 
-                                        <img src="{{asset('images/section7/1.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="brand-slide">
-
-                                    <a >
-
-                                        <img src="{{asset('images/section7/2.jpg')}}" alt=""></a>
-                                </div>
-                                <div class="brand-slide">
-
-                                    <a >
-
-                                        <img src="{{asset('images/section7/3.jpg')}}" alt=""></a>
+                                        <img src="{{ asset('images/section7/1.jpg') }}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
                                     <a>
 
-                                        <img src="{{asset('images/section7/4.jpg')}}" alt=""></a>
+                                        <img src="{{ asset('images/section7/2.jpg') }}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
                                     <a>
 
-                                        <img src="{{asset('images/section7/5.jpg')}}" alt=""></a>
+                                        <img src="{{ asset('images/section7/3.jpg') }}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
                                     <a>
 
-                                        <img src="{{asset('images/section7/6.jpg')}}" alt=""></a>
+                                        <img src="{{ asset('images/section7/4.jpg') }}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
                                     <a>
 
-                                        <img src="{{asset('images/section7/7.jpg')}}" alt=""></a>
+                                        <img src="{{ asset('images/section7/5.jpg') }}" alt=""></a>
                                 </div>
                                 <div class="brand-slide">
 
                                     <a>
 
-                                        <img src="{{asset('images/section7/8.jpg')}}" alt=""></a>
+                                        <img src="{{ asset('images/section7/6.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="brand-slide">
+
+                                    <a>
+
+                                        <img src="{{ asset('images/section7/7.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="brand-slide">
+
+                                    <a>
+
+                                        <img src="{{ asset('images/section7/8.jpg') }}" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -1210,50 +1074,50 @@
 
         <!--====== Main Footer ======-->
 
-        <x-mainFooter/>
+        <x-mainFooter />
 
         <!--====== End - Main Footer ======-->
 
         <!--====== Modal Section ======-->
 
-        <x-addToCardModal/>
-        
-        <x-quickLookModal/>
+        <x-addToCardModal />
 
-        <x-newsLetter/>
+        <x-quickLookModal />
+
+        <x-newsLetter />
 
         <!--====== End - Modal Section ======-->
-    
+
     </div>
     <!--====== End - Main App ======-->
 
     <!--====== timer for section 5 ======-->
-        <script>
-            const countdownDate = new Date("2024-01-01").getTime();
-            
-            const interval = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-                
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                const formattedHours = String(hours).padStart(2, '0');
-                const formattedMinutes = String(minutes).padStart(2, '0');
-                const formattedSeconds = String(seconds).padStart(2, '0');
-            
-                document.getElementById("days").innerText = days;
-                document.getElementById("hours").innerText = formattedHours;
-                document.getElementById("mins").innerText = formattedMinutes;
-                document.getElementById("secs").innerText = formattedSeconds;
-        
-            }, 1000);
-        </script>
+    <script>
+        const countdownDate = new Date("2024-01-01").getTime();
+
+        const interval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const formattedHours = String(hours).padStart(2, '0');
+            const formattedMinutes = String(minutes).padStart(2, '0');
+            const formattedSeconds = String(seconds).padStart(2, '0');
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = formattedHours;
+            document.getElementById("mins").innerText = formattedMinutes;
+            document.getElementById("secs").innerText = formattedSeconds;
+
+        }, 1000);
+    </script>
     <!--====== End - Counter time for section 5 ======-->
 
-    <x-someScripts/>
+    <x-someScripts />
 
 </body>
 
