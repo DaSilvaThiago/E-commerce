@@ -45,6 +45,10 @@ Acesse o projeto em http://localhost:8000.
 # Status do Projeto
 Este projeto está finalizado.
 
+# Imagens do Projeto
+
+![Texto alternativo](pi/public/images/print-screens/Screenshot.png)
+
 # Licença
 Este projeto é licenciado sob [inserir tipo de licença]. Consulte o arquivo LICENSE.md para obter mais detalhes.
 
