@@ -47,7 +47,27 @@ Este projeto está finalizado.
 
 # Imagens do Projeto
 
-![Texto alternativo](pi/public/images/print-screens/Screenshot.png)
+![home page com newsletter na tela](pi/public/images/print-screens/Screenshot(9).png)
+
+![home page](pi/public/images/print-screens/Screenshot(20).png)
+
+![menu da home page](pi/public/images/print-screens/Screenshot(19).png)
+
+![tela de cadastro](pi/public/images/print-screens/Screenshot(18).png)
+
+![perfil do usuario](pi/public/images/print-screens/Screenshot(17).png)
+
+![acompanhamento de pedido](pi/public/images/print-screens/Screenshot(16).png)
+
+![pedido realizado](pi/public/images/print-screens/Screenshot(15).png)
+
+![finalizando compra](pi/public/images/print-screens/Screenshot(13).png)
+
+![carrinho](pi/public/images/print-screens/Screenshot(12).png)
+
+![modal do produto](pi/public/images/print-screens/Screenshot(11).png)
+
+![pagina de produtos](pi/public/images/print-screens/Screenshot(12).png)
 
 # Licença
 Este projeto é licenciado sob [inserir tipo de licença]. Consulte o arquivo LICENSE.md para obter mais detalhes.
