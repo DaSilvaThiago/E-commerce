@@ -31,38 +31,26 @@ php artisan key:generate
 Execução
 Inicie o servidor de desenvolvimento:
 
-bash
-Copy code
+# Copy code
 php artisan serve
 Acesse o projeto em http://localhost:8000.
 
-Capturas de Tela
+```
 
+# Requisitos
+- PHP 7.4 ou superior
+- Composer
+- Node.js e npm
 
-Requisitos
-PHP 7.4 ou superior
-Composer
-Node.js e npm
-Contribuição
-Contribuições são bem-vindas! Siga as diretrizes de contribuição no CONTRIBUTING.md.
+# Status do Projeto
+Este projeto está finalizado.
 
-Status do Projeto
-Este projeto está em constante desenvolvimento. Algumas funcionalidades, como ações em gateways de pagamento, estão em progresso. Acompanhe as atualizações para obter as últimas informações.
-
-Licença
+# Licença
 Este projeto é licenciado sob [inserir tipo de licença]. Consulte o arquivo LICENSE.md para obter mais detalhes.
 
-Documentação Detalhada
-A documentação detalhada sobre a estrutura do código, funções, classes e métodos está disponível na pasta docs.
-
 Problemas e Melhorias
-Sinta-se à vontade para relatar problemas ou sugerir melhorias na seção de Issues.
+Sinta-se à vontade para progredir o projeto, ficou algumas funcionalidades até mesmo básicas a serem feitas, devido tempo que não tinha. 
 
-Integração Contínua
+---
 
-Este projeto utiliza integração contínua para garantir a estabilidade do código.
-
-Versionamento Semântico
-O versionamento segue as práticas de Versionamento Semântico. Consulte o arquivo CHANGELOG.md para obter detalhes sobre as versões.
-
-© 2024 Seu Nome. Todos os direitos reservados.
+© 2024 Thiago Silva. Todos os direitos reservados.
